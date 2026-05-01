@@ -428,7 +428,6 @@ function activate(el,cell,rowNum,sheetId){
   document.getElementById('name-box').textContent=ref;
   document.getElementById('formula-content').textContent=cell.formula!==undefined?cell.formula:(cell.text||'');
 }
-
 function switchSheet(id){
   document.querySelectorAll('.tab').forEach(t=>{
     const a=t.dataset.sheet===id;
