@@ -3,1046 +3,410 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-<!-- ── SEO ── -->
 <title>Tanishq Joshi — Software Engineer | Node.js · AWS · Agentic AI</title>
 <meta name="description" content="Tanishq Joshi is a Software Engineer with 7+ years of experience in Node.js, AWS serverless, and Agentic AI. Open to remote product engineering roles. Based in Indore, India."/>
 <meta name="keywords" content="Tanishq Joshi, Software Engineer, Node.js, AWS, Agentic AI, RAG, LangChain, Copilot Studio, Indore, backend developer, remote"/>
 <meta name="author" content="Tanishq Joshi"/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://tanishq510.github.io/"/>
-
-<!-- ── Open Graph ── -->
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://tanishq510.github.io/"/>
 <meta property="og:title" content="Tanishq Joshi — Software Engineer"/>
-<meta property="og:description" content="7+ years in Node.js, AWS & Agentic AI. Open to remote product engineering roles."/>
-<meta property="og:image" content="https://tanishq510.github.io/og-image.png"/>
-
-<!-- ── Twitter Card ── -->
+<meta property="og:description" content="7+ years in Node.js, AWS and Agentic AI. Open to remote product engineering roles."/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="Tanishq Joshi — Software Engineer"/>
-<meta name="twitter:description" content="7+ years in Node.js, AWS & Agentic AI. Open to remote product engineering roles."/>
-
-<!-- ── Schema.org JSON-LD ── -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Tanishq Joshi",
-  "jobTitle": "Software Engineer",
-  "url": "https://tanishq510.github.io",
-  "email": "tanishjoshi93@gmail.com",
-  "address": { "@type": "PostalAddress", "addressLocality": "Indore", "addressCountry": "IN" },
-  "sameAs": [
-    "https://linkedin.com/in/tanishq-joshi-b396a2170",
-    "https://github.com/tanishq510"
-  ],
-  "knowsAbout": ["Node.js","AWS Lambda","Agentic AI","RAG","LangChain","Copilot Studio","TypeScript","React"]
-}
-</script>
-
+<meta name="twitter:description" content="7+ years in Node.js, AWS and Agentic AI. Open to remote product engineering roles."/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Tanishq Joshi","jobTitle":"Software Engineer","url":"https://tanishq510.github.io","email":"tanishjoshi93@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Indore","addressCountry":"IN"},"sameAs":["https://linkedin.com/in/tanishq-joshi-b396a2170","https://github.com/tanishq510"],"knowsAbout":["Node.js","AWS Lambda","Agentic AI","RAG","LangChain","Copilot Studio","TypeScript","React"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet"/>
-
 <style>
-/* ─────────────────────────────────────────
-   RESET & VARS
-───────────────────────────────────────── */
-*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --green:#0f9d58;--green-dk:#0b8043;--blue:#1a73e8;--blue-dk:#1557b0;
+  --surf:#f8f9fa;--border:#e0e0e0;--hbg:#f3f3f3;
+  --text:#202124;--muted:#5f6368;--dim:#80868b;
+  --abg:rgba(26,115,232,0.07);--hhi:#d3e3fd;--rhov:#f5f5f5;
+  --sans:'Google Sans',Arial,sans-serif;--mono:'Roboto Mono',monospace;
+}
+html{height:100%;overflow:hidden;}
+body{height:100%;width:100%;font-family:var(--sans);font-size:13px;color:var(--text);
+  background:#fff;display:flex;flex-direction:column;overflow:hidden;
+  position:fixed;top:0;left:0;right:0;bottom:0;}
 
-:root {
-  --green:      #0f9d58;
-  --green-dark: #0b8043;
-  --blue:       #1a73e8;
-  --blue-dark:  #1557b0;
-  --surface:    #f8f9fa;
-  --border:     #e0e0e0;
-  --header-bg:  #f3f3f3;
-  --text:       #202124;
-  --muted:      #5f6368;
-  --dim:        #80868b;
-  --active-bg:  rgba(26,115,232,0.07);
-  --hdr-hi:     #d3e3fd;
-  --row-hover:  #f5f5f5;
-  --sans:       'Google Sans', Arial, sans-serif;
-  --mono:       'Roboto Mono', monospace;
-}
+/* TITLE BAR */
+#title-bar{display:flex;align-items:center;gap:10px;padding:8px 16px 4px;flex-shrink:0;}
+.gs-logo{display:grid;grid-template-columns:1fr 1fr;gap:1.5px;width:28px;height:28px;padding:4px;flex-shrink:0;}
+.gs-logo span{border-radius:1.5px;}
+.gs-logo span:nth-child(1){background:#34a853;}
+.gs-logo span:nth-child(2){background:#fbbc04;}
+.gs-logo span:nth-child(3){background:#ea4335;}
+.gs-logo span:nth-child(4){background:#4285f4;}
+#file-name{font-size:16px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.title-actions{margin-left:auto;display:flex;align-items:center;gap:8px;flex-shrink:0;}
+.contact-btn{background:var(--blue);color:#fff;border:none;border-radius:20px;padding:7px 18px;
+  font-size:13px;font-weight:500;cursor:pointer;font-family:var(--sans);transition:background .2s;}
+.contact-btn:hover{background:var(--blue-dk);}
+.avatar{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#7c3aed,#1a73e8);
+  color:#fff;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;cursor:default;user-select:none;}
 
-html, body {
-  height: 100%;
-  font-family: var(--sans);
-  font-size: 13px;
-  color: var(--text);
-  background: #fff;
-  overflow: hidden;
-}
+/* MENU BAR */
+#menu-bar{display:flex;padding:2px 10px;background:#fff;flex-shrink:0;position:relative;z-index:100;}
+.menu-item{padding:5px 10px;font-size:13px;color:var(--muted);cursor:pointer;border-radius:4px;
+  user-select:none;transition:background .12s,color .12s;position:relative;}
+.menu-item:hover,.menu-item.open{background:var(--surf);color:var(--text);}
+.dropdown{display:none;position:absolute;top:100%;left:0;min-width:220px;background:#fff;
+  border:1px solid var(--border);border-radius:4px;box-shadow:0 4px 16px rgba(0,0,0,.12);
+  z-index:200;padding:4px 0;}
+.menu-item.open .dropdown{display:block;}
+.dd-item{padding:8px 20px;font-size:13px;color:var(--text);cursor:pointer;
+  transition:background .1s;white-space:nowrap;display:flex;align-items:center;gap:12px;}
+.dd-item:hover{background:var(--surf);}
+.dd-icon{color:var(--muted);font-size:13px;width:18px;text-align:center;}
+.dd-sep{height:1px;background:var(--border);margin:4px 0;}
+.dd-sc{margin-left:auto;color:var(--dim);font-size:11px;font-family:var(--mono);}
 
-/* ─────────────────────────────────────────
-   TITLE BAR
-───────────────────────────────────────── */
-#title-bar {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 8px 16px 4px;
-  flex-shrink: 0;
-  background: #fff;
-}
-.gs-logo {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5px;
-  width: 28px; height: 28px;
-  padding: 4px;
-  flex-shrink: 0;
-}
-.gs-logo span { border-radius: 1.5px; }
-.gs-logo span:nth-child(1) { background:#34a853; }
-.gs-logo span:nth-child(2) { background:#fbbc04; }
-.gs-logo span:nth-child(3) { background:#ea4335; }
-.gs-logo span:nth-child(4) { background:#4285f4; }
-#file-name {
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--text);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.title-actions {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-shrink: 0;
-}
-.contact-btn {
-  background: var(--blue);
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  padding: 7px 18px;
-  font-size: 13px;
-  font-weight: 500;
-  cursor: pointer;
-  font-family: var(--sans);
-  transition: background 0.2s;
-  white-space: nowrap;
-}
-.contact-btn:hover { background: var(--blue-dark); }
-.avatar {
-  width: 32px; height: 32px;
-  border-radius: 50%;
-  background: linear-gradient(135deg,#7c3aed,#1a73e8);
-  color: #fff;
-  font-size: 12px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  cursor: default;
-  user-select: none;
-}
+/* TOOLBAR */
+#toolbar{background:var(--surf);border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  padding:4px 12px;display:flex;align-items:center;gap:1px;flex-shrink:0;overflow:hidden;}
+.t-btn{height:28px;min-width:28px;display:flex;align-items:center;justify-content:center;
+  border-radius:4px;cursor:pointer;font-size:13px;color:var(--muted);padding:0 4px;
+  transition:background .12s;user-select:none;}
+.t-btn:hover{background:#e0e0e0;color:var(--text);}
+.t-sep{width:1px;height:20px;background:var(--border);margin:0 5px;flex-shrink:0;}
+.t-sel{padding:3px 8px;border:1px solid var(--border);border-radius:4px;font-size:12.5px;
+  color:var(--text);background:#fff;font-family:var(--sans);cursor:pointer;}
+.t-sel:hover{border-color:#aaa;}
 
-/* ─────────────────────────────────────────
-   MENU BAR  (working hover + active state)
-───────────────────────────────────────── */
-#menu-bar {
-  display: flex;
-  padding: 2px 10px;
-  background: #fff;
-  flex-shrink: 0;
-  position: relative;
-  z-index: 100;
-}
-.menu-item {
-  padding: 5px 10px;
-  font-size: 13px;
-  color: var(--muted);
-  cursor: pointer;
-  border-radius: 4px;
-  user-select: none;
-  transition: background 0.12s, color 0.12s;
-  position: relative;
-}
-.menu-item:hover,
-.menu-item.open {
-  background: var(--surface);
-  color: var(--text);
-}
-/* Dropdown */
-.dropdown {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  min-width: 200px;
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-  z-index: 200;
-  padding: 4px 0;
-}
-.menu-item.open .dropdown { display: block; }
-.dd-item {
-  padding: 8px 20px;
-  font-size: 13px;
-  color: var(--text);
-  cursor: pointer;
-  transition: background 0.1s;
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.dd-item:hover { background: var(--surface); }
-.dd-item .dd-icon { color: var(--muted); font-size: 12px; width: 16px; text-align: center; }
-.dd-sep { height: 1px; background: var(--border); margin: 4px 0; }
-.dd-shortcut { margin-left: auto; color: var(--dim); font-size: 11px; font-family: var(--mono); }
+/* FORMULA BAR */
+#formula-bar{display:flex;align-items:center;height:30px;border-bottom:1px solid var(--border);flex-shrink:0;}
+#name-box{width:76px;min-width:76px;border-right:1px solid var(--border);padding:0 8px;height:100%;
+  display:flex;align-items:center;font-family:var(--mono);font-size:13px;}
+#fx-icon{padding:0 12px;font-size:12px;color:var(--muted);font-style:italic;
+  border-right:1px solid var(--border);height:100%;display:flex;align-items:center;flex-shrink:0;}
+#formula-content{flex:1;padding:0 12px;font-size:13px;font-family:var(--mono);color:var(--text);
+  overflow:hidden;white-space:nowrap;text-overflow:ellipsis;height:100%;display:flex;align-items:center;}
 
-/* ─────────────────────────────────────────
-   TOOLBAR
-───────────────────────────────────────── */
-#toolbar {
-  background: var(--surface);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  padding: 4px 12px;
-  display: flex;
-  align-items: center;
-  gap: 1px;
-  flex-shrink: 0;
-  overflow: hidden;
-}
-.t-btn {
-  height: 28px;
-  min-width: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 13px;
-  color: var(--muted);
-  padding: 0 4px;
-  transition: background 0.12s;
-  user-select: none;
-  white-space: nowrap;
-}
-.t-btn:hover { background: #e0e0e0; color: var(--text); }
-.t-sep { width: 1px; height: 20px; background: var(--border); margin: 0 5px; flex-shrink: 0; }
-.t-select {
-  padding: 3px 8px;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  font-size: 12.5px;
-  color: var(--text);
-  background: #fff;
-  font-family: var(--sans);
-  cursor: pointer;
-  transition: border-color 0.15s;
-}
-.t-select:hover { border-color: #aaa; }
+/* GRID */
+#grid-area{flex:1;display:flex;flex-direction:column;overflow:hidden;min-height:0;}
+#col-headers{display:flex;flex-shrink:0;border-bottom:1px solid var(--border);background:var(--hbg);overflow:hidden;}
+.rn-sp{width:44px;min-width:44px;flex-shrink:0;}
+.ch{border-left:1px solid var(--border);text-align:center;font-size:12px;color:var(--muted);
+  padding:4px 0;cursor:default;user-select:none;flex-shrink:0;transition:background .12s;}
+.ch.hl{background:var(--hhi);color:var(--blue);font-weight:600;}
+#grid{flex:1;overflow-y:auto;overflow-x:hidden;}
+#grid::-webkit-scrollbar{width:10px;}
+#grid::-webkit-scrollbar-track{background:var(--surf);}
+#grid::-webkit-scrollbar-thumb{background:#bdbdbd;border-radius:5px;}
+#grid::-webkit-scrollbar-thumb:hover{background:#9e9e9e;}
+.row{display:flex;border-bottom:1px solid var(--border);}
+.rn{width:44px;min-width:44px;background:var(--hbg);border-right:1px solid var(--border);
+  text-align:center;font-size:11.5px;color:var(--muted);display:flex;align-items:center;
+  justify-content:center;flex-shrink:0;cursor:default;user-select:none;}
+.rn.hl{background:var(--hhi);color:var(--blue);font-weight:600;}
+.cell{border-right:1px solid var(--border);padding:5px 9px;font-size:13px;color:var(--text);
+  display:flex;align-items:center;cursor:cell;overflow:hidden;min-height:28px;
+  transition:background .08s;position:relative;flex-shrink:0;}
+.cell:hover{background:var(--rhov);}
+.cell.active{outline:2px solid var(--blue);outline-offset:-2px;background:var(--abg);z-index:2;}
+.cell.hdr{background:#e6f4ea;font-weight:600;font-size:12px;color:#137333;}
+.cell.lbl{background:var(--surf);color:var(--muted);font-size:12.5px;}
+.cell.bold{font-weight:600;}
+.cell.ctr{justify-content:center;text-align:center;}
+.cell.muted{color:var(--muted);}
+.cell.shdr{background:#e6f4ea;font-weight:600;font-size:13.5px;color:#137333;}
+.cell a{color:var(--blue);text-decoration:underline;text-underline-offset:2px;}
+.cell a:hover{color:var(--blue-dk);}
+.status-pill{display:inline-flex;align-items:center;gap:6px;background:#e6f4ea;color:#137333;
+  padding:3px 12px;border-radius:20px;font-size:12px;font-weight:600;}
+.pulse{width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulse 2s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.dl-btn{display:inline-flex;align-items:center;gap:7px;background:var(--green);color:#fff;border:none;
+  border-radius:5px;padding:6px 18px;font-size:13px;font-weight:500;cursor:pointer;
+  text-decoration:none;font-family:var(--sans);transition:background .15s;}
+.dl-btn:hover{background:var(--green-dk);text-decoration:none;}
 
-/* ─────────────────────────────────────────
-   FORMULA BAR
-───────────────────────────────────────── */
-#formula-bar {
-  display: flex;
-  align-items: center;
-  height: 30px;
-  border-bottom: 1px solid var(--border);
-  flex-shrink: 0;
-}
-#name-box {
-  width: 76px;
-  min-width: 76px;
-  border-right: 1px solid var(--border);
-  padding: 0 8px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  font-family: var(--mono);
-  font-size: 13px;
-}
-#fx-icon {
-  padding: 0 12px;
-  font-size: 12px;
-  color: var(--muted);
-  font-style: italic;
-  border-right: 1px solid var(--border);
-  height: 100%;
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-}
-#formula-content {
-  flex: 1;
-  padding: 0 12px;
-  font-size: 13px;
-  font-family: var(--mono);
-  color: var(--text);
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
+/* SHEET TABS */
+#sheet-tabs{display:flex;align-items:flex-end;background:#f1f3f4;border-top:1px solid var(--border);
+  padding:0 10px;height:38px;flex-shrink:0;gap:2px;overflow-x:auto;}
+#sheet-tabs::-webkit-scrollbar{height:3px;}
+#sheet-tabs::-webkit-scrollbar-thumb{background:#ccc;}
+.tab{display:flex;align-items:center;gap:6px;padding:6px 16px;border-radius:5px 5px 0 0;
+  background:#e2e3e4;font-size:12.5px;color:var(--muted);cursor:pointer;
+  border:1px solid transparent;border-bottom:none;height:32px;user-select:none;
+  transition:background .12s,color .12s;white-space:nowrap;flex-shrink:0;}
+.tab:hover{background:#d4d5d6;color:var(--text);}
+.tab.active{background:#fff;color:var(--text);font-weight:500;border-color:var(--border);
+  box-shadow:inset 0 -2px 0 var(--green);}
+.tab-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
+.add-tab{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  cursor:pointer;font-size:18px;color:var(--muted);margin-left:4px;transition:background .12s;flex-shrink:0;}
+.add-tab:hover{background:#d4d5d6;}
 
-/* ─────────────────────────────────────────
-   GRID
-───────────────────────────────────────── */
-#grid-area {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-#col-headers {
-  display: flex;
-  flex-shrink: 0;
-  border-bottom: 1px solid var(--border);
-  background: var(--header-bg);
-  overflow: hidden;
-}
-.rn-spacer { width: 44px; min-width: 44px; flex-shrink: 0; }
-.ch {
-  border-left: 1px solid var(--border);
-  text-align: center;
-  font-size: 12px;
-  color: var(--muted);
-  padding: 4px 0;
-  cursor: default;
-  user-select: none;
-  flex-shrink: 0;
-  transition: background 0.12s;
-}
-.ch.hl { background: var(--hdr-hi); color: var(--blue); font-weight: 600; }
+/* MOBILE */
+@media(max-width:700px){
+  html,body{overflow:auto;position:static;height:auto;}
+  body{display:block;}
+  #toolbar,#formula-bar,#col-headers{display:none;}
+  #grid-area{overflow:visible;display:block;}
+  #grid{overflow:visible;}
+  #title-bar{padding:8px 12px 4px;gap:8px;}
+  #file-name{font-size:14px;}
+  .contact-btn{padding:6px 14px;font-size:12px;}
+  #menu-bar{overflow-x:auto;flex-wrap:nowrap;}
+  #menu-bar::-webkit-scrollbar{display:none;}
+  .menu-item{font-size:12px;padding:5px 8px;white-space:nowrap;}
 
-#grid {
-  flex: 1;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-#grid::-webkit-scrollbar { width: 10px; }
-#grid::-webkit-scrollbar-track { background: var(--surface); }
-#grid::-webkit-scrollbar-thumb { background: #bdbdbd; border-radius: 5px; }
-#grid::-webkit-scrollbar-thumb:hover { background: #9e9e9e; }
+  /* rows stack vertically */
+  .row{flex-direction:column;border-bottom:none;}
+  .row.empty-row{display:none;}
+  .rn{display:none;}
 
-.row { display: flex; border-bottom: 1px solid var(--border); }
-.rn {
-  width: 44px;
-  min-width: 44px;
-  background: var(--header-bg);
-  border-right: 1px solid var(--border);
-  text-align: center;
-  font-size: 11.5px;
-  color: var(--muted);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  cursor: default;
-  user-select: none;
-}
-.rn.hl { background: var(--hdr-hi); color: var(--blue); font-weight: 600; }
+  /* all cells full width */
+  .cell{width:100%!important;min-width:0!important;border-right:none;
+    border-bottom:1px solid #f0f0f0;font-size:13px;padding:7px 14px;min-height:32px;}
 
-.cell {
-  border-right: 1px solid var(--border);
-  padding: 5px 8px;
-  font-size: 13px;
-  color: var(--text);
-  display: flex;
-  align-items: center;
-  cursor: cell;
-  overflow: hidden;
-  min-height: 28px;
-  transition: background 0.08s;
-  position: relative;
-  flex-shrink: 0;
-}
-.cell:hover { background: var(--row-hover); }
-.cell.active {
-  outline: 2px solid var(--blue);
-  outline-offset: -2px;
-  background: var(--active-bg);
-  z-index: 2;
-}
-.cell.hdr {
-  background: #e6f4ea;
-  font-weight: 600;
-  font-size: 12px;
-  color: #137333;
-}
-.cell.lbl {
-  background: var(--surface);
-  color: var(--muted);
-  font-size: 12.5px;
-}
-.cell.bold { font-weight: 600; }
-.cell.ctr { justify-content: center; text-align: center; }
-.cell.muted { color: var(--muted); }
-.cell.section-hdr {
-  background: #e6f4ea;
-  font-weight: 600;
-  font-size: 13.5px;
-  color: #137333;
-}
-.cell a {
-  color: var(--blue);
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-.cell a:hover { color: var(--blue-dark); }
-
-/* Status pill */
-.status-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: #e6f4ea;
-  color: #137333;
-  padding: 3px 12px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 600;
-}
-.pulse {
-  width: 7px; height: 7px;
-  border-radius: 50%;
-  background: var(--green);
-  animation: pulse 2s ease-in-out infinite;
-}
-@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
-
-/* Download button */
-.dl-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  background: var(--green);
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 6px 18px;
-  font-size: 13px;
-  font-weight: 500;
-  cursor: pointer;
-  text-decoration: none;
-  font-family: var(--sans);
-  transition: background 0.15s;
-}
-.dl-btn:hover { background: var(--green-dark); text-decoration: none; }
-
-/* ─────────────────────────────────────────
-   SHEET TABS
-───────────────────────────────────────── */
-#sheet-tabs {
-  display: flex;
-  align-items: flex-end;
-  background: #f1f3f4;
-  border-top: 1px solid var(--border);
-  padding: 0 10px;
-  height: 38px;
-  flex-shrink: 0;
-  gap: 2px;
-  overflow-x: auto;
-}
-#sheet-tabs::-webkit-scrollbar { height: 3px; }
-#sheet-tabs::-webkit-scrollbar-thumb { background: #ccc; }
-
-.tab {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 16px;
-  border-radius: 5px 5px 0 0;
-  background: #e2e3e4;
-  font-size: 12.5px;
-  color: var(--muted);
-  cursor: pointer;
-  border: 1px solid transparent;
-  border-bottom: none;
-  height: 32px;
-  user-select: none;
-  transition: background 0.12s, color 0.12s;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.tab:hover { background: #d4d5d6; color: var(--text); }
-.tab.active {
-  background: #fff;
-  color: var(--text);
-  font-weight: 500;
-  border-color: var(--border);
-  box-shadow: inset 0 -2px 0 var(--green);
-}
-.tab-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
-.add-tab {
-  width: 30px; height: 30px;
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  cursor: pointer;
-  font-size: 18px;
-  color: var(--muted);
-  margin-left: 4px;
-  transition: background 0.12s;
-  flex-shrink: 0;
-}
-.add-tab:hover { background: #d4d5d6; }
-
-/* ─────────────────────────────────────────
-   MOBILE — full reflow below 700px
-───────────────────────────────────────── */
-@media (max-width: 700px) {
-  html, body { overflow: auto; }
-
-  #toolbar { display: none; }
-  #formula-bar { display: none; }
-
-  #title-bar { padding: 8px 12px 4px; gap: 8px; }
-  #file-name { font-size: 14px; }
-  .contact-btn { padding: 6px 14px; font-size: 12px; }
-
-  #menu-bar { overflow-x: auto; flex-wrap: nowrap; }
-  #menu-bar::-webkit-scrollbar { display: none; }
-  .menu-item { font-size: 12px; padding: 5px 8px; white-space: nowrap; }
-
-  /* Stack grid vertically on mobile */
-  #grid-area { overflow: visible; }
-  #col-headers { display: none; }
-  #grid { overflow: visible; flex: none; }
-
-  .row {
-    flex-direction: column;
-    border-bottom: none;
+  /* label = bold group heading on mobile */
+  .cell.lbl{
+    font-weight:700;font-size:11.5px;color:#137333;
+    background:#f0faf4;border-bottom:1px solid var(--border);
+    padding:10px 14px 6px;text-transform:uppercase;letter-spacing:.05em;
   }
-  .rn { display: none; }
+  /* hide empty cells cleanly */
+  .cell:empty{display:none;}
 
-  .cell {
-    width: 100% !important;
-    min-width: 0 !important;
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-    font-size: 13px;
-    padding: 8px 14px;
-    min-height: 36px;
-  }
-  .cell.ctr { justify-content: flex-start; text-align: left; }
-  .cell.muted { font-size: 12px; }
+  .cell.shdr{font-size:15px;padding:12px 14px;}
+  .cell.hdr{font-weight:700;font-size:12px;border-bottom:1px solid var(--border);padding:8px 14px;}
+  .cell.ctr{justify-content:flex-start;text-align:left;}
+  .cell.muted{font-size:12.5px;padding-top:4px;padding-bottom:4px;}
 
-  .tab { padding: 6px 12px; font-size: 12px; }
-  .tab-dot { width: 7px; height: 7px; }
-
-  .dl-btn { font-size: 13px; padding: 8px 18px; }
+  .tab{padding:6px 12px;font-size:12px;}
+  .tab-dot{width:7px;height:7px;}
+  .dl-btn{font-size:13px;padding:8px 18px;}
+  #sheet-tabs{height:36px;}
 }
 </style>
 </head>
-
 <body id="app">
 
-<!-- TITLE BAR -->
 <div id="title-bar">
-  <div class="gs-logo" aria-hidden="true">
-    <span></span><span></span><span></span><span></span>
-  </div>
+  <div class="gs-logo" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
   <span id="file-name">Tanishq Joshi — Portfolio.sheets</span>
   <div class="title-actions">
-    <button class="contact-btn" onclick="window.location.href='mailto:tanishjoshi93@gmail.com'" aria-label="Contact Tanishq">Contact</button>
-    <div class="avatar" title="Tanishq Joshi" aria-label="TJ">TJ</div>
+    <button class="contact-btn" onclick="window.location.href='mailto:tanishjoshi93@gmail.com'">Contact</button>
+    <div class="avatar" title="Tanishq Joshi">TJ</div>
   </div>
 </div>
 
-<!-- MENU BAR -->
 <nav id="menu-bar" role="navigation" aria-label="Spreadsheet menu">
 
-  <div class="menu-item" tabindex="0" id="menu-file">File
+  <div class="menu-item" tabindex="0">File
     <div class="dropdown" role="menu">
-      <div class="dd-item" role="menuitem" onclick="window.open('./resume.pdf')">
-        <span class="dd-icon">📄</span> Download Resume <span class="dd-shortcut">PDF</span>
-      </div>
+      <div class="dd-item" role="menuitem" onclick="window.open('./resume.pdf')"><span class="dd-icon">📄</span>Download Resume<span class="dd-sc">PDF</span></div>
       <div class="dd-sep"></div>
-      <div class="dd-item" role="menuitem" onclick="window.print()">
-        <span class="dd-icon">🖨</span> Print <span class="dd-shortcut">Ctrl+P</span>
-      </div>
+      <div class="dd-item" role="menuitem" onclick="window.print()"><span class="dd-icon">🖨</span>Print<span class="dd-sc">Ctrl+P</span></div>
     </div>
   </div>
 
-  <div class="menu-item" tabindex="0" id="menu-view">View
+  <div class="menu-item" tabindex="0">View
     <div class="dropdown" role="menu">
-      <div class="dd-item" role="menuitem" onclick="switchSheet('about')"><span class="dd-icon">◼</span> About</div>
-      <div class="dd-item" role="menuitem" onclick="switchSheet('exp')"><span class="dd-icon">◼</span> Experience</div>
-      <div class="dd-item" role="menuitem" onclick="switchSheet('skills')"><span class="dd-icon">◼</span> Skills</div>
-      <div class="dd-item" role="menuitem" onclick="switchSheet('projects')"><span class="dd-icon">◼</span> Projects</div>
-      <div class="dd-item" role="menuitem" onclick="switchSheet('contact')"><span class="dd-icon">◼</span> Contact</div>
+      <div class="dd-item" role="menuitem" onclick="switchSheet('about');closeMenus()"><span class="dd-icon" style="color:#0f9d58">◼</span>About</div>
+      <div class="dd-item" role="menuitem" onclick="switchSheet('exp');closeMenus()"><span class="dd-icon" style="color:#1a73e8">◼</span>Experience</div>
+      <div class="dd-item" role="menuitem" onclick="switchSheet('skills');closeMenus()"><span class="dd-icon" style="color:#fbbc04">◼</span>Skills</div>
+      <div class="dd-item" role="menuitem" onclick="switchSheet('projects');closeMenus()"><span class="dd-icon" style="color:#ea4335">◼</span>Projects</div>
+      <div class="dd-item" role="menuitem" onclick="switchSheet('contact');closeMenus()"><span class="dd-icon" style="color:#a142f4">◼</span>Contact</div>
     </div>
   </div>
 
-  <div class="menu-item" tabindex="0" id="menu-insert">Insert
+  <div class="menu-item" tabindex="0">Connect
     <div class="dropdown" role="menu">
-      <div class="dd-item" role="menuitem"><span class="dd-icon">🔗</span> LinkedIn Profile</div>
-      <div class="dd-item" role="menuitem"><span class="dd-icon">💻</span> GitHub Profile</div>
-    </div>
-  </div>
-
-  <div class="menu-item" tabindex="0" id="menu-tools">Tools
-    <div class="dropdown" role="menu">
-      <div class="dd-item" role="menuitem" onclick="window.open('mailto:tanishjoshi93@gmail.com')"><span class="dd-icon">✉</span> Send Email</div>
-      <div class="dd-item" role="menuitem" onclick="window.open('./resume.pdf')"><span class="dd-icon">⬇</span> Download Resume</div>
-    </div>
-  </div>
-
-  <div class="menu-item" tabindex="0" id="menu-help">Help
-    <div class="dropdown" role="menu">
-      <div class="dd-item" role="menuitem"><span class="dd-icon">ℹ</span> About this portfolio</div>
+      <div class="dd-item" role="menuitem" onclick="window.open('https://linkedin.com/in/tanishq-joshi-b396a2170','_blank','noopener')"><span class="dd-icon">💼</span>LinkedIn<span class="dd-sc">↗</span></div>
+      <div class="dd-item" role="menuitem" onclick="window.open('https://github.com/tanishq510','_blank','noopener')"><span class="dd-icon">🐙</span>GitHub<span class="dd-sc">↗</span></div>
       <div class="dd-sep"></div>
-      <div class="dd-item" role="menuitem" onclick="window.open('https://github.com/Tanishq510/Tanishq510.github.io')"><span class="dd-icon">⭐</span> View source on GitHub</div>
+      <div class="dd-item" role="menuitem" onclick="window.location.href='mailto:tanishjoshi93@gmail.com'"><span class="dd-icon">✉</span>Email</div>
+    </div>
+  </div>
+
+  <div class="menu-item" tabindex="0">Tools
+    <div class="dropdown" role="menu">
+      <div class="dd-item" role="menuitem" onclick="window.open('./resume.pdf')"><span class="dd-icon">⬇</span>Download Resume</div>
+      <div class="dd-item" role="menuitem" onclick="window.location.href='mailto:tanishjoshi93@gmail.com'"><span class="dd-icon">✉</span>Send Email</div>
+    </div>
+  </div>
+
+  <div class="menu-item" tabindex="0">Help
+    <div class="dropdown" role="menu">
+      <div class="dd-item" role="menuitem" onclick="window.open('https://github.com/Tanishq510/Tanishq510.github.io','_blank','noopener')"><span class="dd-icon">⭐</span>View source on GitHub</div>
+      <div class="dd-sep"></div>
+      <div class="dd-item" role="menuitem" onclick="window.open('https://linkedin.com/in/tanishq-joshi-b396a2170','_blank','noopener')"><span class="dd-icon">💼</span>Connect on LinkedIn</div>
+      <div class="dd-item" role="menuitem" onclick="window.location.href='mailto:tanishjoshi93@gmail.com'"><span class="dd-icon">✉</span>Get in touch</div>
     </div>
   </div>
 
 </nav>
 
-<!-- TOOLBAR -->
 <div id="toolbar" role="toolbar" aria-label="Formatting toolbar">
-  <div class="t-btn" title="Undo">↩</div>
-  <div class="t-btn" title="Redo">↪</div>
+  <div class="t-btn">↩</div><div class="t-btn">↪</div>
   <div class="t-sep"></div>
-  <div class="t-btn" style="min-width:44px;font-size:12px;">100%</div>
+  <div class="t-btn" style="min-width:44px;font-size:12px">100%</div>
   <div class="t-sep"></div>
-  <select class="t-select" style="width:110px;" aria-label="Font family"><option>Google Sans</option><option>Roboto Mono</option></select>
-  <div style="width:5px;"></div>
-  <select class="t-select" style="width:48px;" aria-label="Font size"><option>12</option><option>13</option><option>14</option></select>
+  <select class="t-sel" style="width:110px"><option>Google Sans</option><option>Roboto Mono</option></select>
+  <div style="width:5px"></div>
+  <select class="t-sel" style="width:48px"><option>12</option><option>13</option><option>14</option></select>
   <div class="t-sep"></div>
-  <div class="t-btn" title="Bold" style="font-weight:700;">B</div>
-  <div class="t-btn" title="Italic" style="font-style:italic;">I</div>
-  <div class="t-btn" title="Underline" style="text-decoration:underline;">U</div>
+  <div class="t-btn" style="font-weight:700">B</div>
+  <div class="t-btn" style="font-style:italic">I</div>
+  <div class="t-btn" style="text-decoration:underline">U</div>
   <div class="t-sep"></div>
-  <div class="t-btn" title="Align left">&#8676;</div>
-  <div class="t-btn" title="Align center">&#8285;</div>
-  <div class="t-btn" title="Align right">&#8677;</div>
+  <div class="t-btn">&#8676;</div><div class="t-btn">&#8285;</div><div class="t-btn">&#8677;</div>
   <div class="t-sep"></div>
-  <div class="t-btn" title="Text color" style="color:var(--green);font-weight:700;">A</div>
-  <div class="t-btn" title="Fill color">&#9632;</div>
+  <div class="t-btn" style="color:var(--green);font-weight:700">A</div>
+  <div class="t-btn">&#9632;</div>
   <div class="t-sep"></div>
-  <div class="t-btn" title="Insert link">&#128279;</div>
-  <div class="t-btn" title="Insert chart">&#128202;</div>
+  <div class="t-btn">&#128279;</div><div class="t-btn">&#128202;</div>
 </div>
 
-<!-- FORMULA BAR -->
 <div id="formula-bar" aria-label="Formula bar">
-  <div id="name-box" aria-label="Cell reference">A1</div>
+  <div id="name-box">A1</div>
   <div id="fx-icon" aria-hidden="true">fx</div>
-  <div id="formula-content" aria-label="Cell formula or value">Tanishq Joshi — Portfolio</div>
+  <div id="formula-content">Tanishq Joshi — Portfolio</div>
 </div>
 
-<!-- GRID -->
 <main id="grid-area" role="main">
   <div id="col-headers" aria-hidden="true"></div>
   <div id="grid" role="grid" aria-label="Portfolio spreadsheet"></div>
 </main>
 
-<!-- SHEET TABS -->
 <div id="sheet-tabs" role="tablist" aria-label="Portfolio sections">
-  <div class="tab active" role="tab" aria-selected="true"  data-sheet="about"    onclick="switchSheet('about')">
-    <div class="tab-dot" style="background:#0f9d58;"></div>About
-  </div>
-  <div class="tab" role="tab" aria-selected="false" data-sheet="exp"      onclick="switchSheet('exp')">
-    <div class="tab-dot" style="background:#1a73e8;"></div>Experience
-  </div>
-  <div class="tab" role="tab" aria-selected="false" data-sheet="skills"   onclick="switchSheet('skills')">
-    <div class="tab-dot" style="background:#fbbc04;"></div>Skills
-  </div>
-  <div class="tab" role="tab" aria-selected="false" data-sheet="projects"  onclick="switchSheet('projects')">
-    <div class="tab-dot" style="background:#ea4335;"></div>Projects
-  </div>
-  <div class="tab" role="tab" aria-selected="false" data-sheet="contact"  onclick="switchSheet('contact')">
-    <div class="tab-dot" style="background:#a142f4;"></div>Contact
-  </div>
+  <div class="tab active" role="tab" aria-selected="true"  data-sheet="about"    onclick="switchSheet('about')"><div class="tab-dot" style="background:#0f9d58"></div>About</div>
+  <div class="tab" role="tab" aria-selected="false" data-sheet="exp"      onclick="switchSheet('exp')"><div class="tab-dot" style="background:#1a73e8"></div>Experience</div>
+  <div class="tab" role="tab" aria-selected="false" data-sheet="skills"   onclick="switchSheet('skills')"><div class="tab-dot" style="background:#fbbc04"></div>Skills</div>
+  <div class="tab" role="tab" aria-selected="false" data-sheet="projects"  onclick="switchSheet('projects')"><div class="tab-dot" style="background:#ea4335"></div>Projects</div>
+  <div class="tab" role="tab" aria-selected="false" data-sheet="contact"  onclick="switchSheet('contact')"><div class="tab-dot" style="background:#a142f4"></div>Contact</div>
   <div class="add-tab" aria-label="Add sheet">+</div>
 </div>
 
 <script>
-/* ─────────────────────────────────
-   SHEET DATA
-───────────────────────────────── */
-const W = { /* named widths for readability */
-  lbl: 150, val: 400, aux: 130,         // about
-  co: 185, role: 148, period: 138, impact: 215, // exp
-  skill: 140,                            // skills (×5)
-  proj: 148, desc: 228, stack: 175, links: 128,  // projects
-  clbl: 155, cval: 390, caux: 125,      // contact
-};
-
-const SHEETS = {
-
-  /* ── ABOUT ─────────────────────────────────────────── */
-  about: {
-    cols: [
-      { id:'A', w: W.lbl },
-      { id:'B', w: W.val },
-      { id:'C', w: W.aux },
-    ],
-    rows: [
-      { n:1, cells:[
-        { w: W.lbl+W.val+W.aux, cls:'section-hdr',
-          text:'Tanishq Joshi — Software Engineer Portfolio',
-          ref:'A1', formula:'Tanishq Joshi — Software Engineer Portfolio' },
-      ]},
-      { n:2, cells:[ {w:W.lbl},{w:W.val},{w:W.aux} ]},
-      { n:3, cells:[
-        { w:W.lbl, cls:'lbl', text:'Full Name',       ref:'A3', formula:'Full Name' },
-        { w:W.val, cls:'bold', text:'Tanishq Joshi',  ref:'B3', formula:'"Tanishq Joshi"' },
-        { w:W.aux },
-      ]},
-      { n:4, cells:[
-        { w:W.lbl, cls:'lbl', text:'Title',           ref:'A4', formula:'Title' },
-        { w:W.val, text:'Software Engineer',           ref:'B4', formula:'"Software Engineer"' },
-        { w:W.aux },
-      ]},
-      { n:5, cells:[
-        { w:W.lbl, cls:'lbl', text:'Experience',      ref:'A5', formula:'Experience' },
-        { w:W.val, text:'7+ years',                   ref:'B5', formula:'=7&"+ years"' },
-        { w:W.aux },
-      ]},
-      { n:6, cells:[
-        { w:W.lbl, cls:'lbl', text:'Location',        ref:'A6', formula:'Location' },
-        { w:W.val, text:'Indore, Madhya Pradesh, IN', ref:'B6', formula:'"Indore, Madhya Pradesh, IN"' },
-        { w:W.aux },
-      ]},
-      { n:7, cells:[
-        { w:W.lbl, cls:'lbl', text:'Status',          ref:'A7', formula:'Status' },
-        { w:W.val, type:'status',                     ref:'B7', formula:'=IF(open_to_work,"Open to Work","Unavailable")' },
-        { w:W.aux },
-      ]},
-      { n:8, cells:[ {w:W.lbl},{w:W.val},{w:W.aux} ]},
-      { n:9, cells:[
-        { w:W.lbl, cls:'lbl', text:'Summary',         ref:'A9', formula:'Summary' },
-        { w:W.val, text:'I build scalable backend systems and intelligent cloud-native applications.', ref:'B9', formula:'"I build scalable backend systems and intelligent cloud-native applications."' },
-        { w:W.aux },
-      ]},
-      { n:10, cells:[
-        { w:W.lbl },
-        { w:W.val, cls:'muted', text:'Main stack: Node.js + AWS. Currently deep in Agentic AI —', ref:'B10' },
-        { w:W.aux, text:'Open to remote', ref:'C10', formula:'"Open to remote: true"' },
-      ]},
-      { n:11, cells:[
-        { w:W.lbl },
-        { w:W.val, cls:'muted', text:'RAG pipelines, LLM integrations, Copilot Studio.', ref:'B11' },
-        { w:W.aux },
-      ]},
-      { n:12, cells:[ {w:W.lbl},{w:W.val},{w:W.aux} ]},
-      { n:13, cells:[
-        { w:W.lbl, cls:'lbl', text:'LinkedIn', ref:'A13', formula:'LinkedIn' },
-        { w:W.val, html:'<a href="https://linkedin.com/in/tanishq-joshi-b396a2170" target="_blank" rel="noopener noreferrer">linkedin.com/in/tanishq-joshi-b396a2170</a>',
-          ref:'B13', formula:'=HYPERLINK("https://linkedin.com/in/tanishq-joshi-b396a2170")' },
-        { w:W.aux },
-      ]},
-      { n:14, cells:[
-        { w:W.lbl, cls:'lbl', text:'GitHub', ref:'A14', formula:'GitHub' },
-        { w:W.val, html:'<a href="https://github.com/tanishq510" target="_blank" rel="noopener noreferrer">github.com/tanishq510</a>',
-          ref:'B14', formula:'=HYPERLINK("https://github.com/tanishq510")' },
-        { w:W.aux },
-      ]},
-      { n:15, cells:[
-        { w:W.lbl, cls:'lbl', text:'Email', ref:'A15', formula:'Email' },
-        { w:W.val, html:'<a href="mailto:tanishjoshi93@gmail.com">tanishjoshi93@gmail.com</a>',
-          ref:'B15', formula:'=HYPERLINK("mailto:tanishjoshi93@gmail.com")' },
-        { w:W.aux },
-      ]},
-      { n:16, cells:[ {w:W.lbl},{w:W.val},{w:W.aux} ]},
-      { n:17, cells:[
-        { w:W.lbl, cls:'lbl', text:'Resume', ref:'A17', formula:'Resume' },
-        { w:W.val, type:'dl',                ref:'B17', formula:'=HYPERLINK("./resume.pdf","↓ Download Resume.pdf")' },
-        { w:W.aux },
-      ]},
-      { n:18, cells:[ {w:W.lbl},{w:W.val},{w:W.aux} ]},
+const S={
+  about:{
+    cols:[{id:'A',w:155},{id:'B',w:420},{id:'C',w:135}],
+    rows:[
+      {n:1,cells:[{w:710,cls:'shdr',text:'Tanishq Joshi — Software Engineer Portfolio',ref:'A1',formula:'Tanishq Joshi — Software Engineer Portfolio'}]},
+      {n:2,empty:1,cells:[{w:155},{w:420},{w:135}]},
+      {n:3,cells:[{w:155,cls:'lbl',text:'Full Name',ref:'A3',formula:'Full Name'},{w:420,cls:'bold',text:'Tanishq Joshi',ref:'B3',formula:'"Tanishq Joshi"'},{w:135}]},
+      {n:4,cells:[{w:155,cls:'lbl',text:'Title',ref:'A4',formula:'Title'},{w:420,text:'Software Engineer',ref:'B4',formula:'"Software Engineer"'},{w:135}]},
+      {n:5,cells:[{w:155,cls:'lbl',text:'Experience',ref:'A5',formula:'Experience'},{w:420,text:'7+ years',ref:'B5',formula:'=7&"+ years"'},{w:135}]},
+      {n:6,cells:[{w:155,cls:'lbl',text:'Location',ref:'A6',formula:'Location'},{w:420,text:'Indore, Madhya Pradesh, IN',ref:'B6',formula:'"Indore, Madhya Pradesh, IN"'},{w:135}]},
+      {n:7,cells:[{w:155,cls:'lbl',text:'Status',ref:'A7',formula:'Status'},{w:420,type:'status',ref:'B7',formula:'=IF(open_to_work,"Open to Work","Unavailable")'},{w:135}]},
+      {n:8,empty:1,cells:[{w:155},{w:420},{w:135}]},
+      {n:9,cells:[{w:155,cls:'lbl',text:'Summary',ref:'A9',formula:'Summary'},{w:420,text:'I build scalable backend systems and intelligent cloud-native applications.',ref:'B9',formula:'"I build scalable backend systems and intelligent cloud-native applications."'},{w:135}]},
+      {n:10,cells:[{w:155},{w:420,cls:'muted',text:'Main stack: Node.js + AWS. Currently deep in Agentic AI —',ref:'B10'},{w:135,text:'Open to remote',ref:'C10',formula:'"Open to remote: true"'}]},
+      {n:11,cells:[{w:155},{w:420,cls:'muted',text:'RAG pipelines, LLM integrations, Copilot Studio.',ref:'B11'},{w:135}]},
+      {n:12,empty:1,cells:[{w:155},{w:420},{w:135}]},
+      {n:13,cells:[{w:155,cls:'lbl',text:'LinkedIn',ref:'A13',formula:'LinkedIn'},{w:420,html:'<a href="https://linkedin.com/in/tanishq-joshi-b396a2170" target="_blank" rel="noopener">linkedin.com/in/tanishq-joshi-b396a2170</a>',ref:'B13',formula:'=HYPERLINK("https://linkedin.com/in/tanishq-joshi-b396a2170")'},{w:135}]},
+      {n:14,cells:[{w:155,cls:'lbl',text:'GitHub',ref:'A14',formula:'GitHub'},{w:420,html:'<a href="https://github.com/tanishq510" target="_blank" rel="noopener">github.com/tanishq510</a>',ref:'B14',formula:'=HYPERLINK("https://github.com/tanishq510")'},{w:135}]},
+      {n:15,cells:[{w:155,cls:'lbl',text:'Email',ref:'A15',formula:'Email'},{w:420,html:'<a href="mailto:tanishjoshi93@gmail.com">tanishjoshi93@gmail.com</a>',ref:'B15',formula:'=HYPERLINK("mailto:tanishjoshi93@gmail.com")'},{w:135}]},
+      {n:16,empty:1,cells:[{w:155},{w:420},{w:135}]},
+      {n:17,cells:[{w:155,cls:'lbl',text:'Resume',ref:'A17',formula:'Resume'},{w:420,type:'dl',ref:'B17',formula:'=HYPERLINK("./resume.pdf","Download Resume.pdf")'},{w:135}]},
+      {n:18,empty:1,cells:[{w:155},{w:420},{w:135}]},
     ]
   },
-
-  /* ── EXPERIENCE ─────────────────────────────────────── */
-  exp: {
-    cols: [
-      { id:'A', w: W.co },
-      { id:'B', w: W.role },
-      { id:'C', w: W.period },
-      { id:'D', w: W.impact },
-    ],
-    rows: [
-      { n:1, cells:[
-        { w:W.co,     cls:'hdr',       text:'Company',  ref:'A1', formula:'Company' },
-        { w:W.role,   cls:'hdr',       text:'Role',     ref:'B1', formula:'Role' },
-        { w:W.period, cls:'hdr ctr',   text:'Period',   ref:'C1', formula:'Period' },
-        { w:W.impact, cls:'hdr',       text:'Impact',   ref:'D1', formula:'Impact' },
-      ]},
-      { n:2, cells:[
-        { w:W.co,     cls:'bold',      text:'Tata Consultancy Services', ref:'A2', formula:'"Tata Consultancy Services"' },
-        { w:W.role,                    text:'Software Engineer',         ref:'B2', formula:'"Software Engineer"' },
-        { w:W.period, cls:'muted ctr', text:'May 2022 – present',       ref:'C2', formula:'"May 2022 – present"' },
-        { w:W.impact,                  text:'Agentic AI via Copilot Studio + OpenAI → effort ↓60%', ref:'D2', formula:'"Agentic AI workflows via Copilot Studio + OpenAI — manual effort ↓60%"' },
-      ]},
-      { n:3, cells:[
-        {w:W.co},{w:W.role},{w:W.period},
-        { w:W.impact, cls:'muted', text:'RAG semantic search over internal docs → resolution ↓45%', ref:'D3', formula:'"RAG semantic search — query resolution ↓45%"' },
-      ]},
-      { n:4, cells:[
-        {w:W.co},{w:W.role},{w:W.period},
-        { w:W.impact, cls:'muted', text:'SQS + Step Functions event pipelines across microservices', ref:'D4', formula:'"SQS + Step Functions event-driven pipelines"' },
-      ]},
-      { n:5, cells:[
-        {w:W.co},{w:W.role},{w:W.period},
-        { w:W.impact, cls:'muted', text:'Lambda cold-start optimisation → p99 latency ↓30%', ref:'D5', formula:'"Lambda optimisation — p99 latency ↓30%"' },
-      ]},
-      { n:6, cells:[
-        { w:W.co,     cls:'bold',      text:'Mindbowser',         ref:'A6', formula:'"Mindbowser"' },
-        { w:W.role,                    text:'Software Engineer',  ref:'B6', formula:'"Software Engineer"' },
-        { w:W.period, cls:'muted ctr', text:'Jan – May 2022',    ref:'C6', formula:'"Jan 2022 – May 2022"' },
-        { w:W.impact,                  text:'Docker containerisation → deployment time ↓40%', ref:'D6', formula:'"Docker containerisation — deploy time ↓40%"' },
-      ]},
-      { n:7, cells:[
-        {w:W.co},{w:W.role},{w:W.period},
-        { w:W.impact, cls:'muted', text:'React/Next.js frontend → traffic ↑25%, load time ↓20%', ref:'D7', formula:'"React/Next.js — traffic ↑25%, load time ↓20%"' },
-      ]},
-      { n:8, cells:[
-        { w:W.co,     cls:'bold',      text:'Codiant — Yash Technologies', ref:'A8', formula:'"Codiant — Yash Technologies"' },
-        { w:W.role,                    text:'Software Developer',           ref:'B8', formula:'"Software Developer"' },
-        { w:W.period, cls:'muted ctr', text:'Jan 2021 – Jan 2022',         ref:'C8', formula:'"Jan 2021 – Jan 2022"' },
-        { w:W.impact,                  text:'CRM/HRM full-stack, FSD architecture, RTK Query', ref:'D8', formula:'"CRM/HRM platforms — FSD architecture, RTK Query, WebSockets"' },
-      ]},
-      { n:9, cells:[
-        { w:W.co,     cls:'bold',      text:'WebKodz',             ref:'A9', formula:'"WebKodz"' },
-        { w:W.role,                    text:'Fullstack Developer',  ref:'B9', formula:'"Fullstack Developer"' },
-        { w:W.period, cls:'muted ctr', text:'Aug 2020 – Jan 2021', ref:'C9', formula:'"Aug 2020 – Jan 2021"' },
-        { w:W.impact, cls:'muted',     text:'Responsive builds, WordPress CMS, SEO +35%', ref:'D9', formula:'"Responsive web, WordPress CMS, SEO +35%"' },
-      ]},
-      { n:10, cells:[
-        { w:W.co,     cls:'bold',      text:'SMT Group',            ref:'A10', formula:'"SMT Group"' },
-        { w:W.role,                    text:'Junior Fullstack Dev', ref:'B10', formula:'"Junior Fullstack Developer"' },
-        { w:W.period, cls:'muted ctr', text:'Jul 2019 – Aug 2020', ref:'C10', formula:'"Jul 2019 – Aug 2020"' },
-        { w:W.impact, cls:'muted',     text:'Internal dashboards and reporting tools', ref:'D10', formula:'"Internal dashboards and reporting tools for operations"' },
-      ]},
-      { n:11, cells:[ {w:W.co},{w:W.role},{w:W.period},{w:W.impact} ]},
+  exp:{
+    cols:[{id:'A',w:190},{id:'B',w:150},{id:'C',w:138},{id:'D',w:232}],
+    rows:[
+      {n:1,cells:[{w:190,cls:'hdr',text:'Company',ref:'A1',formula:'Company'},{w:150,cls:'hdr',text:'Role',ref:'B1',formula:'Role'},{w:138,cls:'hdr ctr',text:'Period',ref:'C1',formula:'Period'},{w:232,cls:'hdr',text:'Impact',ref:'D1',formula:'Impact'}]},
+      {n:2,cells:[{w:190,cls:'bold',text:'Tata Consultancy Services',ref:'A2',formula:'"Tata Consultancy Services"'},{w:150,text:'Software Engineer',ref:'B2'},{w:138,cls:'muted ctr',text:'May 2022 – present',ref:'C2',formula:'"May 2022 – present"'},{w:232,text:'Agentic AI via Copilot Studio + OpenAI → effort ↓60%',ref:'D2',formula:'"Agentic AI — manual effort ↓60%"'}]},
+      {n:3,cells:[{w:190},{w:150},{w:138},{w:232,cls:'muted',text:'RAG semantic search over internal docs → resolution ↓45%',ref:'D3'}]},
+      {n:4,cells:[{w:190},{w:150},{w:138},{w:232,cls:'muted',text:'SQS + Step Functions event pipelines across microservices',ref:'D4'}]},
+      {n:5,cells:[{w:190},{w:150},{w:138},{w:232,cls:'muted',text:'Lambda cold-start optimisation → p99 latency ↓30%',ref:'D5'}]},
+      {n:6,cells:[{w:190,cls:'bold',text:'Mindbowser',ref:'A6'},{w:150,text:'Software Engineer',ref:'B6'},{w:138,cls:'muted ctr',text:'Jan – May 2022',ref:'C6',formula:'"Jan 2022 – May 2022"'},{w:232,text:'Docker containerisation → deployment time ↓40%',ref:'D6'}]},
+      {n:7,cells:[{w:190},{w:150},{w:138},{w:232,cls:'muted',text:'React/Next.js frontend → traffic ↑25%, load time ↓20%',ref:'D7'}]},
+      {n:8,cells:[{w:190,cls:'bold',text:'Codiant — Yash Technologies',ref:'A8'},{w:150,text:'Software Developer',ref:'B8'},{w:138,cls:'muted ctr',text:'Jan 2021 – Jan 2022',ref:'C8'},{w:232,text:'CRM/HRM full-stack, FSD architecture, RTK Query',ref:'D8'}]},
+      {n:9,cells:[{w:190,cls:'bold',text:'WebKodz',ref:'A9'},{w:150,text:'Fullstack Developer',ref:'B9'},{w:138,cls:'muted ctr',text:'Aug 2020 – Jan 2021',ref:'C9'},{w:232,cls:'muted',text:'Responsive builds, WordPress CMS, SEO +35%',ref:'D9'}]},
+      {n:10,cells:[{w:190,cls:'bold',text:'SMT Group',ref:'A10'},{w:150,text:'Junior Fullstack Dev',ref:'B10'},{w:138,cls:'muted ctr',text:'Jul 2019 – Aug 2020',ref:'C10'},{w:232,cls:'muted',text:'Internal dashboards and reporting tools',ref:'D10'}]},
+      {n:11,empty:1,cells:[{w:190},{w:150},{w:138},{w:232}]},
     ]
   },
-
-  /* ── SKILLS ─────────────────────────────────────────── */
-  skills: {
-    cols: [
-      { id:'A', w:W.skill },
-      { id:'B', w:W.skill },
-      { id:'C', w:W.skill },
-      { id:'D', w:W.skill },
-      { id:'E', w:W.skill },
-    ],
-    rows: [
-      { n:1, cells:[
-        { w:W.skill, cls:'hdr ctr', text:'Backend',     ref:'A1', formula:'Backend' },
-        { w:W.skill, cls:'hdr ctr', text:'Cloud (AWS)', ref:'B1', formula:'Cloud (AWS)' },
-        { w:W.skill, cls:'hdr ctr', text:'AI / LLM',   ref:'C1', formula:'AI / LLM' },
-        { w:W.skill, cls:'hdr ctr', text:'Frontend',   ref:'D1', formula:'Frontend' },
-        { w:W.skill, cls:'hdr ctr', text:'Tooling',    ref:'E1', formula:'Tooling' },
-      ]},
-      { n:2, cells:[
-        {w:W.skill,cls:'ctr',text:'Node.js',       ref:'A2'},{w:W.skill,cls:'ctr',text:'Lambda',       ref:'B2'},
-        {w:W.skill,cls:'ctr',text:'RAG',           ref:'C2'},{w:W.skill,cls:'ctr',text:'React',        ref:'D2'},
-        {w:W.skill,cls:'ctr',text:'Docker',        ref:'E2'},
-      ]},
-      { n:3, cells:[
-        {w:W.skill,cls:'ctr',text:'TypeScript',    ref:'A3'},{w:W.skill,cls:'ctr',text:'SQS / SNS',   ref:'B3'},
-        {w:W.skill,cls:'ctr',text:'OpenAI API',    ref:'C3'},{w:W.skill,cls:'ctr',text:'Next.js',     ref:'D3'},
-        {w:W.skill,cls:'ctr',text:'Git',           ref:'E3'},
-      ]},
-      { n:4, cells:[
-        {w:W.skill,cls:'ctr',text:'Express',       ref:'A4'},{w:W.skill,cls:'ctr',text:'Step Functions',ref:'B4'},
-        {w:W.skill,cls:'ctr',text:'LangChain',     ref:'C4'},{w:W.skill,cls:'ctr',text:'Tailwind CSS', ref:'D4'},
-        {w:W.skill,cls:'ctr',text:'Postman',       ref:'E4'},
-      ]},
-      { n:5, cells:[
-        {w:W.skill,cls:'ctr',text:'GraphQL',       ref:'A5'},{w:W.skill,cls:'ctr',text:'S3 / RDS',    ref:'B5'},
-        {w:W.skill,cls:'ctr',text:'Copilot Studio',ref:'C5'},{w:W.skill,cls:'ctr',text:'HTML / CSS',  ref:'D5'},
-        {w:W.skill,cls:'ctr',text:'Swagger',       ref:'E5'},
-      ]},
-      { n:6, cells:[
-        {w:W.skill,cls:'ctr',text:'MongoDB',       ref:'A6'},{w:W.skill,cls:'ctr',text:'CloudWatch',  ref:'B6'},
-        {w:W.skill,cls:'ctr',text:'Embeddings',    ref:'C6'},{w:W.skill,cls:'ctr'},
-        {w:W.skill,cls:'ctr',text:'Jira',          ref:'E6'},
-      ]},
-      { n:7, cells:[
-        {w:W.skill,cls:'ctr',text:'PostgreSQL',    ref:'A7'},{w:W.skill,cls:'ctr',text:'DynamoDB',    ref:'B7'},
-        {w:W.skill,cls:'ctr',text:'Azure AI',      ref:'C7'},{w:W.skill,cls:'ctr'},
-        {w:W.skill,cls:'ctr'},
-      ]},
-      { n:8, cells:[
-        {w:W.skill,cls:'ctr',text:'Redis',         ref:'A8'},{w:W.skill,cls:'ctr',text:'IAM / EC2',   ref:'B8'},
-        {w:W.skill,cls:'ctr',text:'Prompt Eng.',   ref:'C8'},{w:W.skill,cls:'ctr'},
-        {w:W.skill,cls:'ctr'},
-      ]},
-      { n:9, cells:[ {w:W.skill},{w:W.skill},{w:W.skill},{w:W.skill},{w:W.skill} ]},
-      { n:10, cells:[
-        { w:W.skill, cls:'lbl ctr', text:'Years of Exp.', ref:'A10', formula:'Years of Experience' },
-        { w:W.skill, cls:'bold ctr', text:'7+', ref:'B10', formula:'=7', style:'color:#137333' },
-        { w:W.skill, cls:'lbl ctr', text:'Remote?', ref:'C10', formula:'Remote available?' },
-        { w:W.skill, cls:'bold ctr', text:'Yes ✓', ref:'D10', formula:'=TRUE', style:'color:#137333' },
-        { w:W.skill, cls:'lbl ctr', text:'Open to Work?', ref:'E10', formula:'Open to work?' },
-      ]},
-      { n:11, cells:[
-        {w:W.skill},{w:W.skill},{w:W.skill},{w:W.skill},
-        { w:W.skill, cls:'bold ctr', text:'Yes ✓', ref:'E11', formula:'=TRUE', style:'color:#137333' },
-      ]},
+  skills:{
+    cols:[{id:'A',w:140},{id:'B',w:140},{id:'C',w:140},{id:'D',w:140},{id:'E',w:140}],
+    rows:[
+      {n:1,cells:[{w:140,cls:'hdr ctr',text:'Backend',ref:'A1'},{w:140,cls:'hdr ctr',text:'Cloud (AWS)',ref:'B1'},{w:140,cls:'hdr ctr',text:'AI / LLM',ref:'C1'},{w:140,cls:'hdr ctr',text:'Frontend',ref:'D1'},{w:140,cls:'hdr ctr',text:'Tooling',ref:'E1'}]},
+      {n:2,cells:[{w:140,cls:'ctr',text:'Node.js',ref:'A2'},{w:140,cls:'ctr',text:'Lambda',ref:'B2'},{w:140,cls:'ctr',text:'RAG',ref:'C2'},{w:140,cls:'ctr',text:'React',ref:'D2'},{w:140,cls:'ctr',text:'Docker',ref:'E2'}]},
+      {n:3,cells:[{w:140,cls:'ctr',text:'TypeScript',ref:'A3'},{w:140,cls:'ctr',text:'SQS / SNS',ref:'B3'},{w:140,cls:'ctr',text:'OpenAI API',ref:'C3'},{w:140,cls:'ctr',text:'Next.js',ref:'D3'},{w:140,cls:'ctr',text:'Git',ref:'E3'}]},
+      {n:4,cells:[{w:140,cls:'ctr',text:'Express',ref:'A4'},{w:140,cls:'ctr',text:'Step Functions',ref:'B4'},{w:140,cls:'ctr',text:'LangChain',ref:'C4'},{w:140,cls:'ctr',text:'Tailwind CSS',ref:'D4'},{w:140,cls:'ctr',text:'Postman',ref:'E4'}]},
+      {n:5,cells:[{w:140,cls:'ctr',text:'GraphQL',ref:'A5'},{w:140,cls:'ctr',text:'S3 / RDS',ref:'B5'},{w:140,cls:'ctr',text:'Copilot Studio',ref:'C5'},{w:140,cls:'ctr',text:'HTML / CSS',ref:'D5'},{w:140,cls:'ctr',text:'Swagger',ref:'E5'}]},
+      {n:6,cells:[{w:140,cls:'ctr',text:'MongoDB',ref:'A6'},{w:140,cls:'ctr',text:'CloudWatch',ref:'B6'},{w:140,cls:'ctr',text:'Embeddings',ref:'C6'},{w:140,cls:'ctr'},{w:140,cls:'ctr',text:'Jira',ref:'E6'}]},
+      {n:7,cells:[{w:140,cls:'ctr',text:'PostgreSQL',ref:'A7'},{w:140,cls:'ctr',text:'DynamoDB',ref:'B7'},{w:140,cls:'ctr',text:'Azure AI',ref:'C7'},{w:140,cls:'ctr'},{w:140,cls:'ctr'}]},
+      {n:8,cells:[{w:140,cls:'ctr',text:'Redis',ref:'A8'},{w:140,cls:'ctr',text:'IAM / EC2',ref:'B8'},{w:140,cls:'ctr',text:'Prompt Eng.',ref:'C8'},{w:140,cls:'ctr'},{w:140,cls:'ctr'}]},
+      {n:9,empty:1,cells:[{w:140},{w:140},{w:140},{w:140},{w:140}]},
+      {n:10,cells:[{w:140,cls:'lbl ctr',text:'Years of Exp.',ref:'A10',formula:'Years of Experience'},{w:140,cls:'bold ctr',text:'7+',ref:'B10',formula:'=7',style:'color:#137333'},{w:140,cls:'lbl ctr',text:'Remote?',ref:'C10'},{w:140,cls:'bold ctr',text:'Yes ✓',ref:'D10',formula:'=TRUE',style:'color:#137333'},{w:140,cls:'lbl ctr',text:'Open to Work?',ref:'E10'}]},
+      {n:11,cells:[{w:140},{w:140},{w:140},{w:140},{w:140,cls:'bold ctr',text:'Yes ✓',ref:'E11',formula:'=TRUE',style:'color:#137333'}]},
     ]
   },
-
-  /* ── PROJECTS ───────────────────────────────────────── */
-  projects: {
-    cols: [
-      { id:'A', w: W.proj },
-      { id:'B', w: W.desc },
-      { id:'C', w: W.stack },
-      { id:'D', w: W.links },
-    ],
-    rows: [
-      { n:1, cells:[
-        { w:W.proj,  cls:'hdr', text:'Project',     ref:'A1', formula:'Project' },
-        { w:W.desc,  cls:'hdr', text:'Description', ref:'B1', formula:'Description' },
-        { w:W.stack, cls:'hdr', text:'Stack',       ref:'C1', formula:'Stack' },
-        { w:W.links, cls:'hdr', text:'Links',       ref:'D1', formula:'Links' },
-      ]},
-      { n:2, cells:[
-        { w:W.proj,  cls:'bold', html:'<a href="https://github.com/tanishq510" target="_blank" rel="noopener">rag-pipeline</a>',
-          ref:'A2', formula:'=HYPERLINK("https://github.com/tanishq510","rag-pipeline")' },
-        { w:W.desc,  text:'Document ingestion + semantic search over PDFs', ref:'B2', formula:'"Document ingestion + semantic search. OpenAI embeddings + Pinecone."' },
-        { w:W.stack, cls:'muted', text:'Node.js, OpenAI, Pinecone, Lambda', ref:'C2', formula:'"Node.js · OpenAI · Pinecone · Lambda"' },
-        { w:W.links, html:'<a href="https://github.com/tanishq510" target="_blank" rel="noopener">↗ github</a>', ref:'D2' },
-      ]},
-      { n:3, cells:[
-        { w:W.proj,  cls:'bold', html:'<a href="https://github.com/tanishq510" target="_blank" rel="noopener">aws-step-workflow</a>',
-          ref:'A3', formula:'=HYPERLINK("https://github.com/tanishq510","aws-step-workflow")' },
-        { w:W.desc,  text:'Serverless orchestration with DLQs and error branching', ref:'B3', formula:'"Serverless orchestration: Step Functions + Lambda + SQS."' },
-        { w:W.stack, cls:'muted', text:'AWS, Step Functions, SQS', ref:'C3', formula:'"AWS · Step Functions · SQS · Lambda"' },
-        { w:W.links, html:'<a href="https://github.com/tanishq510" target="_blank" rel="noopener">↗ github</a>', ref:'D3' },
-      ]},
-      { n:4, cells:[
-        { w:W.proj,  cls:'bold', html:'<a href="https://github.com/tanishq510" target="_blank" rel="noopener">copilot-agent</a>',
-          ref:'A4', formula:'=HYPERLINK("https://github.com/tanishq510","copilot-agent")' },
-        { w:W.desc,  text:'Enterprise chatbot with memory and tool calling', ref:'B4', formula:'"Enterprise chatbot — memory, tool calling, REST integrations."' },
-        { w:W.stack, cls:'muted', text:'Copilot Studio, Azure AI, TypeScript', ref:'C4', formula:'"Copilot Studio · Azure AI · TypeScript"' },
-        { w:W.links, html:'<a href="https://github.com/tanishq510" target="_blank" rel="noopener">↗ github</a>', ref:'D4' },
-      ]},
-      { n:5, cells:[
-        { w:W.proj,  cls:'bold', html:'<a href="https://tanishq510.github.io" target="_blank" rel="noopener">this-portfolio</a>',
-          ref:'A5', formula:'=HYPERLINK("https://tanishq510.github.io","this-portfolio")' },
-        { w:W.desc,  text:'You are looking at it. Built as a Google Sheets mockup.', ref:'B5', formula:'"Google Sheets-themed portfolio — HTML, CSS, Vanilla JS."' },
-        { w:W.stack, cls:'muted', text:'HTML, CSS, Vanilla JS', ref:'C5', formula:'"HTML · CSS · Vanilla JS"' },
-        { w:W.links, html:'<a href="https://github.com/Tanishq510/Tanishq510.github.io" target="_blank" rel="noopener">↗ source</a>', ref:'D5' },
-      ]},
-      { n:6, cells:[ {w:W.proj},{w:W.desc},{w:W.stack},{w:W.links} ]},
+  projects:{
+    cols:[{id:'A',w:150},{id:'B',w:235},{id:'C',w:178},{id:'D',w:147}],
+    rows:[
+      {n:1,cells:[{w:150,cls:'hdr',text:'Project',ref:'A1'},{w:235,cls:'hdr',text:'Description',ref:'B1'},{w:178,cls:'hdr',text:'Stack',ref:'C1'},{w:147,cls:'hdr',text:'Links',ref:'D1'}]},
+      {n:2,cells:[{w:150,cls:'bold',html:'<a href="https://github.com/tanishq510" target="_blank" rel="noopener">rag-pipeline</a>',ref:'A2',formula:'=HYPERLINK("https://github.com/tanishq510","rag-pipeline")'},{w:235,text:'Document ingestion + semantic search over PDFs',ref:'B2'},{w:178,cls:'muted',text:'Node.js, OpenAI, Pinecone, Lambda',ref:'C2'},{w:147,html:'<a href="https://github.com/tanishq510" target="_blank" rel="noopener">↗ github</a>',ref:'D2'}]},
+      {n:3,cells:[{w:150,cls:'bold',html:'<a href="https://github.com/tanishq510" target="_blank" rel="noopener">aws-step-workflow</a>',ref:'A3'},{w:235,text:'Serverless orchestration with DLQs and error branching',ref:'B3'},{w:178,cls:'muted',text:'AWS, Step Functions, SQS',ref:'C3'},{w:147,html:'<a href="https://github.com/tanishq510" target="_blank" rel="noopener">↗ github</a>',ref:'D3'}]},
+      {n:4,cells:[{w:150,cls:'bold',html:'<a href="https://github.com/tanishq510" target="_blank" rel="noopener">copilot-agent</a>',ref:'A4'},{w:235,text:'Enterprise chatbot with memory and tool calling',ref:'B4'},{w:178,cls:'muted',text:'Copilot Studio, Azure AI, TypeScript',ref:'C4'},{w:147,html:'<a href="https://github.com/tanishq510" target="_blank" rel="noopener">↗ github</a>',ref:'D4'}]},
+      {n:5,cells:[{w:150,cls:'bold',html:'<a href="https://tanishq510.github.io" target="_blank" rel="noopener">this-portfolio</a>',ref:'A5'},{w:235,text:'You are looking at it. Built as a Google Sheets mockup.',ref:'B5'},{w:178,cls:'muted',text:'HTML, CSS, Vanilla JS',ref:'C5'},{w:147,html:'<a href="https://github.com/Tanishq510/Tanishq510.github.io" target="_blank" rel="noopener">↗ source</a>',ref:'D5'}]},
+      {n:6,empty:1,cells:[{w:150},{w:235},{w:178},{w:147}]},
     ]
   },
-
-  /* ── CONTACT ────────────────────────────────────────── */
-  contact: {
-    cols: [
-      { id:'A', w: W.clbl },
-      { id:'B', w: W.cval },
-      { id:'C', w: W.caux },
-    ],
-    rows: [
-      { n:1, cells:[
-        { w: W.clbl+W.cval+W.caux, cls:'section-hdr', text:'Contact Tanishq Joshi', ref:'A1', formula:'Contact Tanishq Joshi' },
-      ]},
-      { n:2, cells:[ {w:W.clbl},{w:W.cval},{w:W.caux} ]},
-      { n:3, cells:[
-        { w:W.clbl, cls:'lbl', text:'Email',    ref:'A3', formula:'Email' },
-        { w:W.cval, html:'<a href="mailto:tanishjoshi93@gmail.com">tanishjoshi93@gmail.com</a>', ref:'B3', formula:'=HYPERLINK("mailto:tanishjoshi93@gmail.com")' },
-        { w:W.caux },
-      ]},
-      { n:4, cells:[
-        { w:W.clbl, cls:'lbl', text:'LinkedIn', ref:'A4', formula:'LinkedIn' },
-        { w:W.cval, html:'<a href="https://linkedin.com/in/tanishq-joshi-b396a2170" target="_blank" rel="noopener noreferrer">linkedin.com/in/tanishq-joshi-b396a2170</a>', ref:'B4', formula:'=HYPERLINK("https://linkedin.com/in/tanishq-joshi-b396a2170")' },
-        { w:W.caux },
-      ]},
-      { n:5, cells:[
-        { w:W.clbl, cls:'lbl', text:'GitHub',   ref:'A5', formula:'GitHub' },
-        { w:W.cval, html:'<a href="https://github.com/tanishq510" target="_blank" rel="noopener noreferrer">github.com/tanishq510</a>', ref:'B5', formula:'=HYPERLINK("https://github.com/tanishq510")' },
-        { w:W.caux },
-      ]},
-      { n:6, cells:[ {w:W.clbl},{w:W.cval},{w:W.caux} ]},
-      { n:7, cells:[
-        { w:W.clbl, cls:'lbl', text:'Available for', ref:'A7', formula:'Available for' },
-        { w:W.cval, text:'Full-time roles, remote contracts, interesting side projects', ref:'B7', formula:'"Full-time roles, remote contracts, interesting projects"' },
-        { w:W.caux },
-      ]},
-      { n:8, cells:[
-        { w:W.clbl, cls:'lbl', text:'Response time', ref:'A8', formula:'Response time' },
-        { w:W.cval, text:'Within 24 hours', ref:'B8', formula:'"Within 24 hours"' },
-        { w:W.caux },
-      ]},
-      { n:9, cells:[ {w:W.clbl},{w:W.cval},{w:W.caux} ]},
-      { n:10, cells:[
-        { w:W.clbl, cls:'lbl', text:'Resume', ref:'A10', formula:'Resume' },
-        { w:W.cval, type:'dl', ref:'B10', formula:'=HYPERLINK("./resume.pdf","↓ Download Resume.pdf")' },
-        { w:W.caux },
-      ]},
-      { n:11, cells:[ {w:W.clbl},{w:W.cval},{w:W.caux} ]},
+  contact:{
+    cols:[{id:'A',w:155},{id:'B',w:415},{id:'C',w:140}],
+    rows:[
+      {n:1,cells:[{w:710,cls:'shdr',text:'Contact Tanishq Joshi',ref:'A1',formula:'Contact Tanishq Joshi'}]},
+      {n:2,empty:1,cells:[{w:155},{w:415},{w:140}]},
+      {n:3,cells:[{w:155,cls:'lbl',text:'Email',ref:'A3'},{w:415,html:'<a href="mailto:tanishjoshi93@gmail.com">tanishjoshi93@gmail.com</a>',ref:'B3',formula:'=HYPERLINK("mailto:tanishjoshi93@gmail.com")'},{w:140}]},
+      {n:4,cells:[{w:155,cls:'lbl',text:'LinkedIn',ref:'A4'},{w:415,html:'<a href="https://linkedin.com/in/tanishq-joshi-b396a2170" target="_blank" rel="noopener">linkedin.com/in/tanishq-joshi-b396a2170</a>',ref:'B4',formula:'=HYPERLINK("https://linkedin.com/in/tanishq-joshi-b396a2170")'},{w:140}]},
+      {n:5,cells:[{w:155,cls:'lbl',text:'GitHub',ref:'A5'},{w:415,html:'<a href="https://github.com/tanishq510" target="_blank" rel="noopener">github.com/tanishq510</a>',ref:'B5',formula:'=HYPERLINK("https://github.com/tanishq510")'},{w:140}]},
+      {n:6,empty:1,cells:[{w:155},{w:415},{w:140}]},
+      {n:7,cells:[{w:155,cls:'lbl',text:'Available for',ref:'A7'},{w:415,text:'Full-time roles, remote contracts, interesting side projects',ref:'B7'},{w:140}]},
+      {n:8,cells:[{w:155,cls:'lbl',text:'Response time',ref:'A8'},{w:415,text:'Within 24 hours',ref:'B8'},{w:140}]},
+      {n:9,empty:1,cells:[{w:155},{w:415},{w:140}]},
+      {n:10,cells:[{w:155,cls:'lbl',text:'Resume',ref:'A10'},{w:415,type:'dl',ref:'B10',formula:'=HYPERLINK("./resume.pdf","Download Resume.pdf")'},{w:140}]},
+      {n:11,empty:1,cells:[{w:155},{w:415},{w:140}]},
     ]
   }
 };
 
-/* ─────────────────────────────────
-   RENDER ENGINE
-───────────────────────────────── */
-let current = 'about';
-
-function render(sheetId) {
-  const sheet = SHEETS[sheetId];
-  const colHeaders = document.getElementById('col-headers');
-  const grid = document.getElementById('grid');
-
-  /* column headers */
-  colHeaders.innerHTML = '';
-  const sp = document.createElement('div'); sp.className = 'rn-spacer'; colHeaders.appendChild(sp);
-  sheet.cols.forEach(col => {
-    const ch = document.createElement('div');
-    ch.className = 'ch';
-    ch.id = `ch-${sheetId}-${col.id}`;
-    ch.style.cssText = `width:${col.w}px;min-width:${col.w}px;`;
-    ch.textContent = col.id;
-    colHeaders.appendChild(ch);
+function render(id){
+  const sheet=S[id];
+  const ch=document.getElementById('col-headers');
+  const grid=document.getElementById('grid');
+  ch.innerHTML='';
+  const sp=document.createElement('div');sp.className='rn-sp';ch.appendChild(sp);
+  sheet.cols.forEach(c=>{
+    const el=document.createElement('div');
+    el.className='ch';el.id=`ch-${id}-${c.id}`;
+    el.style.cssText=`width:${c.w}px;min-width:${c.w}px;`;
+    el.textContent=c.id;ch.appendChild(el);
   });
-
-  /* rows */
-  grid.innerHTML = '';
-  sheet.rows.forEach(row => {
-    const rowEl = document.createElement('div');
-    rowEl.className = 'row';
-
-    const rn = document.createElement('div');
-    rn.className = 'rn'; rn.id = `rn-${sheetId}-${row.n}`; rn.textContent = row.n;
-    rowEl.appendChild(rn);
-
-    row.cells.forEach(cell => {
-      const el = document.createElement('div');
-      el.className = 'cell ' + (cell.cls || '');
-      el.style.cssText = `width:${cell.w}px;min-width:${cell.w}px;` + (cell.style || '');
-
-      if (cell.type === 'status') {
-        el.innerHTML = `<span class="status-pill"><span class="pulse"></span>Open to Work</span>`;
-      } else if (cell.type === 'dl') {
-        el.innerHTML = `<a class="dl-btn" href="./resume.pdf" download="Tanishq_Joshi_Resume.pdf">↓&nbsp;&nbsp;Download Resume.pdf</a>`;
-      } else if (cell.html) {
-        el.innerHTML = cell.html;
-      } else {
-        el.textContent = cell.text || '';
+  grid.innerHTML='';
+  sheet.rows.forEach(row=>{
+    const rowEl=document.createElement('div');
+    rowEl.className='row'+(row.empty?' empty-row':'');
+    const rn=document.createElement('div');
+    rn.className='rn';rn.id=`rn-${id}-${row.n}`;rn.textContent=row.n;rowEl.appendChild(rn);
+    row.cells.forEach(cell=>{
+      const el=document.createElement('div');
+      el.className=('cell '+(cell.cls||'')).trim();
+      el.style.cssText=`width:${cell.w}px;min-width:${cell.w}px;`+(cell.style||'');
+      if(cell.type==='status'){
+        el.innerHTML='<span class="status-pill"><span class="pulse"></span>Open to Work</span>';
+      }else if(cell.type==='dl'){
+        el.innerHTML='<a class="dl-btn" href="./resume.pdf" download="Tanishq_Joshi_Resume.pdf">&#8595;&nbsp;&nbsp;Download Resume.pdf</a>';
+      }else if(cell.html){
+        el.innerHTML=cell.html;
+      }else{
+        el.textContent=cell.text||'';
       }
-
-      /* click — update formula bar */
-      el.addEventListener('click', e => {
-        if (e.target.tagName === 'A') return;
-        activateCell(el, cell, row.n, sheetId);
+      el.addEventListener('click',e=>{
+        if(e.target.tagName==='A')return;
+        activate(el,cell,row.n,id);
       });
       rowEl.appendChild(el);
     });
@@ -1050,72 +414,49 @@ function render(sheetId) {
   });
 }
 
-function activateCell(el, cell, rowNum, sheetId) {
-  document.querySelectorAll('.cell.active').forEach(c => c.classList.remove('active'));
-  document.querySelectorAll('.rn.hl').forEach(r => r.classList.remove('hl'));
-  document.querySelectorAll('.ch.hl').forEach(c => c.classList.remove('hl'));
-
+function activate(el,cell,rowNum,sheetId){
+  document.querySelectorAll('.cell.active').forEach(c=>c.classList.remove('active'));
+  document.querySelectorAll('.rn.hl').forEach(r=>r.classList.remove('hl'));
+  document.querySelectorAll('.ch.hl').forEach(c=>c.classList.remove('hl'));
   el.classList.add('active');
-  const rn = document.getElementById(`rn-${sheetId}-${rowNum}`);
-  if (rn) rn.classList.add('hl');
-
-  const ref = cell.ref || 'A1';
-  const col = ref.replace(/[0-9]/g, '');
-  const ch = document.getElementById(`ch-${sheetId}-${col}`);
-  if (ch) ch.classList.add('hl');
-
-  document.getElementById('name-box').textContent = ref;
-  document.getElementById('formula-content').textContent = cell.formula !== undefined ? cell.formula : (cell.text || '');
+  const rn=document.getElementById(`rn-${sheetId}-${rowNum}`);
+  if(rn)rn.classList.add('hl');
+  const ref=cell.ref||'A1';
+  const col=ref.replace(/[0-9]/g,'');
+  const chEl=document.getElementById(`ch-${sheetId}-${col}`);
+  if(chEl)chEl.classList.add('hl');
+  document.getElementById('name-box').textContent=ref;
+  document.getElementById('formula-content').textContent=cell.formula!==undefined?cell.formula:(cell.text||'');
 }
 
-function switchSheet(sheetId) {
-  current = sheetId;
-  document.querySelectorAll('.tab').forEach(t => {
-    const active = t.dataset.sheet === sheetId;
-    t.classList.toggle('active', active);
-    t.setAttribute('aria-selected', active);
+function switchSheet(id){
+  document.querySelectorAll('.tab').forEach(t=>{
+    const a=t.dataset.sheet===id;
+    t.classList.toggle('active',a);
+    t.setAttribute('aria-selected',String(a));
   });
-  render(sheetId);
-  document.getElementById('grid').scrollTop = 0;
-  /* activate first cell */
-  const firstRow = SHEETS[sheetId].rows[0];
-  if (firstRow) {
-    const firstCellEl = document.querySelector('#grid .cell');
-    if (firstCellEl) activateCell(firstCellEl, firstRow.cells[0], 1, sheetId);
-  }
+  render(id);
+  document.getElementById('grid').scrollTop=0;
+  const fr=S[id].rows[0];
+  if(fr){const fe=document.querySelector('#grid .cell');if(fe)activate(fe,fr.cells[0],1,id);}
 }
 
-/* ─────────────────────────────────
-   MENU INTERACTIONS
-───────────────────────────────── */
-document.querySelectorAll('.menu-item').forEach(item => {
-  item.addEventListener('click', e => {
-    const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.menu-item.open').forEach(m => m.classList.remove('open'));
-    if (!isOpen) item.classList.add('open');
-    e.stopPropagation();
+function closeMenus(){document.querySelectorAll('.menu-item.open').forEach(m=>m.classList.remove('open'));}
+document.querySelectorAll('.menu-item').forEach(item=>{
+  item.addEventListener('click',e=>{
+    const open=item.classList.contains('open');
+    closeMenus();if(!open)item.classList.add('open');e.stopPropagation();
+  });
+  item.addEventListener('keydown',e=>{
+    if(e.key==='Enter'||e.key===' '){e.preventDefault();item.click();}
+    if(e.key==='Escape')closeMenus();
   });
 });
-document.addEventListener('click', () => {
-  document.querySelectorAll('.menu-item.open').forEach(m => m.classList.remove('open'));
-});
+document.addEventListener('click',closeMenus);
 
-/* ─────────────────────────────────
-   KEYBOARD NAVIGATION
-───────────────────────────────── */
-document.querySelectorAll('.menu-item').forEach(item => {
-  item.addEventListener('keydown', e => {
-    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); item.click(); }
-    if (e.key === 'Escape') item.classList.remove('open');
-  });
-});
-
-/* ─────────────────────────────────
-   INIT
-───────────────────────────────── */
 render('about');
-const firstEl = document.querySelector('#grid .cell');
-if (firstEl) activateCell(firstEl, SHEETS.about.rows[0].cells[0], 1, 'about');
+const fe=document.querySelector('#grid .cell');
+if(fe)activate(fe,S.about.rows[0].cells[0],1,'about');
 </script>
 </body>
 </html>
