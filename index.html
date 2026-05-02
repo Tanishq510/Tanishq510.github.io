@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
 <title>Tanishq Joshi — Software Engineer | Node.js · AWS · Agentic AI</title>
 <meta name="description" content="Tanishq Joshi is a Software Engineer with 7+ years of experience in Node.js, AWS serverless, and Agentic AI. Open to remote product engineering roles. Based in Indore, India."/>
 <meta name="keywords" content="Tanishq Joshi, Software Engineer, Node.js, AWS, Agentic AI, RAG, LangChain, Copilot Studio, Indore, backend developer, remote"/>
@@ -27,16 +27,27 @@
   --surf:#f8f9fa;--border:#e0e0e0;--hbg:#f3f3f3;
   --text:#202124;--muted:#5f6368;--dim:#80868b;
   --abg:rgba(26,115,232,0.07);--hhi:#d3e3fd;--rhov:#f5f5f5;
-  --sans:'Google Sans',Arial,sans-serif;--mono:'Roboto Mono',monospace;
+  --row-h:28px;
+  --sans:"Google Sans",Arial,sans-serif;--mono:"Roboto Mono",monospace;
 }
-html{height:100%;overflow:hidden;}
-body{height:100%;width:100%;font-family:var(--sans);font-size:13px;color:var(--text);
-  background:#fff;display:flex;flex-direction:column;overflow:hidden;
-  position:fixed;top:0;left:0;right:0;bottom:0;}
 
-/* TITLE BAR */
-#title-bar{display:flex;align-items:center;gap:10px;padding:8px 16px 4px;flex-shrink:0;}
-.gs-logo{display:grid;grid-template-columns:1fr 1fr;gap:1.5px;width:28px;height:28px;padding:4px;flex-shrink:0;}
+/* ── FULLSCREEN DESKTOP ── */
+html{height:100%;overflow:hidden;}
+body{
+  height:100%;width:100%;font-family:var(--sans);font-size:13px;
+  color:var(--text);background:#fff;display:flex;flex-direction:column;
+  overflow:hidden;position:fixed;top:0;left:0;right:0;bottom:0;
+}
+
+/* ── TITLE BAR ── */
+#title-bar{
+  display:flex;align-items:center;gap:10px;
+  padding:8px 16px 4px;flex-shrink:0;background:#fff;
+}
+.gs-logo{
+  display:grid;grid-template-columns:1fr 1fr;gap:1.5px;
+  width:28px;height:28px;padding:4px;flex-shrink:0;
+}
 .gs-logo span{border-radius:1.5px;}
 .gs-logo span:nth-child(1){background:#34a853;}
 .gs-logo span:nth-child(2){background:#fbbc04;}
@@ -44,70 +55,151 @@ body{height:100%;width:100%;font-family:var(--sans);font-size:13px;color:var(--t
 .gs-logo span:nth-child(4){background:#4285f4;}
 #file-name{font-size:16px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .title-actions{margin-left:auto;display:flex;align-items:center;gap:8px;flex-shrink:0;}
-.contact-btn{background:var(--blue);color:#fff;border:none;border-radius:20px;padding:7px 18px;
-  font-size:13px;font-weight:500;cursor:pointer;font-family:var(--sans);transition:background .2s;}
+.contact-btn{
+  background:var(--blue);color:#fff;border:none;border-radius:20px;
+  padding:7px 18px;font-size:13px;font-weight:500;cursor:pointer;
+  font-family:var(--sans);transition:background .2s;white-space:nowrap;
+}
 .contact-btn:hover{background:var(--blue-dk);}
-.avatar{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#7c3aed,#1a73e8);
-  color:#fff;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;
-  flex-shrink:0;cursor:default;user-select:none;}
+/* Resume btn — shown only on mobile */
+.resume-btn{
+  display:none;
+  align-items:center;gap:6px;
+  background:#fff;color:var(--blue);
+  border:1px solid var(--blue);
+  border-radius:4px;
+  padding:6px 14px;font-size:12.5px;font-weight:500;cursor:pointer;
+  font-family:var(--sans);transition:background .15s,color .15s;white-space:nowrap;
+  text-decoration:none;
+}
+.resume-btn:hover{background:var(--abg);}
+.avatar{
+  width:32px;height:32px;border-radius:50%;
+  background:linear-gradient(135deg,#7c3aed,#1a73e8);
+  color:#fff;font-size:12px;font-weight:600;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;cursor:default;user-select:none;
+}
 
-/* MENU BAR */
-#menu-bar{display:flex;padding:2px 10px;background:#fff;flex-shrink:0;position:relative;z-index:100;}
-.menu-item{padding:5px 10px;font-size:13px;color:var(--muted);cursor:pointer;border-radius:4px;
-  user-select:none;transition:background .12s,color .12s;position:relative;}
+/* ── MENU BAR ── */
+#menu-bar{
+  display:flex;padding:2px 10px;background:#fff;
+  flex-shrink:0;position:relative;z-index:200;
+}
+.menu-item{
+  padding:5px 10px;font-size:13px;color:var(--muted);
+  cursor:pointer;border-radius:4px;user-select:none;
+  transition:background .12s,color .12s;position:relative;
+}
 .menu-item:hover,.menu-item.open{background:var(--surf);color:var(--text);}
-.dropdown{display:none;position:absolute;top:100%;left:0;min-width:220px;background:#fff;
-  border:1px solid var(--border);border-radius:4px;box-shadow:0 4px 16px rgba(0,0,0,.12);
-  z-index:200;padding:4px 0;}
+.dropdown{
+  display:none;position:absolute;top:calc(100% + 2px);left:0;
+  min-width:220px;background:#fff;
+  border:1px solid var(--border);border-radius:6px;
+  box-shadow:0 6px 20px rgba(0,0,0,.14);
+  z-index:300;padding:4px 0;
+}
 .menu-item.open .dropdown{display:block;}
-.dd-item{padding:8px 20px;font-size:13px;color:var(--text);cursor:pointer;
-  transition:background .1s;white-space:nowrap;display:flex;align-items:center;gap:12px;}
+.dd-item{
+  padding:9px 20px;font-size:13px;color:var(--text);cursor:pointer;
+  transition:background .1s;white-space:nowrap;
+  display:flex;align-items:center;gap:12px;
+}
 .dd-item:hover{background:var(--surf);}
 .dd-icon{color:var(--muted);font-size:13px;width:18px;text-align:center;}
 .dd-sep{height:1px;background:var(--border);margin:4px 0;}
 .dd-sc{margin-left:auto;color:var(--dim);font-size:11px;font-family:var(--mono);}
 
-/* TOOLBAR */
-#toolbar{background:var(--surf);border-top:1px solid var(--border);border-bottom:1px solid var(--border);
-  padding:4px 12px;display:flex;align-items:center;gap:1px;flex-shrink:0;overflow:hidden;}
-.t-btn{height:28px;min-width:28px;display:flex;align-items:center;justify-content:center;
-  border-radius:4px;cursor:pointer;font-size:13px;color:var(--muted);padding:0 4px;
-  transition:background .12s;user-select:none;}
+/* ── TOOLBAR ── */
+#toolbar{
+  background:var(--surf);border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  padding:4px 12px;display:flex;align-items:center;
+  gap:1px;flex-shrink:0;overflow:hidden;
+}
+.t-btn{
+  height:28px;min-width:28px;display:flex;align-items:center;
+  justify-content:center;border-radius:4px;cursor:pointer;
+  font-size:13px;color:var(--muted);padding:0 4px;
+  transition:background .12s;user-select:none;
+}
 .t-btn:hover{background:#e0e0e0;color:var(--text);}
 .t-sep{width:1px;height:20px;background:var(--border);margin:0 5px;flex-shrink:0;}
-.t-sel{padding:3px 8px;border:1px solid var(--border);border-radius:4px;font-size:12.5px;
-  color:var(--text);background:#fff;font-family:var(--sans);cursor:pointer;}
+.t-sel{
+  padding:3px 8px;border:1px solid var(--border);border-radius:4px;
+  font-size:12.5px;color:var(--text);background:#fff;
+  font-family:var(--sans);cursor:pointer;
+}
 .t-sel:hover{border-color:#aaa;}
 
-/* FORMULA BAR */
-#formula-bar{display:flex;align-items:center;height:30px;border-bottom:1px solid var(--border);flex-shrink:0;}
-#name-box{width:76px;min-width:76px;border-right:1px solid var(--border);padding:0 8px;height:100%;
-  display:flex;align-items:center;font-family:var(--mono);font-size:13px;}
-#fx-icon{padding:0 12px;font-size:12px;color:var(--muted);font-style:italic;
-  border-right:1px solid var(--border);height:100%;display:flex;align-items:center;flex-shrink:0;}
-#formula-content{flex:1;padding:0 12px;font-size:13px;font-family:var(--mono);color:var(--text);
-  overflow:hidden;white-space:nowrap;text-overflow:ellipsis;height:100%;display:flex;align-items:center;}
+/* ── FORMULA BAR ── */
+#formula-bar{
+  display:flex;align-items:center;height:30px;
+  border-bottom:1px solid var(--border);flex-shrink:0;
+}
+#name-box{
+  width:76px;min-width:76px;border-right:1px solid var(--border);
+  padding:0 8px;height:100%;display:flex;align-items:center;
+  font-family:var(--mono);font-size:13px;
+}
+#fx-icon{
+  padding:0 12px;font-size:12px;color:var(--muted);font-style:italic;
+  border-right:1px solid var(--border);height:100%;
+  display:flex;align-items:center;flex-shrink:0;
+}
+#formula-content{
+  flex:1;padding:0 12px;font-size:13px;font-family:var(--mono);
+  color:var(--text);overflow:hidden;white-space:nowrap;
+  text-overflow:ellipsis;height:100%;display:flex;align-items:center;
+}
 
-/* GRID */
+/* ── GRID AREA ── */
 #grid-area{flex:1;display:flex;flex-direction:column;overflow:hidden;min-height:0;}
-#col-headers{display:flex;flex-shrink:0;border-bottom:1px solid var(--border);background:var(--hbg);overflow:hidden;}
+
+/* ── COLUMN HEADERS ── */
+#col-headers{
+  display:flex;flex-shrink:0;
+  border-bottom:1px solid var(--border);
+  background:var(--hbg);overflow:hidden;
+}
 .rn-sp{width:44px;min-width:44px;flex-shrink:0;}
-.ch{border-left:1px solid var(--border);text-align:center;font-size:12px;color:var(--muted);
-  padding:4px 0;cursor:default;user-select:none;flex-shrink:0;transition:background .12s;}
+.ch{
+  border-left:1px solid var(--border);text-align:center;
+  font-size:12px;color:var(--muted);padding:4px 0;
+  cursor:default;user-select:none;flex-shrink:0;transition:background .12s;
+}
 .ch.hl{background:var(--hhi);color:var(--blue);font-weight:600;}
-#grid{flex:1;overflow-y:auto;overflow-x:hidden;}
+
+/* ── GRID ── */
+#grid{
+  flex:1;overflow-y:auto;overflow-x:hidden;
+  display:flex;flex-direction:column;
+  /* FIX 2: repeating row lines fill all remaining vertical space */
+
+}
 #grid::-webkit-scrollbar{width:10px;}
 #grid::-webkit-scrollbar-track{background:var(--surf);}
 #grid::-webkit-scrollbar-thumb{background:#bdbdbd;border-radius:5px;}
 #grid::-webkit-scrollbar-thumb:hover{background:#9e9e9e;}
-.row{display:flex;border-bottom:1px solid var(--border);}
-.rn{width:44px;min-width:44px;background:var(--hbg);border-right:1px solid var(--border);
-  text-align:center;font-size:11.5px;color:var(--muted);display:flex;align-items:center;
-  justify-content:center;flex-shrink:0;cursor:default;user-select:none;}
+
+#grid-content{display:flex;flex-direction:column;}
+
+.row{display:flex;border-bottom:1px solid var(--border);flex-shrink:0;}
+.rn{
+  width:44px;min-width:44px;background:var(--hbg);
+  border-right:1px solid var(--border);text-align:center;
+  font-size:11.5px;color:var(--muted);display:flex;align-items:center;
+  justify-content:center;flex-shrink:0;cursor:default;user-select:none;
+  min-height:var(--row-h);
+}
 .rn.hl{background:var(--hhi);color:var(--blue);font-weight:600;}
-.cell{border-right:1px solid var(--border);padding:5px 9px;font-size:13px;color:var(--text);
-  display:flex;align-items:center;cursor:cell;overflow:hidden;min-height:28px;
-  transition:background .08s;position:relative;flex-shrink:0;}
+
+.cell{
+  border-right:1px solid var(--border);padding:5px 9px;font-size:13px;
+  color:var(--text);display:flex;align-items:center;cursor:cell;
+  overflow:hidden;min-height:var(--row-h);transition:background .08s;
+  position:relative;flex-shrink:0;
+}
 .cell:hover{background:var(--rhov);}
 .cell.active{outline:2px solid var(--blue);outline-offset:-2px;background:var(--abg);z-index:2;}
 .cell.hdr{background:#e6f4ea;font-weight:600;font-size:12px;color:#137333;}
@@ -116,144 +208,277 @@ body{height:100%;width:100%;font-family:var(--sans);font-size:13px;color:var(--t
 .cell.ctr{justify-content:center;text-align:center;}
 .cell.muted{color:var(--muted);}
 .cell.shdr{background:#e6f4ea;font-weight:600;font-size:13.5px;color:#137333;}
+/* FIX 2: filler cell stretches to fill remaining row width */
+.cell.fill{flex:1;min-width:0;border-right:none;}
 .cell a{color:var(--blue);text-decoration:underline;text-underline-offset:2px;}
 .cell a:hover{color:var(--blue-dk);}
-.status-pill{display:inline-flex;align-items:center;gap:6px;background:#e6f4ea;color:#137333;
-  padding:3px 12px;border-radius:20px;font-size:12px;font-weight:600;}
-.pulse{width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulse 2s ease-in-out infinite;}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-.dl-btn{display:inline-flex;align-items:center;gap:7px;background:var(--green);color:#fff;border:none;
-  border-radius:5px;padding:6px 18px;font-size:13px;font-weight:500;cursor:pointer;
-  text-decoration:none;font-family:var(--sans);transition:background .15s;}
-.dl-btn:hover{background:var(--green-dk);text-decoration:none;}
 
-/* SHEET TABS */
-#sheet-tabs{display:flex;align-items:flex-end;background:#f1f3f4;border-top:1px solid var(--border);
-  padding:0 10px;height:38px;flex-shrink:0;gap:2px;overflow-x:auto;}
+.status-pill{
+  display:inline-flex;align-items:center;gap:6px;
+  background:#e6f4ea;color:#137333;padding:3px 12px;
+  border-radius:20px;font-size:12px;font-weight:600;
+}
+.pulse{
+  width:7px;height:7px;border-radius:50%;background:var(--green);
+  animation:pulse 2s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.dl-btn{
+  color:var(--blue);
+  text-decoration:underline;
+  text-underline-offset:2px;
+  font-size:13px;
+  cursor:pointer;
+  background:none;
+  border:none;
+  padding:0;
+  font-family:var(--sans);
+  transition:color .15s;
+}
+.dl-btn:hover{color:var(--blue-dk);text-decoration:underline;}
+
+/* ── SHEET TABS ── */
+/* FIX 1: proper padding in footer */
+#sheet-tabs{
+  display:flex;align-items:flex-end;
+  background:#f1f3f4;border-top:1px solid var(--border);
+  padding:4px 12px 0;
+  height:40px;
+  flex-shrink:0;gap:3px;overflow-x:auto;
+}
 #sheet-tabs::-webkit-scrollbar{height:3px;}
 #sheet-tabs::-webkit-scrollbar-thumb{background:#ccc;}
-.tab{display:flex;align-items:center;gap:6px;padding:6px 16px;border-radius:5px 5px 0 0;
-  background:#e2e3e4;font-size:12.5px;color:var(--muted);cursor:pointer;
-  border:1px solid transparent;border-bottom:none;height:32px;user-select:none;
-  transition:background .12s,color .12s;white-space:nowrap;flex-shrink:0;}
+.tab{
+  display:flex;align-items:center;gap:6px;padding:5px 18px 7px;
+  border-radius:5px 5px 0 0;background:#e2e3e4;
+  font-size:12.5px;color:var(--muted);cursor:pointer;
+  border:1px solid transparent;border-bottom:none;
+  height:34px;user-select:none;
+  transition:background .12s,color .12s;white-space:nowrap;flex-shrink:0;
+}
 .tab:hover{background:#d4d5d6;color:var(--text);}
-.tab.active{background:#fff;color:var(--text);font-weight:500;border-color:var(--border);
-  box-shadow:inset 0 -2px 0 var(--green);}
+.tab.active{
+  background:#fff;color:var(--text);font-weight:500;
+  border-color:var(--border);box-shadow:inset 0 -2px 0 var(--green);
+}
 .tab-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
-.add-tab{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;
-  cursor:pointer;font-size:18px;color:var(--muted);margin-left:4px;transition:background .12s;flex-shrink:0;}
+.add-tab{
+  width:30px;height:30px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;font-size:18px;color:var(--muted);
+  margin-left:4px;transition:background .12s;flex-shrink:0;
+}
 .add-tab:hover{background:#d4d5d6;}
 
-/* MOBILE */
+/* ═══════════════════════════════════════════════════════
+   MOBILE STYLES
+═══════════════════════════════════════════════════════ */
 @media(max-width:700px){
+  /* Unlock scroll, release fixed layout */
   html,body{overflow:auto;position:static;height:auto;}
   body{display:block;}
+
+  /* Hide desktop-only chrome */
   #toolbar,#formula-bar,#col-headers{display:none;}
-  #grid-area{overflow:visible;display:block;}
-  #grid{overflow:visible;}
-  #title-bar{padding:8px 12px 4px;gap:8px;}
-  #file-name{font-size:14px;}
-  .contact-btn{padding:6px 14px;font-size:12px;}
-  #menu-bar{overflow-x:auto;flex-wrap:nowrap;}
-  #menu-bar::-webkit-scrollbar{display:none;}
-  .menu-item{font-size:12px;padding:5px 8px;white-space:nowrap;}
+  #grid-area{overflow:visible;display:block;background:none;}
+  #grid{overflow:visible;display:block;background:none;}
+  #grid-content{display:block;}
 
-  /* rows stack vertically */
-  .row{flex-direction:column;border-bottom:none;}
-  .row.empty-row{display:none;}
-  .rn{display:none;}
+  /* Title bar — show resume btn, compact */
+  #title-bar{padding:10px 14px 6px;gap:8px;}
+  #file-name{font-size:13px;}
+  .contact-btn{padding:6px 12px;font-size:12px;}
+  .resume-btn{display:inline-flex;}
+  .avatar{display:none;}
 
-  /* all cells full width */
-  .cell{width:100%!important;min-width:0!important;border-right:none;
-    border-bottom:1px solid #f0f0f0;font-size:13px;padding:7px 14px;min-height:32px;}
-
-  /* label = bold group heading on mobile */
-  .cell.lbl{
-    font-weight:700;font-size:11.5px;color:#137333;
-    background:#f0faf4;border-bottom:1px solid var(--border);
-    padding:10px 14px 6px;text-transform:uppercase;letter-spacing:.05em;
+  /* FIX 3: Menu bar functional on mobile */
+  #menu-bar{
+    overflow-x:auto;flex-wrap:nowrap;
+    padding:2px 10px;gap:2px;
   }
-  /* hide empty cells cleanly */
-  .cell:empty{display:none;}
+  #menu-bar::-webkit-scrollbar{display:none;}
+  .menu-item{
+    font-size:12.5px;padding:7px 10px;
+    white-space:nowrap;min-height:36px;
+    display:flex;align-items:center;
+  }
+  /* Mobile dropdowns — positioned via JS below the tapped item */
+  .dropdown{
+    position:fixed;
+    width:220px;min-width:unset;
+    border-radius:6px;
+    box-shadow:0 4px 16px rgba(0,0,0,.16);
+    z-index:9999;max-height:50vh;overflow-y:auto;
+  }
+  .dd-item{padding:11px 18px;font-size:13.5px;min-height:42px;}
 
-  .cell.shdr{font-size:15px;padding:12px 14px;}
-  .cell.hdr{font-weight:700;font-size:12px;border-bottom:1px solid var(--border);padding:8px 14px;}
-  .cell.ctr{justify-content:flex-start;text-align:left;}
-  .cell.muted{font-size:12.5px;padding-top:4px;padding-bottom:4px;}
-
-  .tab{padding:6px 12px;font-size:12px;}
+  /* FIX 3: Safe area padding for footer */
+  /* MOBILE FOOTER: fixed to bottom with proper padding */
+  #sheet-tabs{
+    position:fixed;
+    bottom:0;left:0;right:0;
+    padding:6px 14px 0;
+    padding-bottom:env(safe-area-inset-bottom,10px);
+    height:auto;min-height:48px;
+    z-index:500;
+    border-top:2px solid var(--border);
+    background:#f1f3f4;
+    box-shadow:0 -2px 8px rgba(0,0,0,.06);
+  }
+  /* push content well above fixed footer */
+  #grid-area{padding-bottom:72px;}
+  .tab{padding:5px 14px 7px;font-size:12px;height:34px;}
   .tab-dot{width:7px;height:7px;}
-  .dl-btn{font-size:13px;padding:8px 18px;}
-  #sheet-tabs{height:36px;}
+
+  /* ── MOBILE CARD LAYOUT ── */
+  .m-section{padding:0;}
+  .m-card{
+    padding:14px 16px;border-bottom:1px solid var(--border);
+  }
+  .m-card:last-child{border-bottom:none;}
+  /* section title */
+  .m-title{
+    background:#e6f4ea;padding:12px 16px;
+    font-weight:600;font-size:15px;color:#137333;
+    border-bottom:1px solid #c8e6c9;
+  }
+  /* label = group heading — matches lbl style */
+  .m-lbl{
+    font-size:11px;font-weight:700;color:#137333;
+    text-transform:uppercase;letter-spacing:.06em;
+    margin-bottom:4px;
+  }
+  /* value text */
+  .m-val{font-size:13.5px;color:var(--text);line-height:1.55;}
+  .m-val-muted{font-size:13px;color:var(--muted);line-height:1.5;}
+  /* status pill — reuse existing */
+  /* company header row */
+  .m-company{font-size:14px;font-weight:600;color:var(--text);margin-bottom:2px;}
+  .m-role{font-size:12.5px;color:var(--muted);margin-bottom:8px;}
+  /* bullet */
+  .m-bullet{
+    font-size:13px;color:var(--text);padding-left:14px;
+    position:relative;line-height:1.55;margin-bottom:3px;
+  }
+  .m-bullet::before{content:"→";position:absolute;left:0;color:var(--green);font-size:11px;}
+  /* tag row for skills */
+  .m-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
+  .m-tag{
+    font-size:12px;color:var(--muted);
+    background:#fff;border:1px solid var(--border);
+    border-radius:4px;padding:3px 10px;
+  }
+  /* project card */
+  .m-proj-name{
+    font-size:14px;font-weight:600;color:var(--blue);
+    text-decoration:underline;text-underline-offset:2px;
+  }
+  .m-proj-desc{font-size:13px;color:var(--text);margin:4px 0;line-height:1.5;}
+  .m-proj-stack{font-size:12px;color:var(--muted);margin-bottom:6px;}
+  .m-proj-link{
+    font-size:12.5px;color:var(--blue);
+    text-decoration:underline;text-underline-offset:2px;margin-right:12px;
+  }
+  /* divider between exp/project entries */
+  .m-div{height:1px;background:var(--border);margin:0;}
+  /* contact link rows */
+  .m-contact-row{
+    display:flex;align-items:center;gap:10px;
+    padding:12px 16px;border-bottom:1px solid var(--border);
+    min-height:48px;
+  }
+  .m-contact-row:last-child{border-bottom:none;}
+  .m-contact-label{font-size:11px;font-weight:700;color:#137333;text-transform:uppercase;letter-spacing:.06em;min-width:80px;}
+  .m-contact-val{font-size:13px;color:var(--blue);text-decoration:underline;overflow:hidden;text-overflow:ellipsis;}
+  .m-contact-val-plain{font-size:13px;color:var(--text);}
+  /* download btn full width on mobile */
+  .m-dl-wrap{padding:14px 16px;}
+  .m-dl-btn{
+    display:inline-flex;align-items:center;gap:6px;
+    color:var(--blue);text-decoration:underline;text-underline-offset:2px;
+    font-size:14px;font-weight:400;cursor:pointer;
+    background:none;border:none;padding:0;font-family:var(--sans);
+    transition:color .15s;
+  }
+  .m-dl-btn:hover{color:var(--blue-dk);}
 }
 </style>
 </head>
 <body id="app">
 
+<!-- TITLE BAR -->
 <div id="title-bar">
-  <div class="gs-logo" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  <div class="gs-logo" aria-hidden="true">
+    <span></span><span></span><span></span><span></span>
+  </div>
   <span id="file-name">Tanishq Joshi — Portfolio.sheets</span>
   <div class="title-actions">
+    <!-- FIX 4: Resume download button (mobile only) -->
+    <a class="resume-btn" href="./resume.pdf" download="Tanishq_Joshi_Resume.pdf" aria-label="Download Resume">
+      Resume.pdf
+    </a>
     <button class="contact-btn" onclick="window.location.href='mailto:tanishjoshi93@gmail.com'">Contact</button>
     <div class="avatar" title="Tanishq Joshi">TJ</div>
   </div>
 </div>
 
+<!-- MENU BAR -->
 <nav id="menu-bar" role="navigation" aria-label="Spreadsheet menu">
 
   <div class="menu-item" tabindex="0">File
     <div class="dropdown" role="menu">
-      <div class="dd-item" role="menuitem" onclick="window.open('./resume.pdf')"><span class="dd-icon">📄</span>Download Resume<span class="dd-sc">PDF</span></div>
+      <div class="dd-item" onclick="window.open('./resume.pdf')"><span class="dd-icon">&#128196;</span>Download Resume<span class="dd-sc">PDF</span></div>
       <div class="dd-sep"></div>
-      <div class="dd-item" role="menuitem" onclick="window.print()"><span class="dd-icon">🖨</span>Print<span class="dd-sc">Ctrl+P</span></div>
+      <div class="dd-item" onclick="window.print()"><span class="dd-icon">&#128424;</span>Print<span class="dd-sc">Ctrl+P</span></div>
     </div>
   </div>
 
   <div class="menu-item" tabindex="0">View
     <div class="dropdown" role="menu">
-      <div class="dd-item" role="menuitem" onclick="switchSheet('about');closeMenus()"><span class="dd-icon" style="color:#0f9d58">◼</span>About</div>
-      <div class="dd-item" role="menuitem" onclick="switchSheet('exp');closeMenus()"><span class="dd-icon" style="color:#1a73e8">◼</span>Experience</div>
-      <div class="dd-item" role="menuitem" onclick="switchSheet('skills');closeMenus()"><span class="dd-icon" style="color:#fbbc04">◼</span>Skills</div>
-      <div class="dd-item" role="menuitem" onclick="switchSheet('projects');closeMenus()"><span class="dd-icon" style="color:#ea4335">◼</span>Projects</div>
-      <div class="dd-item" role="menuitem" onclick="switchSheet('contact');closeMenus()"><span class="dd-icon" style="color:#a142f4">◼</span>Contact</div>
+      <div class="dd-item" onclick="switchSheet('about');closeMenus()"><span class="dd-icon" style="color:#0f9d58">&#9632;</span>About</div>
+      <div class="dd-item" onclick="switchSheet('exp');closeMenus()"><span class="dd-icon" style="color:#1a73e8">&#9632;</span>Experience</div>
+      <div class="dd-item" onclick="switchSheet('skills');closeMenus()"><span class="dd-icon" style="color:#fbbc04">&#9632;</span>Skills</div>
+      <div class="dd-item" onclick="switchSheet('projects');closeMenus()"><span class="dd-icon" style="color:#ea4335">&#9632;</span>Projects</div>
+      <div class="dd-item" onclick="switchSheet('contact');closeMenus()"><span class="dd-icon" style="color:#a142f4">&#9632;</span>Contact</div>
     </div>
   </div>
 
   <div class="menu-item" tabindex="0">Connect
     <div class="dropdown" role="menu">
-      <div class="dd-item" role="menuitem" onclick="window.open('https://linkedin.com/in/tanishq-joshi-b396a2170','_blank','noopener')"><span class="dd-icon">💼</span>LinkedIn<span class="dd-sc">↗</span></div>
-      <div class="dd-item" role="menuitem" onclick="window.open('https://github.com/tanishq510','_blank','noopener')"><span class="dd-icon">🐙</span>GitHub<span class="dd-sc">↗</span></div>
+      <div class="dd-item" onclick="window.open('https://linkedin.com/in/tanishq-joshi-b396a2170','_blank','noopener')"><span class="dd-icon">&#128188;</span>LinkedIn<span class="dd-sc">&#8599;</span></div>
+      <div class="dd-item" onclick="window.open('https://github.com/tanishq510','_blank','noopener')"><span class="dd-icon">&#128025;</span>GitHub<span class="dd-sc">&#8599;</span></div>
       <div class="dd-sep"></div>
-      <div class="dd-item" role="menuitem" onclick="window.location.href='mailto:tanishjoshi93@gmail.com'"><span class="dd-icon">✉</span>Email</div>
+      <div class="dd-item" onclick="window.location.href='mailto:tanishjoshi93@gmail.com'"><span class="dd-icon">&#9993;</span>Email</div>
     </div>
   </div>
 
   <div class="menu-item" tabindex="0">Tools
     <div class="dropdown" role="menu">
-      <div class="dd-item" role="menuitem" onclick="window.open('./resume.pdf')"><span class="dd-icon">⬇</span>Download Resume</div>
-      <div class="dd-item" role="menuitem" onclick="window.location.href='mailto:tanishjoshi93@gmail.com'"><span class="dd-icon">✉</span>Send Email</div>
+      <div class="dd-item" onclick="window.open('./resume.pdf')"><span class="dd-icon">&#128196;</span>Download Resume</div>
+      <div class="dd-item" onclick="window.location.href='mailto:tanishjoshi93@gmail.com'"><span class="dd-icon">&#9993;</span>Send Email</div>
     </div>
   </div>
 
   <div class="menu-item" tabindex="0">Help
     <div class="dropdown" role="menu">
-      <div class="dd-item" role="menuitem" onclick="window.open('https://github.com/Tanishq510/Tanishq510.github.io','_blank','noopener')"><span class="dd-icon">⭐</span>View source on GitHub</div>
+      <div class="dd-item" onclick="window.open('https://github.com/Tanishq510/Tanishq510.github.io','_blank','noopener')"><span class="dd-icon">&#11088;</span>View source on GitHub</div>
       <div class="dd-sep"></div>
-      <div class="dd-item" role="menuitem" onclick="window.open('https://linkedin.com/in/tanishq-joshi-b396a2170','_blank','noopener')"><span class="dd-icon">💼</span>Connect on LinkedIn</div>
-      <div class="dd-item" role="menuitem" onclick="window.location.href='mailto:tanishjoshi93@gmail.com'"><span class="dd-icon">✉</span>Get in touch</div>
+      <div class="dd-item" onclick="window.open('https://linkedin.com/in/tanishq-joshi-b396a2170','_blank','noopener')"><span class="dd-icon">&#128188;</span>Connect on LinkedIn</div>
+      <div class="dd-item" onclick="window.location.href='mailto:tanishjoshi93@gmail.com'"><span class="dd-icon">&#9993;</span>Get in touch</div>
     </div>
   </div>
 
 </nav>
 
-<div id="toolbar" role="toolbar" aria-label="Formatting toolbar">
-  <div class="t-btn">↩</div><div class="t-btn">↪</div>
+<!-- TOOLBAR -->
+<div id="toolbar" role="toolbar">
+  <div class="t-btn">&#8617;</div><div class="t-btn">&#8618;</div>
   <div class="t-sep"></div>
   <div class="t-btn" style="min-width:44px;font-size:12px">100%</div>
   <div class="t-sep"></div>
   <select class="t-sel" style="width:110px"><option>Google Sans</option><option>Roboto Mono</option></select>
   <div style="width:5px"></div>
-  <select class="t-sel" style="width:48px"><option>12</option><option>13</option><option>14</option></select>
+  <select class="t-sel" style="width:48px"><option>12</option><option>13</option></select>
   <div class="t-sep"></div>
   <div class="t-btn" style="font-weight:700">B</div>
   <div class="t-btn" style="font-style:italic">I</div>
@@ -267,195 +492,476 @@ body{height:100%;width:100%;font-family:var(--sans);font-size:13px;color:var(--t
   <div class="t-btn">&#128279;</div><div class="t-btn">&#128202;</div>
 </div>
 
-<div id="formula-bar" aria-label="Formula bar">
+<!-- FORMULA BAR -->
+<div id="formula-bar">
   <div id="name-box">A1</div>
-  <div id="fx-icon" aria-hidden="true">fx</div>
-  <div id="formula-content">Tanishq Joshi — Portfolio</div>
+  <div id="fx-icon">fx</div>
+  <div id="formula-content">Tanishq Joshi &#8212; Portfolio</div>
 </div>
 
+<!-- GRID -->
 <main id="grid-area" role="main">
   <div id="col-headers" aria-hidden="true"></div>
-  <div id="grid" role="grid" aria-label="Portfolio spreadsheet"></div>
+  <div id="grid" role="grid">
+    <div id="grid-content"></div>
+  </div>
 </main>
 
-<div id="sheet-tabs" role="tablist" aria-label="Portfolio sections">
+<!-- SHEET TABS -->
+<div id="sheet-tabs" role="tablist">
   <div class="tab active" role="tab" aria-selected="true"  data-sheet="about"    onclick="switchSheet('about')"><div class="tab-dot" style="background:#0f9d58"></div>About</div>
-  <div class="tab" role="tab" aria-selected="false" data-sheet="exp"      onclick="switchSheet('exp')"><div class="tab-dot" style="background:#1a73e8"></div>Experience</div>
-  <div class="tab" role="tab" aria-selected="false" data-sheet="skills"   onclick="switchSheet('skills')"><div class="tab-dot" style="background:#fbbc04"></div>Skills</div>
-  <div class="tab" role="tab" aria-selected="false" data-sheet="projects"  onclick="switchSheet('projects')"><div class="tab-dot" style="background:#ea4335"></div>Projects</div>
-  <div class="tab" role="tab" aria-selected="false" data-sheet="contact"  onclick="switchSheet('contact')"><div class="tab-dot" style="background:#a142f4"></div>Contact</div>
-  <div class="add-tab" aria-label="Add sheet">+</div>
+  <div class="tab"        role="tab" aria-selected="false" data-sheet="exp"       onclick="switchSheet('exp')"><div class="tab-dot" style="background:#1a73e8"></div>Experience</div>
+  <div class="tab"        role="tab" aria-selected="false" data-sheet="skills"    onclick="switchSheet('skills')"><div class="tab-dot" style="background:#fbbc04"></div>Skills</div>
+  <div class="tab"        role="tab" aria-selected="false" data-sheet="projects"  onclick="switchSheet('projects')"><div class="tab-dot" style="background:#ea4335"></div>Projects</div>
+  <div class="tab"        role="tab" aria-selected="false" data-sheet="contact"   onclick="switchSheet('contact')"><div class="tab-dot" style="background:#a142f4"></div>Contact</div>
+  <div class="add-tab">+</div>
 </div>
 
 <script>
-const S={
+/* ═══════════════════════════════════
+   DESKTOP SHEET DATA
+═══════════════════════════════════ */
+const SHEETS = {
   about:{
-    cols:[{id:'A',w:155},{id:'B',w:420},{id:'C',w:135}],
+    cols:[{id:"A",w:155},{id:"B",w:420},{id:"C",w:135}],
     rows:[
-      {n:1,cells:[{w:710,cls:'shdr',text:'Tanishq Joshi — Software Engineer Portfolio',ref:'A1',formula:'Tanishq Joshi — Software Engineer Portfolio'}]},
+      {n:1,cells:[{w:710,cls:"shdr",text:"Tanishq Joshi \u2014 Software Engineer Portfolio",ref:"A1",formula:"Tanishq Joshi \u2014 Software Engineer Portfolio"}]},
       {n:2,empty:1,cells:[{w:155},{w:420},{w:135}]},
-      {n:3,cells:[{w:155,cls:'lbl',text:'Full Name',ref:'A3',formula:'Full Name'},{w:420,cls:'bold',text:'Tanishq Joshi',ref:'B3',formula:'"Tanishq Joshi"'},{w:135}]},
-      {n:4,cells:[{w:155,cls:'lbl',text:'Title',ref:'A4',formula:'Title'},{w:420,text:'Software Engineer',ref:'B4',formula:'"Software Engineer"'},{w:135}]},
-      {n:5,cells:[{w:155,cls:'lbl',text:'Experience',ref:'A5',formula:'Experience'},{w:420,text:'7+ years',ref:'B5',formula:'=7&"+ years"'},{w:135}]},
-      {n:6,cells:[{w:155,cls:'lbl',text:'Location',ref:'A6',formula:'Location'},{w:420,text:'Indore, Madhya Pradesh, IN',ref:'B6',formula:'"Indore, Madhya Pradesh, IN"'},{w:135}]},
-      {n:7,cells:[{w:155,cls:'lbl',text:'Status',ref:'A7',formula:'Status'},{w:420,type:'status',ref:'B7',formula:'=IF(open_to_work,"Open to Work","Unavailable")'},{w:135}]},
+      {n:3,cells:[{w:155,cls:"lbl",text:"Full Name",ref:"A3",formula:"Full Name"},{w:420,cls:"bold",text:"Tanishq Joshi",ref:"B3",formula:"\"Tanishq Joshi\""},{w:135}]},
+      {n:4,cells:[{w:155,cls:"lbl",text:"Title",ref:"A4",formula:"Title"},{w:420,text:"Software Engineer",ref:"B4",formula:"\"Software Engineer\""},{w:135}]},
+      {n:5,cells:[{w:155,cls:"lbl",text:"Experience",ref:"A5",formula:"Experience"},{w:420,text:"7+ years",ref:"B5",formula:"=7&\"+ years\""},{w:135}]},
+      {n:6,cells:[{w:155,cls:"lbl",text:"Location",ref:"A6",formula:"Location"},{w:420,text:"Indore, Madhya Pradesh, IN",ref:"B6",formula:"\"Indore, Madhya Pradesh, IN\""},{w:135}]},
+      {n:7,cells:[{w:155,cls:"lbl",text:"Status",ref:"A7",formula:"Status"},{w:420,type:"status",ref:"B7",formula:"=IF(open_to_work,\"Open to Work\",\"Unavailable\")"},{w:135}]},
       {n:8,empty:1,cells:[{w:155},{w:420},{w:135}]},
-      {n:9,cells:[{w:155,cls:'lbl',text:'Summary',ref:'A9',formula:'Summary'},{w:420,text:'I build scalable backend systems and intelligent cloud-native applications.',ref:'B9',formula:'"I build scalable backend systems and intelligent cloud-native applications."'},{w:135}]},
-      {n:10,cells:[{w:155},{w:420,cls:'muted',text:'Main stack: Node.js + AWS. Currently deep in Agentic AI —',ref:'B10'},{w:135,text:'Open to remote',ref:'C10',formula:'"Open to remote: true"'}]},
-      {n:11,cells:[{w:155},{w:420,cls:'muted',text:'RAG pipelines, LLM integrations, Copilot Studio.',ref:'B11'},{w:135}]},
+      {n:9,cells:[{w:155,cls:"lbl",text:"Summary",ref:"A9",formula:"Summary"},{w:420,text:"I build scalable backend systems and intelligent cloud-native applications.",ref:"B9",formula:"\"Summary\""},{w:135}]},
+      {n:10,cells:[{w:155},{w:420,cls:"muted",text:"Main stack: Node.js + AWS. Currently deep in Agentic AI \u2014",ref:"B10"},{w:135,text:"Open to remote",ref:"C10",formula:"\"Open to remote: true\""}]},
+      {n:11,cells:[{w:155},{w:420,cls:"muted",text:"RAG pipelines, LLM integrations, Copilot Studio.",ref:"B11"},{w:135}]},
       {n:12,empty:1,cells:[{w:155},{w:420},{w:135}]},
-      {n:13,cells:[{w:155,cls:'lbl',text:'LinkedIn',ref:'A13',formula:'LinkedIn'},{w:420,html:'<a href="https://linkedin.com/in/tanishq-joshi-b396a2170" target="_blank" rel="noopener">linkedin.com/in/tanishq-joshi-b396a2170</a>',ref:'B13',formula:'=HYPERLINK("https://linkedin.com/in/tanishq-joshi-b396a2170")'},{w:135}]},
-      {n:14,cells:[{w:155,cls:'lbl',text:'GitHub',ref:'A14',formula:'GitHub'},{w:420,html:'<a href="https://github.com/tanishq510" target="_blank" rel="noopener">github.com/tanishq510</a>',ref:'B14',formula:'=HYPERLINK("https://github.com/tanishq510")'},{w:135}]},
-      {n:15,cells:[{w:155,cls:'lbl',text:'Email',ref:'A15',formula:'Email'},{w:420,html:'<a href="mailto:tanishjoshi93@gmail.com">tanishjoshi93@gmail.com</a>',ref:'B15',formula:'=HYPERLINK("mailto:tanishjoshi93@gmail.com")'},{w:135}]},
+      {n:13,cells:[{w:155,cls:"lbl",text:"LinkedIn",ref:"A13",formula:"LinkedIn"},{w:420,html:"<a href=\"https://linkedin.com/in/tanishq-joshi-b396a2170\" target=\"_blank\" rel=\"noopener\">linkedin.com/in/tanishq-joshi-b396a2170</a>",ref:"B13",formula:"=HYPERLINK(\"https://linkedin.com/in/tanishq-joshi-b396a2170\")"},{w:135}]},
+      {n:14,cells:[{w:155,cls:"lbl",text:"GitHub",ref:"A14",formula:"GitHub"},{w:420,html:"<a href=\"https://github.com/tanishq510\" target=\"_blank\" rel=\"noopener\">github.com/tanishq510</a>",ref:"B14",formula:"=HYPERLINK(\"https://github.com/tanishq510\")"},{w:135}]},
+      {n:15,cells:[{w:155,cls:"lbl",text:"Email",ref:"A15",formula:"Email"},{w:420,html:"<a href=\"mailto:tanishjoshi93@gmail.com\">tanishjoshi93@gmail.com</a>",ref:"B15",formula:"=HYPERLINK(\"mailto:tanishjoshi93@gmail.com\")"},{w:135}]},
       {n:16,empty:1,cells:[{w:155},{w:420},{w:135}]},
-      {n:17,cells:[{w:155,cls:'lbl',text:'Resume',ref:'A17',formula:'Resume'},{w:420,type:'dl',ref:'B17',formula:'=HYPERLINK("./resume.pdf","Download Resume.pdf")'},{w:135}]},
+      {n:17,cells:[{w:155,cls:"lbl",text:"Resume",ref:"A17",formula:"Resume"},{w:420,type:"dl",ref:"B17",formula:"=HYPERLINK(\"./resume.pdf\",\"Download Resume.pdf\")"},{w:135}]},
       {n:18,empty:1,cells:[{w:155},{w:420},{w:135}]},
     ]
   },
   exp:{
-    cols:[{id:'A',w:190},{id:'B',w:150},{id:'C',w:138},{id:'D',w:232}],
+    cols:[{id:"A",w:190},{id:"B",w:150},{id:"C",w:138},{id:"D",w:232}],
     rows:[
-      {n:1,cells:[{w:190,cls:'hdr',text:'Company',ref:'A1',formula:'Company'},{w:150,cls:'hdr',text:'Role',ref:'B1',formula:'Role'},{w:138,cls:'hdr ctr',text:'Period',ref:'C1',formula:'Period'},{w:232,cls:'hdr',text:'Impact',ref:'D1',formula:'Impact'}]},
-      {n:2,cells:[{w:190,cls:'bold',text:'Tata Consultancy Services',ref:'A2',formula:'"Tata Consultancy Services"'},{w:150,text:'Software Engineer',ref:'B2'},{w:138,cls:'muted ctr',text:'May 2022 – present',ref:'C2',formula:'"May 2022 – present"'},{w:232,text:'Agentic AI via Copilot Studio + OpenAI → effort ↓60%',ref:'D2',formula:'"Agentic AI — manual effort ↓60%"'}]},
-      {n:3,cells:[{w:190},{w:150},{w:138},{w:232,cls:'muted',text:'RAG semantic search over internal docs → resolution ↓45%',ref:'D3'}]},
-      {n:4,cells:[{w:190},{w:150},{w:138},{w:232,cls:'muted',text:'SQS + Step Functions event pipelines across microservices',ref:'D4'}]},
-      {n:5,cells:[{w:190},{w:150},{w:138},{w:232,cls:'muted',text:'Lambda cold-start optimisation → p99 latency ↓30%',ref:'D5'}]},
-      {n:6,cells:[{w:190,cls:'bold',text:'Mindbowser',ref:'A6'},{w:150,text:'Software Engineer',ref:'B6'},{w:138,cls:'muted ctr',text:'Jan – May 2022',ref:'C6',formula:'"Jan 2022 – May 2022"'},{w:232,text:'Docker containerisation → deployment time ↓40%',ref:'D6'}]},
-      {n:7,cells:[{w:190},{w:150},{w:138},{w:232,cls:'muted',text:'React/Next.js frontend → traffic ↑25%, load time ↓20%',ref:'D7'}]},
-      {n:8,cells:[{w:190,cls:'bold',text:'Codiant — Yash Technologies',ref:'A8'},{w:150,text:'Software Developer',ref:'B8'},{w:138,cls:'muted ctr',text:'Jan 2021 – Jan 2022',ref:'C8'},{w:232,text:'CRM/HRM full-stack, FSD architecture, RTK Query',ref:'D8'}]},
-      {n:9,cells:[{w:190,cls:'bold',text:'WebKodz',ref:'A9'},{w:150,text:'Fullstack Developer',ref:'B9'},{w:138,cls:'muted ctr',text:'Aug 2020 – Jan 2021',ref:'C9'},{w:232,cls:'muted',text:'Responsive builds, WordPress CMS, SEO +35%',ref:'D9'}]},
-      {n:10,cells:[{w:190,cls:'bold',text:'SMT Group',ref:'A10'},{w:150,text:'Junior Fullstack Dev',ref:'B10'},{w:138,cls:'muted ctr',text:'Jul 2019 – Aug 2020',ref:'C10'},{w:232,cls:'muted',text:'Internal dashboards and reporting tools',ref:'D10'}]},
+      {n:1,cells:[{w:190,cls:"hdr",text:"Company",ref:"A1"},{w:150,cls:"hdr",text:"Role",ref:"B1"},{w:138,cls:"hdr ctr",text:"Period",ref:"C1"},{w:232,cls:"hdr",text:"Impact",ref:"D1"}]},
+      {n:2,cells:[{w:190,cls:"bold",text:"Tata Consultancy Services",ref:"A2",formula:"\"Tata Consultancy Services\""},{w:150,text:"Software Engineer",ref:"B2"},{w:138,cls:"muted ctr",text:"May 2022 \u2013 present",ref:"C2",formula:"\"May 2022 \u2013 present\""},{w:232,text:"Agentic AI via Copilot Studio + OpenAI \u2192 effort \u2193 60%",ref:"D2",formula:"\"Agentic AI \u2014 manual effort \u2193 60%\""}]},
+      {n:3,cells:[{w:190},{w:150},{w:138},{w:232,cls:"muted",text:"RAG semantic search \u2192 resolution \u2193 45%",ref:"D3"}]},
+      {n:4,cells:[{w:190},{w:150},{w:138},{w:232,cls:"muted",text:"SQS + Step Functions event pipelines",ref:"D4"}]},
+      {n:5,cells:[{w:190},{w:150},{w:138},{w:232,cls:"muted",text:"Lambda cold-start optimisation \u2192 p99 \u2193 30%",ref:"D5"}]},
+      {n:6,cells:[{w:190,cls:"bold",text:"Mindbowser",ref:"A6"},{w:150,text:"Software Engineer",ref:"B6"},{w:138,cls:"muted ctr",text:"Jan \u2013 May 2022",ref:"C6"},{w:232,text:"Docker containerisation \u2192 deploy time \u2193 40%",ref:"D6"}]},
+      {n:7,cells:[{w:190},{w:150},{w:138},{w:232,cls:"muted",text:"React / Next.js \u2192 traffic \u2191 25%, load \u2193 20%",ref:"D7"}]},
+      {n:8,cells:[{w:190,cls:"bold",text:"Codiant \u2014 Yash Technologies",ref:"A8"},{w:150,text:"Software Developer",ref:"B8"},{w:138,cls:"muted ctr",text:"Jan 2021 \u2013 Jan 2022",ref:"C8"},{w:232,text:"CRM / HRM full-stack, FSD architecture, RTK Query",ref:"D8"}]},
+      {n:9,cells:[{w:190,cls:"bold",text:"WebKodz",ref:"A9"},{w:150,text:"Fullstack Developer",ref:"B9"},{w:138,cls:"muted ctr",text:"Aug 2020 \u2013 Jan 2021",ref:"C9"},{w:232,cls:"muted",text:"Responsive builds, WordPress CMS, SEO +35%",ref:"D9"}]},
+      {n:10,cells:[{w:190,cls:"bold",text:"SMT Group",ref:"A10"},{w:150,text:"Junior Fullstack Dev",ref:"B10"},{w:138,cls:"muted ctr",text:"Jul 2019 \u2013 Aug 2020",ref:"C10"},{w:232,cls:"muted",text:"Internal dashboards and reporting tools",ref:"D10"}]},
       {n:11,empty:1,cells:[{w:190},{w:150},{w:138},{w:232}]},
     ]
   },
   skills:{
-    cols:[{id:'A',w:140},{id:'B',w:140},{id:'C',w:140},{id:'D',w:140},{id:'E',w:140}],
+    cols:[{id:"A",w:140},{id:"B",w:140},{id:"C",w:140},{id:"D",w:140},{id:"E",w:140}],
     rows:[
-      {n:1,cells:[{w:140,cls:'hdr ctr',text:'Backend',ref:'A1'},{w:140,cls:'hdr ctr',text:'Cloud (AWS)',ref:'B1'},{w:140,cls:'hdr ctr',text:'AI / LLM',ref:'C1'},{w:140,cls:'hdr ctr',text:'Frontend',ref:'D1'},{w:140,cls:'hdr ctr',text:'Tooling',ref:'E1'}]},
-      {n:2,cells:[{w:140,cls:'ctr',text:'Node.js',ref:'A2'},{w:140,cls:'ctr',text:'Lambda',ref:'B2'},{w:140,cls:'ctr',text:'RAG',ref:'C2'},{w:140,cls:'ctr',text:'React',ref:'D2'},{w:140,cls:'ctr',text:'Docker',ref:'E2'}]},
-      {n:3,cells:[{w:140,cls:'ctr',text:'TypeScript',ref:'A3'},{w:140,cls:'ctr',text:'SQS / SNS',ref:'B3'},{w:140,cls:'ctr',text:'OpenAI API',ref:'C3'},{w:140,cls:'ctr',text:'Next.js',ref:'D3'},{w:140,cls:'ctr',text:'Git',ref:'E3'}]},
-      {n:4,cells:[{w:140,cls:'ctr',text:'Express',ref:'A4'},{w:140,cls:'ctr',text:'Step Functions',ref:'B4'},{w:140,cls:'ctr',text:'LangChain',ref:'C4'},{w:140,cls:'ctr',text:'Tailwind CSS',ref:'D4'},{w:140,cls:'ctr',text:'Postman',ref:'E4'}]},
-      {n:5,cells:[{w:140,cls:'ctr',text:'GraphQL',ref:'A5'},{w:140,cls:'ctr',text:'S3 / RDS',ref:'B5'},{w:140,cls:'ctr',text:'Copilot Studio',ref:'C5'},{w:140,cls:'ctr',text:'HTML / CSS',ref:'D5'},{w:140,cls:'ctr',text:'Swagger',ref:'E5'}]},
-      {n:6,cells:[{w:140,cls:'ctr',text:'MongoDB',ref:'A6'},{w:140,cls:'ctr',text:'CloudWatch',ref:'B6'},{w:140,cls:'ctr',text:'Embeddings',ref:'C6'},{w:140,cls:'ctr'},{w:140,cls:'ctr',text:'Jira',ref:'E6'}]},
-      {n:7,cells:[{w:140,cls:'ctr',text:'PostgreSQL',ref:'A7'},{w:140,cls:'ctr',text:'DynamoDB',ref:'B7'},{w:140,cls:'ctr',text:'Azure AI',ref:'C7'},{w:140,cls:'ctr'},{w:140,cls:'ctr'}]},
-      {n:8,cells:[{w:140,cls:'ctr',text:'Redis',ref:'A8'},{w:140,cls:'ctr',text:'IAM / EC2',ref:'B8'},{w:140,cls:'ctr',text:'Prompt Eng.',ref:'C8'},{w:140,cls:'ctr'},{w:140,cls:'ctr'}]},
+      {n:1,cells:[{w:140,cls:"hdr ctr",text:"Backend",ref:"A1"},{w:140,cls:"hdr ctr",text:"Cloud (AWS)",ref:"B1"},{w:140,cls:"hdr ctr",text:"AI / LLM",ref:"C1"},{w:140,cls:"hdr ctr",text:"Frontend",ref:"D1"},{w:140,cls:"hdr ctr",text:"Tooling",ref:"E1"}]},
+      {n:2,cells:[{w:140,cls:"ctr",text:"Node.js",ref:"A2"},{w:140,cls:"ctr",text:"Lambda",ref:"B2"},{w:140,cls:"ctr",text:"RAG",ref:"C2"},{w:140,cls:"ctr",text:"React",ref:"D2"},{w:140,cls:"ctr",text:"Docker",ref:"E2"}]},
+      {n:3,cells:[{w:140,cls:"ctr",text:"TypeScript",ref:"A3"},{w:140,cls:"ctr",text:"SQS / SNS",ref:"B3"},{w:140,cls:"ctr",text:"OpenAI API",ref:"C3"},{w:140,cls:"ctr",text:"Next.js",ref:"D3"},{w:140,cls:"ctr",text:"Git",ref:"E3"}]},
+      {n:4,cells:[{w:140,cls:"ctr",text:"Express",ref:"A4"},{w:140,cls:"ctr",text:"Step Functions",ref:"B4"},{w:140,cls:"ctr",text:"LangChain",ref:"C4"},{w:140,cls:"ctr",text:"Tailwind CSS",ref:"D4"},{w:140,cls:"ctr",text:"Postman",ref:"E4"}]},
+      {n:5,cells:[{w:140,cls:"ctr",text:"GraphQL",ref:"A5"},{w:140,cls:"ctr",text:"S3 / RDS",ref:"B5"},{w:140,cls:"ctr",text:"Copilot Studio",ref:"C5"},{w:140,cls:"ctr",text:"HTML / CSS",ref:"D5"},{w:140,cls:"ctr",text:"Swagger",ref:"E5"}]},
+      {n:6,cells:[{w:140,cls:"ctr",text:"MongoDB",ref:"A6"},{w:140,cls:"ctr",text:"CloudWatch",ref:"B6"},{w:140,cls:"ctr",text:"Embeddings",ref:"C6"},{w:140,cls:"ctr"},{w:140,cls:"ctr",text:"Jira",ref:"E6"}]},
+      {n:7,cells:[{w:140,cls:"ctr",text:"PostgreSQL",ref:"A7"},{w:140,cls:"ctr",text:"DynamoDB",ref:"B7"},{w:140,cls:"ctr",text:"Azure AI",ref:"C7"},{w:140,cls:"ctr"},{w:140,cls:"ctr"}]},
+      {n:8,cells:[{w:140,cls:"ctr",text:"Redis",ref:"A8"},{w:140,cls:"ctr",text:"IAM / EC2",ref:"B8"},{w:140,cls:"ctr",text:"Prompt Eng.",ref:"C8"},{w:140,cls:"ctr"},{w:140,cls:"ctr"}]},
       {n:9,empty:1,cells:[{w:140},{w:140},{w:140},{w:140},{w:140}]},
-      {n:10,cells:[{w:140,cls:'lbl ctr',text:'Years of Exp.',ref:'A10',formula:'Years of Experience'},{w:140,cls:'bold ctr',text:'7+',ref:'B10',formula:'=7',style:'color:#137333'},{w:140,cls:'lbl ctr',text:'Remote?',ref:'C10'},{w:140,cls:'bold ctr',text:'Yes ✓',ref:'D10',formula:'=TRUE',style:'color:#137333'},{w:140,cls:'lbl ctr',text:'Open to Work?',ref:'E10'}]},
-      {n:11,cells:[{w:140},{w:140},{w:140},{w:140},{w:140,cls:'bold ctr',text:'Yes ✓',ref:'E11',formula:'=TRUE',style:'color:#137333'}]},
+      {n:10,cells:[{w:140,cls:"lbl ctr",text:"Years of Exp.",ref:"A10",formula:"Years of Experience"},{w:140,cls:"bold ctr",text:"7+",ref:"B10",formula:"=7",style:"color:#137333"},{w:140,cls:"lbl ctr",text:"Remote?",ref:"C10"},{w:140,cls:"bold ctr",text:"Yes \u2713",ref:"D10",formula:"=TRUE",style:"color:#137333"},{w:140,cls:"lbl ctr",text:"Open to Work?",ref:"E10"}]},
+      {n:11,cells:[{w:140},{w:140},{w:140},{w:140},{w:140,cls:"bold ctr",text:"Yes \u2713",ref:"E11",formula:"=TRUE",style:"color:#137333"}]},
     ]
   },
   projects:{
-    cols:[{id:'A',w:150},{id:'B',w:235},{id:'C',w:178},{id:'D',w:147}],
+    cols:[{id:"A",w:150},{id:"B",w:235},{id:"C",w:178},{id:"D",w:147}],
     rows:[
-      {n:1,cells:[{w:150,cls:'hdr',text:'Project',ref:'A1'},{w:235,cls:'hdr',text:'Description',ref:'B1'},{w:178,cls:'hdr',text:'Stack',ref:'C1'},{w:147,cls:'hdr',text:'Links',ref:'D1'}]},
-      {n:2,cells:[{w:150,cls:'bold',html:'<a href="https://github.com/tanishq510" target="_blank" rel="noopener">rag-pipeline</a>',ref:'A2',formula:'=HYPERLINK("https://github.com/tanishq510","rag-pipeline")'},{w:235,text:'Document ingestion + semantic search over PDFs',ref:'B2'},{w:178,cls:'muted',text:'Node.js, OpenAI, Pinecone, Lambda',ref:'C2'},{w:147,html:'<a href="https://github.com/tanishq510" target="_blank" rel="noopener">↗ github</a>',ref:'D2'}]},
-      {n:3,cells:[{w:150,cls:'bold',html:'<a href="https://github.com/tanishq510" target="_blank" rel="noopener">aws-step-workflow</a>',ref:'A3'},{w:235,text:'Serverless orchestration with DLQs and error branching',ref:'B3'},{w:178,cls:'muted',text:'AWS, Step Functions, SQS',ref:'C3'},{w:147,html:'<a href="https://github.com/tanishq510" target="_blank" rel="noopener">↗ github</a>',ref:'D3'}]},
-      {n:4,cells:[{w:150,cls:'bold',html:'<a href="https://github.com/tanishq510" target="_blank" rel="noopener">copilot-agent</a>',ref:'A4'},{w:235,text:'Enterprise chatbot with memory and tool calling',ref:'B4'},{w:178,cls:'muted',text:'Copilot Studio, Azure AI, TypeScript',ref:'C4'},{w:147,html:'<a href="https://github.com/tanishq510" target="_blank" rel="noopener">↗ github</a>',ref:'D4'}]},
-      {n:5,cells:[{w:150,cls:'bold',html:'<a href="https://tanishq510.github.io" target="_blank" rel="noopener">this-portfolio</a>',ref:'A5'},{w:235,text:'You are looking at it. Built as a Google Sheets mockup.',ref:'B5'},{w:178,cls:'muted',text:'HTML, CSS, Vanilla JS',ref:'C5'},{w:147,html:'<a href="https://github.com/Tanishq510/Tanishq510.github.io" target="_blank" rel="noopener">↗ source</a>',ref:'D5'}]},
+      {n:1,cells:[{w:150,cls:"hdr",text:"Project",ref:"A1"},{w:235,cls:"hdr",text:"Description",ref:"B1"},{w:178,cls:"hdr",text:"Stack",ref:"C1"},{w:147,cls:"hdr",text:"Links",ref:"D1"}]},
+      {n:2,cells:[{w:150,cls:"bold",html:"<a href=\"https://github.com/tanishq510\" target=\"_blank\" rel=\"noopener\">rag-pipeline</a>",ref:"A2"},{w:235,text:"Document ingestion + semantic search over PDFs",ref:"B2"},{w:178,cls:"muted",text:"Node.js, OpenAI, Pinecone, Lambda",ref:"C2"},{w:147,html:"<a href=\"https://github.com/tanishq510\" target=\"_blank\" rel=\"noopener\">\u2197 github</a>",ref:"D2"}]},
+      {n:3,cells:[{w:150,cls:"bold",html:"<a href=\"https://github.com/tanishq510\" target=\"_blank\" rel=\"noopener\">aws-step-workflow</a>",ref:"A3"},{w:235,text:"Serverless orchestration with DLQs and error branching",ref:"B3"},{w:178,cls:"muted",text:"AWS, Step Functions, SQS",ref:"C3"},{w:147,html:"<a href=\"https://github.com/tanishq510\" target=\"_blank\" rel=\"noopener\">\u2197 github</a>",ref:"D3"}]},
+      {n:4,cells:[{w:150,cls:"bold",html:"<a href=\"https://github.com/tanishq510\" target=\"_blank\" rel=\"noopener\">copilot-agent</a>",ref:"A4"},{w:235,text:"Enterprise chatbot with memory and tool calling",ref:"B4"},{w:178,cls:"muted",text:"Copilot Studio, Azure AI, TypeScript",ref:"C4"},{w:147,html:"<a href=\"https://github.com/tanishq510\" target=\"_blank\" rel=\"noopener\">\u2197 github</a>",ref:"D4"}]},
+      {n:5,cells:[{w:150,cls:"bold",html:"<a href=\"https://tanishq510.github.io\" target=\"_blank\" rel=\"noopener\">this-portfolio</a>",ref:"A5"},{w:235,text:"You are looking at it. Built as a Google Sheets mockup.",ref:"B5"},{w:178,cls:"muted",text:"HTML, CSS, Vanilla JS",ref:"C5"},{w:147,html:"<a href=\"https://github.com/Tanishq510/Tanishq510.github.io\" target=\"_blank\" rel=\"noopener\">\u2197 source</a>",ref:"D5"}]},
       {n:6,empty:1,cells:[{w:150},{w:235},{w:178},{w:147}]},
     ]
   },
   contact:{
-    cols:[{id:'A',w:155},{id:'B',w:415},{id:'C',w:140}],
+    cols:[{id:"A",w:155},{id:"B",w:415},{id:"C",w:140}],
     rows:[
-      {n:1,cells:[{w:710,cls:'shdr',text:'Contact Tanishq Joshi',ref:'A1',formula:'Contact Tanishq Joshi'}]},
+      {n:1,cells:[{w:710,cls:"shdr",text:"Contact Tanishq Joshi",ref:"A1",formula:"Contact Tanishq Joshi"}]},
       {n:2,empty:1,cells:[{w:155},{w:415},{w:140}]},
-      {n:3,cells:[{w:155,cls:'lbl',text:'Email',ref:'A3'},{w:415,html:'<a href="mailto:tanishjoshi93@gmail.com">tanishjoshi93@gmail.com</a>',ref:'B3',formula:'=HYPERLINK("mailto:tanishjoshi93@gmail.com")'},{w:140}]},
-      {n:4,cells:[{w:155,cls:'lbl',text:'LinkedIn',ref:'A4'},{w:415,html:'<a href="https://linkedin.com/in/tanishq-joshi-b396a2170" target="_blank" rel="noopener">linkedin.com/in/tanishq-joshi-b396a2170</a>',ref:'B4',formula:'=HYPERLINK("https://linkedin.com/in/tanishq-joshi-b396a2170")'},{w:140}]},
-      {n:5,cells:[{w:155,cls:'lbl',text:'GitHub',ref:'A5'},{w:415,html:'<a href="https://github.com/tanishq510" target="_blank" rel="noopener">github.com/tanishq510</a>',ref:'B5',formula:'=HYPERLINK("https://github.com/tanishq510")'},{w:140}]},
+      {n:3,cells:[{w:155,cls:"lbl",text:"Email",ref:"A3"},{w:415,html:"<a href=\"mailto:tanishjoshi93@gmail.com\">tanishjoshi93@gmail.com</a>",ref:"B3",formula:"=HYPERLINK(\"mailto:tanishjoshi93@gmail.com\")"},{w:140}]},
+      {n:4,cells:[{w:155,cls:"lbl",text:"LinkedIn",ref:"A4"},{w:415,html:"<a href=\"https://linkedin.com/in/tanishq-joshi-b396a2170\" target=\"_blank\" rel=\"noopener\">linkedin.com/in/tanishq-joshi-b396a2170</a>",ref:"B4",formula:"=HYPERLINK(\"https://linkedin.com/in/tanishq-joshi-b396a2170\")"},{w:140}]},
+      {n:5,cells:[{w:155,cls:"lbl",text:"GitHub",ref:"A5"},{w:415,html:"<a href=\"https://github.com/tanishq510\" target=\"_blank\" rel=\"noopener\">github.com/tanishq510</a>",ref:"B5",formula:"=HYPERLINK(\"https://github.com/tanishq510\")"},{w:140}]},
       {n:6,empty:1,cells:[{w:155},{w:415},{w:140}]},
-      {n:7,cells:[{w:155,cls:'lbl',text:'Available for',ref:'A7'},{w:415,text:'Full-time roles, remote contracts, interesting side projects',ref:'B7'},{w:140}]},
-      {n:8,cells:[{w:155,cls:'lbl',text:'Response time',ref:'A8'},{w:415,text:'Within 24 hours',ref:'B8'},{w:140}]},
+      {n:7,cells:[{w:155,cls:"lbl",text:"Available for",ref:"A7"},{w:415,text:"Full-time roles, remote contracts, interesting side projects",ref:"B7"},{w:140}]},
+      {n:8,cells:[{w:155,cls:"lbl",text:"Response time",ref:"A8"},{w:415,text:"Within 24 hours",ref:"B8"},{w:140}]},
       {n:9,empty:1,cells:[{w:155},{w:415},{w:140}]},
-      {n:10,cells:[{w:155,cls:'lbl',text:'Resume',ref:'A10'},{w:415,type:'dl',ref:'B10',formula:'=HYPERLINK("./resume.pdf","Download Resume.pdf")'},{w:140}]},
+      {n:10,cells:[{w:155,cls:"lbl",text:"Resume",ref:"A10"},{w:415,type:"dl",ref:"B10",formula:"=HYPERLINK(\"./resume.pdf\",\"Download Resume.pdf\")"},{w:140}]},
       {n:11,empty:1,cells:[{w:155},{w:415},{w:140}]},
     ]
   }
 };
 
-function render(id){
-  const sheet=S[id];
-  const ch=document.getElementById('col-headers');
-  const grid=document.getElementById('grid');
-  ch.innerHTML='';
-  const sp=document.createElement('div');sp.className='rn-sp';ch.appendChild(sp);
-  sheet.cols.forEach(c=>{
-    const el=document.createElement('div');
-    el.className='ch';el.id=`ch-${id}-${c.id}`;
-    el.style.cssText=`width:${c.w}px;min-width:${c.w}px;`;
-    el.textContent=c.id;ch.appendChild(el);
+/* ═══════════════════════════════════
+   FIX 5: MOBILE CARD DATA
+═══════════════════════════════════ */
+const MOBILE = {
+  about: null, // uses desktop grid (already works well on mobile)
+  contact: null, // uses desktop grid
+
+  skills: [
+    { cat:"Backend",       items:["Node.js","TypeScript","Express","GraphQL","MongoDB","PostgreSQL","Redis","MySQL"] },
+    { cat:"Cloud (AWS)",   items:["Lambda","SQS / SNS","Step Functions","S3 / RDS","CloudWatch","DynamoDB","IAM / EC2","ECS"] },
+    { cat:"AI / LLM",      items:["RAG","OpenAI API","LangChain","LlamaIndex","Copilot Studio","Azure AI","Embeddings","Prompt Eng."] },
+    { cat:"Frontend",      items:["React","Next.js","Tailwind CSS","HTML / CSS"] },
+    { cat:"Tooling",       items:["Docker","Git","Postman","Swagger","Jira","VS Code"] },
+  ],
+
+  exp: [
+    { company:"Tata Consultancy Services", role:"Software Engineer", period:"May 2022 \u2013 present",
+      bullets:["Built Agentic AI workflows via Copilot Studio + OpenAI \u2014 reduced manual effort by 60%","RAG semantic search over internal knowledge bases \u2014 query resolution 45% faster","Event-driven pipelines using SQS, SNS and Step Functions across microservices","Lambda cold-start optimisation \u2014 p99 latency reduced by 30%"] },
+    { company:"Mindbowser", role:"Software Engineer", period:"Jan 2022 \u2013 May 2022",
+      bullets:["Docker containerisation \u2014 deployment time reduced by 40%","React / Next.js frontend rewrites \u2014 traffic up 25%, load time down 20%"] },
+    { company:"Codiant \u2014 Yash Technologies", role:"Software Developer", period:"Jan 2021 \u2013 Jan 2022",
+      bullets:["CRM and HRM platforms built full-stack with FSD architecture and RTK Query"] },
+    { company:"WebKodz", role:"Fullstack Developer", period:"Aug 2020 \u2013 Jan 2021",
+      bullets:["Responsive web builds and WordPress CMS \u2014 improved SEO scores by 35%"] },
+    { company:"SMT Group", role:"Junior Fullstack Developer", period:"Jul 2019 \u2013 Aug 2020",
+      bullets:["Internal dashboards and reporting tools for operations teams"] },
+  ],
+
+  projects: [
+    { name:"rag-pipeline", href:"https://github.com/tanishq510",
+      desc:"Document ingestion and semantic search \u2014 upload any PDF and ask questions in natural language.",
+      stack:"Node.js \u00b7 OpenAI \u00b7 Pinecone \u00b7 AWS Lambda",
+      links:[{label:"\u2197 github", href:"https://github.com/tanishq510"}] },
+    { name:"aws-step-workflow", href:"https://github.com/tanishq510",
+      desc:"Serverless job orchestration with Step Functions, Lambda and SQS \u2014 includes dead-letter queues and error branching.",
+      stack:"AWS \u00b7 Step Functions \u00b7 SQS \u00b7 Lambda",
+      links:[{label:"\u2197 github", href:"https://github.com/tanishq510"}] },
+    { name:"copilot-agent", href:"https://github.com/tanishq510",
+      desc:"Enterprise chatbot with memory, tool calling and REST integrations on Microsoft Copilot Studio.",
+      stack:"Copilot Studio \u00b7 Azure AI \u00b7 TypeScript",
+      links:[{label:"\u2197 github", href:"https://github.com/tanishq510"}] },
+    { name:"this-portfolio", href:"https://tanishq510.github.io",
+      desc:"You are looking at it. A Google Sheets\u2013themed portfolio built in vanilla HTML, CSS and JS.",
+      stack:"HTML \u00b7 CSS \u00b7 Vanilla JS",
+      links:[{label:"\u2197 source", href:"https://github.com/Tanishq510/Tanishq510.github.io"}] },
+  ]
+};
+
+/* ═══════════════════════════════════
+   HELPERS
+═══════════════════════════════════ */
+function isMobile(){ return window.innerWidth <= 700; }
+
+/* ═══════════════════════════════════
+   DESKTOP RENDER
+═══════════════════════════════════ */
+function renderDesktop(id){
+  const sheet = SHEETS[id];
+  const ch = document.getElementById("col-headers");
+  const gc = document.getElementById("grid-content");
+
+  // column headers
+  ch.innerHTML = "";
+  const sp = document.createElement("div"); sp.className="rn-sp"; ch.appendChild(sp);
+  sheet.cols.forEach(c => {
+    const el = document.createElement("div");
+    el.className="ch"; el.id="ch-"+id+"-"+c.id;
+    el.style.cssText="width:"+c.w+"px;min-width:"+c.w+"px;";
+    el.textContent = c.id; ch.appendChild(el);
   });
-  grid.innerHTML='';
-  sheet.rows.forEach(row=>{
-    const rowEl=document.createElement('div');
-    rowEl.className='row'+(row.empty?' empty-row':'');
-    const rn=document.createElement('div');
-    rn.className='rn';rn.id=`rn-${id}-${row.n}`;rn.textContent=row.n;rowEl.appendChild(rn);
-    row.cells.forEach(cell=>{
-      const el=document.createElement('div');
-      el.className=('cell '+(cell.cls||'')).trim();
-      el.style.cssText=`width:${cell.w}px;min-width:${cell.w}px;`+(cell.style||'');
-      if(cell.type==='status'){
-        el.innerHTML='<span class="status-pill"><span class="pulse"></span>Open to Work</span>';
-      }else if(cell.type==='dl'){
-        el.innerHTML='<a class="dl-btn" href="./resume.pdf" download="Tanishq_Joshi_Resume.pdf">&#8595;&nbsp;&nbsp;Download Resume.pdf</a>';
-      }else if(cell.html){
-        el.innerHTML=cell.html;
-      }else{
-        el.textContent=cell.text||'';
+  // filler header cell
+  const fhc = document.createElement("div");
+  fhc.className="ch"; fhc.style.flex="1"; ch.appendChild(fhc);
+
+  // rows
+  gc.innerHTML = "";
+  sheet.rows.forEach(row => {
+    const rowEl = document.createElement("div");
+    rowEl.className = "row" + (row.empty ? " empty-row" : "");
+
+    const rn = document.createElement("div");
+    rn.className="rn"; rn.id="rn-"+id+"-"+row.n; rn.textContent=row.n;
+    rowEl.appendChild(rn);
+
+    row.cells.forEach(cell => {
+      const el = document.createElement("div");
+      el.className = ("cell "+(cell.cls||"")).trim();
+      el.style.cssText = "width:"+cell.w+"px;min-width:"+cell.w+"px;"+(cell.style||"");
+
+      if(cell.type==="status"){
+        el.innerHTML = "<span class=\"status-pill\"><span class=\"pulse\"></span>Open to Work</span>";
+      } else if(cell.type==="dl"){
+        el.innerHTML = "<a class=\"dl-btn\" href=\"./resume.pdf\" download=\"Tanishq_Joshi_Resume.pdf\">Download Resume.pdf</a>";
+      } else if(cell.html){
+        el.innerHTML = cell.html;
+      } else {
+        el.textContent = cell.text||"";
       }
-      el.addEventListener('click',e=>{
-        if(e.target.tagName==='A')return;
-        activate(el,cell,row.n,id);
+
+      el.addEventListener("click", e => {
+        if(e.target.tagName==="A") return;
+        activateCell(el, cell, row.n, id);
       });
       rowEl.appendChild(el);
     });
-    grid.appendChild(rowEl);
+
+    // filler cell extends row to full width
+    const filler = document.createElement("div");
+    filler.className = "cell fill";
+    rowEl.appendChild(filler);
+
+    gc.appendChild(rowEl);
   });
+
+  // Phantom rows — fill visible grid with row lines + column lines + row numbers
+  const dataRowCount = sheet.rows.length;
+  const PHANTOM = 60;
+  for(let p = 0; p < PHANTOM; p++){
+    const pr = document.createElement("div");
+    pr.className = "row phantom-row";
+    // row number
+    const prn = document.createElement("div");
+    prn.className = "rn";
+    prn.style.color = "var(--dim)";
+    prn.textContent = dataRowCount + 1 + p;
+    pr.appendChild(prn);
+    // one empty cell per column — gives vertical column lines
+    sheet.cols.forEach(col => {
+      const pc = document.createElement("div");
+      pc.className = "cell";
+      pc.style.cssText = "width:"+col.w+"px;min-width:"+col.w+"px;";
+      pr.appendChild(pc);
+    });
+    // final fill cell to stretch to edge
+    const pf = document.createElement("div");
+    pf.className = "cell fill";
+    pr.appendChild(pf);
+    gc.appendChild(pr);
+  }
 }
 
-function activate(el,cell,rowNum,sheetId){
-  document.querySelectorAll('.cell.active').forEach(c=>c.classList.remove('active'));
-  document.querySelectorAll('.rn.hl').forEach(r=>r.classList.remove('hl'));
-  document.querySelectorAll('.ch.hl').forEach(c=>c.classList.remove('hl'));
-  el.classList.add('active');
-  const rn=document.getElementById(`rn-${sheetId}-${rowNum}`);
-  if(rn)rn.classList.add('hl');
-  const ref=cell.ref||'A1';
-  const col=ref.replace(/[0-9]/g,'');
-  const chEl=document.getElementById(`ch-${sheetId}-${col}`);
-  if(chEl)chEl.classList.add('hl');
-  document.getElementById('name-box').textContent=ref;
-  document.getElementById('formula-content').textContent=cell.formula!==undefined?cell.formula:(cell.text||'');
+function activateCell(el, cell, rowNum, sheetId){
+  document.querySelectorAll(".cell.active").forEach(c=>c.classList.remove("active"));
+  document.querySelectorAll(".rn.hl").forEach(r=>r.classList.remove("hl"));
+  document.querySelectorAll(".ch.hl").forEach(c=>c.classList.remove("hl"));
+  el.classList.add("active");
+  const rn = document.getElementById("rn-"+sheetId+"-"+rowNum);
+  if(rn) rn.classList.add("hl");
+  const ref = cell.ref||"A1";
+  const col = ref.replace(/[0-9]/g,"");
+  const chEl = document.getElementById("ch-"+sheetId+"-"+col);
+  if(chEl) chEl.classList.add("hl");
+  document.getElementById("name-box").textContent = ref;
+  document.getElementById("formula-content").textContent = cell.formula!==undefined?cell.formula:(cell.text||"");
 }
+
+/* ═══════════════════════════════════
+   FIX 5: MOBILE RENDER
+═══════════════════════════════════ */
+function renderMobile(id){
+  document.getElementById("col-headers").innerHTML = "";
+  const gc = document.getElementById("grid-content");
+  gc.innerHTML = "";
+
+  // About and Contact: use same structure but render as mobile cards via CSS
+  if(id==="about" || id==="contact"){
+    renderDesktop(id); return;
+  }
+
+  const section = document.createElement("div");
+  section.className = "m-section";
+
+  if(id==="skills"){
+    const titleEl = document.createElement("div");
+    titleEl.className="m-title"; titleEl.textContent="Skills & Technologies";
+    section.appendChild(titleEl);
+
+    MOBILE.skills.forEach(group => {
+      const card = document.createElement("div");
+      card.className = "m-card";
+      const lbl = document.createElement("div");
+      lbl.className="m-lbl"; lbl.textContent=group.cat;
+      card.appendChild(lbl);
+      const tags = document.createElement("div");
+      tags.className="m-tags";
+      group.items.forEach(skill => {
+        const t = document.createElement("span");
+        t.className="m-tag"; t.textContent=skill;
+        tags.appendChild(t);
+      });
+      card.appendChild(tags);
+      section.appendChild(card);
+    });
+
+    // summary row
+    const sumCard = document.createElement("div");
+    sumCard.className="m-card";
+    sumCard.innerHTML = "<div class=\"m-lbl\">Summary</div><div class=\"m-tags\"><span class=\"m-tag\" style=\"color:#137333;border-color:#c8e6c9;background:#f0faf4\">7+ years experience</span><span class=\"m-tag\" style=\"color:#137333;border-color:#c8e6c9;background:#f0faf4\">Open to remote</span><span class=\"m-tag\" style=\"color:#137333;border-color:#c8e6c9;background:#f0faf4\">Open to work</span></div>";
+    section.appendChild(sumCard);
+  }
+
+  else if(id==="exp"){
+    const titleEl = document.createElement("div");
+    titleEl.className="m-title"; titleEl.textContent="Work Experience";
+    section.appendChild(titleEl);
+
+    MOBILE.exp.forEach((entry, i) => {
+      const card = document.createElement("div");
+      card.className="m-card";
+
+      const co = document.createElement("div");
+      co.className="m-company"; co.textContent=entry.company;
+      card.appendChild(co);
+
+      const role = document.createElement("div");
+      role.className="m-role"; role.textContent=entry.role+" \u00b7 "+entry.period;
+      card.appendChild(role);
+
+      entry.bullets.forEach(b => {
+        const bul = document.createElement("div");
+        bul.className="m-bullet"; bul.textContent=b;
+        card.appendChild(bul);
+      });
+
+      section.appendChild(card);
+      if(i < MOBILE.exp.length-1){
+        const div = document.createElement("div");
+        div.className="m-div"; section.appendChild(div);
+      }
+    });
+  }
+
+  else if(id==="projects"){
+    const titleEl = document.createElement("div");
+    titleEl.className="m-title"; titleEl.textContent="Projects";
+    section.appendChild(titleEl);
+
+    MOBILE.projects.forEach((proj, i) => {
+      const card = document.createElement("div");
+      card.className="m-card";
+
+      const nameEl = document.createElement("a");
+      nameEl.className="m-proj-name"; nameEl.href=proj.href;
+      nameEl.target="_blank"; nameEl.rel="noopener";
+      nameEl.textContent=proj.name;
+      card.appendChild(nameEl);
+
+      const desc = document.createElement("div");
+      desc.className="m-proj-desc"; desc.textContent=proj.desc;
+      card.appendChild(desc);
+
+      const stack = document.createElement("div");
+      stack.className="m-proj-stack"; stack.textContent=proj.stack;
+      card.appendChild(stack);
+
+      const linksRow = document.createElement("div");
+      proj.links.forEach(lk => {
+        const a = document.createElement("a");
+        a.className="m-proj-link"; a.href=lk.href;
+        a.target="_blank"; a.rel="noopener"; a.textContent=lk.label;
+        linksRow.appendChild(a);
+      });
+      card.appendChild(linksRow);
+      section.appendChild(card);
+
+      if(i < MOBILE.projects.length-1){
+        const div = document.createElement("div");
+        div.className="m-div"; section.appendChild(div);
+      }
+    });
+
+    // Download button
+    const dlWrap = document.createElement("div");
+    dlWrap.className="m-dl-wrap";
+    dlWrap.innerHTML="<a class=\"m-dl-btn\" href=\"./resume.pdf\" download=\"Tanishq_Joshi_Resume.pdf\">Download Resume.pdf</a>";
+    section.appendChild(dlWrap);
+  }
+
+  gc.appendChild(section);
+}
+
+/* ═══════════════════════════════════
+   SWITCH SHEET
+═══════════════════════════════════ */
 function switchSheet(id){
-  document.querySelectorAll('.tab').forEach(t=>{
-    const a=t.dataset.sheet===id;
-    t.classList.toggle('active',a);
-    t.setAttribute('aria-selected',String(a));
+  document.querySelectorAll(".tab").forEach(t=>{
+    const a = t.dataset.sheet===id;
+    t.classList.toggle("active",a);
+    t.setAttribute("aria-selected",String(a));
   });
-  render(id);
-  document.getElementById('grid').scrollTop=0;
-  const fr=S[id].rows[0];
-  if(fr){const fe=document.querySelector('#grid .cell');if(fe)activate(fe,fr.cells[0],1,id);}
+  if(isMobile()){
+    renderMobile(id);
+  } else {
+    renderDesktop(id);
+    // activate first data cell
+    const fr = SHEETS[id].rows[0];
+    if(fr){ const fe=document.querySelector("#grid-content .cell"); if(fe) activateCell(fe,fr.cells[0],1,id); }
+  }
+  document.getElementById("grid").scrollTop=0;
 }
 
-function closeMenus(){document.querySelectorAll('.menu-item.open').forEach(m=>m.classList.remove('open'));}
-document.querySelectorAll('.menu-item').forEach(item=>{
-  item.addEventListener('click',e=>{
-    const open=item.classList.contains('open');
-    closeMenus();if(!open)item.classList.add('open');e.stopPropagation();
+/* ═══════════════════════════════════
+   MENU INTERACTIONS
+═══════════════════════════════════ */
+function closeMenus(){
+  document.querySelectorAll(".menu-item.open").forEach(m=>{
+    m.classList.remove("open");
+    // Reset any JS-applied position
+    const dd = m.querySelector(".dropdown");
+    if(dd){ dd.style.top=""; dd.style.left=""; }
   });
-  item.addEventListener('keydown',e=>{
-    if(e.key==='Enter'||e.key===' '){e.preventDefault();item.click();}
-    if(e.key==='Escape')closeMenus();
+}
+
+function positionDropdown(item){
+  const dd = item.querySelector(".dropdown");
+  if(!dd) return;
+  const rect = item.getBoundingClientRect();
+  dd.style.top  = rect.bottom + "px";
+  // Keep dropdown on screen — if it would overflow right, align to right edge
+  const ddW = 220;
+  const left = Math.min(rect.left, window.innerWidth - ddW - 8);
+  dd.style.left = Math.max(8, left) + "px";
+}
+
+document.querySelectorAll(".menu-item").forEach(item=>{
+  item.addEventListener("click", e=>{
+    const isOpen = item.classList.contains("open");
+    closeMenus();
+    if(!isOpen){
+      item.classList.add("open");
+      // On mobile, position dropdown using screen coordinates
+      if(window.innerWidth <= 700) positionDropdown(item);
+    }
+    e.stopPropagation();
+  });
+  item.addEventListener("keydown", e=>{
+    if(e.key==="Enter"||e.key===" "){ e.preventDefault(); item.click(); }
+    if(e.key==="Escape") closeMenus();
   });
 });
-document.addEventListener('click',closeMenus);
+document.addEventListener("click", closeMenus);
 
-render('about');
-const fe=document.querySelector('#grid .cell');
-if(fe)activate(fe,S.about.rows[0].cells[0],1,'about');
+/* Re-render on resize so desktop/mobile switch works */
+let resizeTimer;
+window.addEventListener("resize", ()=>{
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(()=>{
+    const active = document.querySelector(".tab.active");
+    if(active) switchSheet(active.dataset.sheet);
+  }, 200);
+});
+
+/* ═══════════════════════════════════
+   INIT
+═══════════════════════════════════ */
+switchSheet("about");
 </script>
 </body>
 </html>

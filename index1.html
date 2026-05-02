@@ -1,0 +1,461 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tanishq Joshi — Software Engineer | Node.js · AWS · Agentic AI</title>
+<meta name="description" content="Tanishq Joshi is a Software Engineer with 7+ years of experience in Node.js, AWS serverless, and Agentic AI. Open to remote product engineering roles. Based in Indore, India."/>
+<meta name="keywords" content="Tanishq Joshi, Software Engineer, Node.js, AWS, Agentic AI, RAG, LangChain, Copilot Studio, Indore, backend developer, remote"/>
+<meta name="author" content="Tanishq Joshi"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://tanishq510.github.io/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://tanishq510.github.io/"/>
+<meta property="og:title" content="Tanishq Joshi — Software Engineer"/>
+<meta property="og:description" content="7+ years in Node.js, AWS and Agentic AI. Open to remote product engineering roles."/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Tanishq Joshi — Software Engineer"/>
+<meta name="twitter:description" content="7+ years in Node.js, AWS and Agentic AI. Open to remote product engineering roles."/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Tanishq Joshi","jobTitle":"Software Engineer","url":"https://tanishq510.github.io","email":"tanishjoshi93@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Indore","addressCountry":"IN"},"sameAs":["https://linkedin.com/in/tanishq-joshi-b396a2170","https://github.com/tanishq510"],"knowsAbout":["Node.js","AWS Lambda","Agentic AI","RAG","LangChain","Copilot Studio","TypeScript","React"]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --green:#0f9d58;--green-dk:#0b8043;--blue:#1a73e8;--blue-dk:#1557b0;
+  --surf:#f8f9fa;--border:#e0e0e0;--hbg:#f3f3f3;
+  --text:#202124;--muted:#5f6368;--dim:#80868b;
+  --abg:rgba(26,115,232,0.07);--hhi:#d3e3fd;--rhov:#f5f5f5;
+  --sans:'Google Sans',Arial,sans-serif;--mono:'Roboto Mono',monospace;
+}
+html{height:100%;overflow:hidden;}
+body{height:100%;width:100%;font-family:var(--sans);font-size:13px;color:var(--text);
+  background:#fff;display:flex;flex-direction:column;overflow:hidden;
+  position:fixed;top:0;left:0;right:0;bottom:0;}
+
+/* TITLE BAR */
+#title-bar{display:flex;align-items:center;gap:10px;padding:8px 16px 4px;flex-shrink:0;}
+.gs-logo{display:grid;grid-template-columns:1fr 1fr;gap:1.5px;width:28px;height:28px;padding:4px;flex-shrink:0;}
+.gs-logo span{border-radius:1.5px;}
+.gs-logo span:nth-child(1){background:#34a853;}
+.gs-logo span:nth-child(2){background:#fbbc04;}
+.gs-logo span:nth-child(3){background:#ea4335;}
+.gs-logo span:nth-child(4){background:#4285f4;}
+#file-name{font-size:16px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.title-actions{margin-left:auto;display:flex;align-items:center;gap:8px;flex-shrink:0;}
+.contact-btn{background:var(--blue);color:#fff;border:none;border-radius:20px;padding:7px 18px;
+  font-size:13px;font-weight:500;cursor:pointer;font-family:var(--sans);transition:background .2s;}
+.contact-btn:hover{background:var(--blue-dk);}
+.avatar{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#7c3aed,#1a73e8);
+  color:#fff;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;cursor:default;user-select:none;}
+
+/* MENU BAR */
+#menu-bar{display:flex;padding:2px 10px;background:#fff;flex-shrink:0;position:relative;z-index:100;}
+.menu-item{padding:5px 10px;font-size:13px;color:var(--muted);cursor:pointer;border-radius:4px;
+  user-select:none;transition:background .12s,color .12s;position:relative;}
+.menu-item:hover,.menu-item.open{background:var(--surf);color:var(--text);}
+.dropdown{display:none;position:absolute;top:100%;left:0;min-width:220px;background:#fff;
+  border:1px solid var(--border);border-radius:4px;box-shadow:0 4px 16px rgba(0,0,0,.12);
+  z-index:200;padding:4px 0;}
+.menu-item.open .dropdown{display:block;}
+.dd-item{padding:8px 20px;font-size:13px;color:var(--text);cursor:pointer;
+  transition:background .1s;white-space:nowrap;display:flex;align-items:center;gap:12px;}
+.dd-item:hover{background:var(--surf);}
+.dd-icon{color:var(--muted);font-size:13px;width:18px;text-align:center;}
+.dd-sep{height:1px;background:var(--border);margin:4px 0;}
+.dd-sc{margin-left:auto;color:var(--dim);font-size:11px;font-family:var(--mono);}
+
+/* TOOLBAR */
+#toolbar{background:var(--surf);border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  padding:4px 12px;display:flex;align-items:center;gap:1px;flex-shrink:0;overflow:hidden;}
+.t-btn{height:28px;min-width:28px;display:flex;align-items:center;justify-content:center;
+  border-radius:4px;cursor:pointer;font-size:13px;color:var(--muted);padding:0 4px;
+  transition:background .12s;user-select:none;}
+.t-btn:hover{background:#e0e0e0;color:var(--text);}
+.t-sep{width:1px;height:20px;background:var(--border);margin:0 5px;flex-shrink:0;}
+.t-sel{padding:3px 8px;border:1px solid var(--border);border-radius:4px;font-size:12.5px;
+  color:var(--text);background:#fff;font-family:var(--sans);cursor:pointer;}
+.t-sel:hover{border-color:#aaa;}
+
+/* FORMULA BAR */
+#formula-bar{display:flex;align-items:center;height:30px;border-bottom:1px solid var(--border);flex-shrink:0;}
+#name-box{width:76px;min-width:76px;border-right:1px solid var(--border);padding:0 8px;height:100%;
+  display:flex;align-items:center;font-family:var(--mono);font-size:13px;}
+#fx-icon{padding:0 12px;font-size:12px;color:var(--muted);font-style:italic;
+  border-right:1px solid var(--border);height:100%;display:flex;align-items:center;flex-shrink:0;}
+#formula-content{flex:1;padding:0 12px;font-size:13px;font-family:var(--mono);color:var(--text);
+  overflow:hidden;white-space:nowrap;text-overflow:ellipsis;height:100%;display:flex;align-items:center;}
+
+/* GRID */
+#grid-area{flex:1;display:flex;flex-direction:column;overflow:hidden;min-height:0;}
+#col-headers{display:flex;flex-shrink:0;border-bottom:1px solid var(--border);background:var(--hbg);overflow:hidden;}
+.rn-sp{width:44px;min-width:44px;flex-shrink:0;}
+.ch{border-left:1px solid var(--border);text-align:center;font-size:12px;color:var(--muted);
+  padding:4px 0;cursor:default;user-select:none;flex-shrink:0;transition:background .12s;}
+.ch.hl{background:var(--hhi);color:var(--blue);font-weight:600;}
+#grid{flex:1;overflow-y:auto;overflow-x:hidden;}
+#grid::-webkit-scrollbar{width:10px;}
+#grid::-webkit-scrollbar-track{background:var(--surf);}
+#grid::-webkit-scrollbar-thumb{background:#bdbdbd;border-radius:5px;}
+#grid::-webkit-scrollbar-thumb:hover{background:#9e9e9e;}
+.row{display:flex;border-bottom:1px solid var(--border);}
+.rn{width:44px;min-width:44px;background:var(--hbg);border-right:1px solid var(--border);
+  text-align:center;font-size:11.5px;color:var(--muted);display:flex;align-items:center;
+  justify-content:center;flex-shrink:0;cursor:default;user-select:none;}
+.rn.hl{background:var(--hhi);color:var(--blue);font-weight:600;}
+.cell{border-right:1px solid var(--border);padding:5px 9px;font-size:13px;color:var(--text);
+  display:flex;align-items:center;cursor:cell;overflow:hidden;min-height:28px;
+  transition:background .08s;position:relative;flex-shrink:0;}
+.cell:hover{background:var(--rhov);}
+.cell.active{outline:2px solid var(--blue);outline-offset:-2px;background:var(--abg);z-index:2;}
+.cell.hdr{background:#e6f4ea;font-weight:600;font-size:12px;color:#137333;}
+.cell.lbl{background:var(--surf);color:var(--muted);font-size:12.5px;}
+.cell.bold{font-weight:600;}
+.cell.ctr{justify-content:center;text-align:center;}
+.cell.muted{color:var(--muted);}
+.cell.shdr{background:#e6f4ea;font-weight:600;font-size:13.5px;color:#137333;}
+.cell a{color:var(--blue);text-decoration:underline;text-underline-offset:2px;}
+.cell a:hover{color:var(--blue-dk);}
+.status-pill{display:inline-flex;align-items:center;gap:6px;background:#e6f4ea;color:#137333;
+  padding:3px 12px;border-radius:20px;font-size:12px;font-weight:600;}
+.pulse{width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulse 2s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.dl-btn{display:inline-flex;align-items:center;gap:7px;background:var(--green);color:#fff;border:none;
+  border-radius:5px;padding:6px 18px;font-size:13px;font-weight:500;cursor:pointer;
+  text-decoration:none;font-family:var(--sans);transition:background .15s;}
+.dl-btn:hover{background:var(--green-dk);text-decoration:none;}
+
+/* SHEET TABS */
+#sheet-tabs{display:flex;align-items:flex-end;background:#f1f3f4;border-top:1px solid var(--border);
+  padding:0 10px;height:38px;flex-shrink:0;gap:2px;overflow-x:auto;}
+#sheet-tabs::-webkit-scrollbar{height:3px;}
+#sheet-tabs::-webkit-scrollbar-thumb{background:#ccc;}
+.tab{display:flex;align-items:center;gap:6px;padding:6px 16px;border-radius:5px 5px 0 0;
+  background:#e2e3e4;font-size:12.5px;color:var(--muted);cursor:pointer;
+  border:1px solid transparent;border-bottom:none;height:32px;user-select:none;
+  transition:background .12s,color .12s;white-space:nowrap;flex-shrink:0;}
+.tab:hover{background:#d4d5d6;color:var(--text);}
+.tab.active{background:#fff;color:var(--text);font-weight:500;border-color:var(--border);
+  box-shadow:inset 0 -2px 0 var(--green);}
+.tab-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
+.add-tab{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  cursor:pointer;font-size:18px;color:var(--muted);margin-left:4px;transition:background .12s;flex-shrink:0;}
+.add-tab:hover{background:#d4d5d6;}
+
+/* MOBILE */
+@media(max-width:700px){
+  html,body{overflow:auto;position:static;height:auto;}
+  body{display:block;}
+  #toolbar,#formula-bar,#col-headers{display:none;}
+  #grid-area{overflow:visible;display:block;}
+  #grid{overflow:visible;}
+  #title-bar{padding:8px 12px 4px;gap:8px;}
+  #file-name{font-size:14px;}
+  .contact-btn{padding:6px 14px;font-size:12px;}
+  #menu-bar{overflow-x:auto;flex-wrap:nowrap;}
+  #menu-bar::-webkit-scrollbar{display:none;}
+  .menu-item{font-size:12px;padding:5px 8px;white-space:nowrap;}
+
+  /* rows stack vertically */
+  .row{flex-direction:column;border-bottom:none;}
+  .row.empty-row{display:none;}
+  .rn{display:none;}
+
+  /* all cells full width */
+  .cell{width:100%!important;min-width:0!important;border-right:none;
+    border-bottom:1px solid #f0f0f0;font-size:13px;padding:7px 14px;min-height:32px;}
+
+  /* label = bold group heading on mobile */
+  .cell.lbl{
+    font-weight:700;font-size:11.5px;color:#137333;
+    background:#f0faf4;border-bottom:1px solid var(--border);
+    padding:10px 14px 6px;text-transform:uppercase;letter-spacing:.05em;
+  }
+  /* hide empty cells cleanly */
+  .cell:empty{display:none;}
+
+  .cell.shdr{font-size:15px;padding:12px 14px;}
+  .cell.hdr{font-weight:700;font-size:12px;border-bottom:1px solid var(--border);padding:8px 14px;}
+  .cell.ctr{justify-content:flex-start;text-align:left;}
+  .cell.muted{font-size:12.5px;padding-top:4px;padding-bottom:4px;}
+
+  .tab{padding:6px 12px;font-size:12px;}
+  .tab-dot{width:7px;height:7px;}
+  .dl-btn{font-size:13px;padding:8px 18px;}
+  #sheet-tabs{height:36px;}
+}
+</style>
+</head>
+<body id="app">
+
+<div id="title-bar">
+  <div class="gs-logo" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  <span id="file-name">Tanishq Joshi — Portfolio.sheets</span>
+  <div class="title-actions">
+    <button class="contact-btn" onclick="window.location.href='mailto:tanishjoshi93@gmail.com'">Contact</button>
+    <div class="avatar" title="Tanishq Joshi">TJ</div>
+  </div>
+</div>
+
+<nav id="menu-bar" role="navigation" aria-label="Spreadsheet menu">
+
+  <div class="menu-item" tabindex="0">File
+    <div class="dropdown" role="menu">
+      <div class="dd-item" role="menuitem" onclick="window.open('./resume.pdf')"><span class="dd-icon">📄</span>Download Resume<span class="dd-sc">PDF</span></div>
+      <div class="dd-sep"></div>
+      <div class="dd-item" role="menuitem" onclick="window.print()"><span class="dd-icon">🖨</span>Print<span class="dd-sc">Ctrl+P</span></div>
+    </div>
+  </div>
+
+  <div class="menu-item" tabindex="0">View
+    <div class="dropdown" role="menu">
+      <div class="dd-item" role="menuitem" onclick="switchSheet('about');closeMenus()"><span class="dd-icon" style="color:#0f9d58">◼</span>About</div>
+      <div class="dd-item" role="menuitem" onclick="switchSheet('exp');closeMenus()"><span class="dd-icon" style="color:#1a73e8">◼</span>Experience</div>
+      <div class="dd-item" role="menuitem" onclick="switchSheet('skills');closeMenus()"><span class="dd-icon" style="color:#fbbc04">◼</span>Skills</div>
+      <div class="dd-item" role="menuitem" onclick="switchSheet('projects');closeMenus()"><span class="dd-icon" style="color:#ea4335">◼</span>Projects</div>
+      <div class="dd-item" role="menuitem" onclick="switchSheet('contact');closeMenus()"><span class="dd-icon" style="color:#a142f4">◼</span>Contact</div>
+    </div>
+  </div>
+
+  <div class="menu-item" tabindex="0">Connect
+    <div class="dropdown" role="menu">
+      <div class="dd-item" role="menuitem" onclick="window.open('https://linkedin.com/in/tanishq-joshi-b396a2170','_blank','noopener')"><span class="dd-icon">💼</span>LinkedIn<span class="dd-sc">↗</span></div>
+      <div class="dd-item" role="menuitem" onclick="window.open('https://github.com/tanishq510','_blank','noopener')"><span class="dd-icon">🐙</span>GitHub<span class="dd-sc">↗</span></div>
+      <div class="dd-sep"></div>
+      <div class="dd-item" role="menuitem" onclick="window.location.href='mailto:tanishjoshi93@gmail.com'"><span class="dd-icon">✉</span>Email</div>
+    </div>
+  </div>
+
+  <div class="menu-item" tabindex="0">Tools
+    <div class="dropdown" role="menu">
+      <div class="dd-item" role="menuitem" onclick="window.open('./resume.pdf')"><span class="dd-icon">⬇</span>Download Resume</div>
+      <div class="dd-item" role="menuitem" onclick="window.location.href='mailto:tanishjoshi93@gmail.com'"><span class="dd-icon">✉</span>Send Email</div>
+    </div>
+  </div>
+
+  <div class="menu-item" tabindex="0">Help
+    <div class="dropdown" role="menu">
+      <div class="dd-item" role="menuitem" onclick="window.open('https://github.com/Tanishq510/Tanishq510.github.io','_blank','noopener')"><span class="dd-icon">⭐</span>View source on GitHub</div>
+      <div class="dd-sep"></div>
+      <div class="dd-item" role="menuitem" onclick="window.open('https://linkedin.com/in/tanishq-joshi-b396a2170','_blank','noopener')"><span class="dd-icon">💼</span>Connect on LinkedIn</div>
+      <div class="dd-item" role="menuitem" onclick="window.location.href='mailto:tanishjoshi93@gmail.com'"><span class="dd-icon">✉</span>Get in touch</div>
+    </div>
+  </div>
+
+</nav>
+
+<div id="toolbar" role="toolbar" aria-label="Formatting toolbar">
+  <div class="t-btn">↩</div><div class="t-btn">↪</div>
+  <div class="t-sep"></div>
+  <div class="t-btn" style="min-width:44px;font-size:12px">100%</div>
+  <div class="t-sep"></div>
+  <select class="t-sel" style="width:110px"><option>Google Sans</option><option>Roboto Mono</option></select>
+  <div style="width:5px"></div>
+  <select class="t-sel" style="width:48px"><option>12</option><option>13</option><option>14</option></select>
+  <div class="t-sep"></div>
+  <div class="t-btn" style="font-weight:700">B</div>
+  <div class="t-btn" style="font-style:italic">I</div>
+  <div class="t-btn" style="text-decoration:underline">U</div>
+  <div class="t-sep"></div>
+  <div class="t-btn">&#8676;</div><div class="t-btn">&#8285;</div><div class="t-btn">&#8677;</div>
+  <div class="t-sep"></div>
+  <div class="t-btn" style="color:var(--green);font-weight:700">A</div>
+  <div class="t-btn">&#9632;</div>
+  <div class="t-sep"></div>
+  <div class="t-btn">&#128279;</div><div class="t-btn">&#128202;</div>
+</div>
+
+<div id="formula-bar" aria-label="Formula bar">
+  <div id="name-box">A1</div>
+  <div id="fx-icon" aria-hidden="true">fx</div>
+  <div id="formula-content">Tanishq Joshi — Portfolio</div>
+</div>
+
+<main id="grid-area" role="main">
+  <div id="col-headers" aria-hidden="true"></div>
+  <div id="grid" role="grid" aria-label="Portfolio spreadsheet"></div>
+</main>
+
+<div id="sheet-tabs" role="tablist" aria-label="Portfolio sections">
+  <div class="tab active" role="tab" aria-selected="true"  data-sheet="about"    onclick="switchSheet('about')"><div class="tab-dot" style="background:#0f9d58"></div>About</div>
+  <div class="tab" role="tab" aria-selected="false" data-sheet="exp"      onclick="switchSheet('exp')"><div class="tab-dot" style="background:#1a73e8"></div>Experience</div>
+  <div class="tab" role="tab" aria-selected="false" data-sheet="skills"   onclick="switchSheet('skills')"><div class="tab-dot" style="background:#fbbc04"></div>Skills</div>
+  <div class="tab" role="tab" aria-selected="false" data-sheet="projects"  onclick="switchSheet('projects')"><div class="tab-dot" style="background:#ea4335"></div>Projects</div>
+  <div class="tab" role="tab" aria-selected="false" data-sheet="contact"  onclick="switchSheet('contact')"><div class="tab-dot" style="background:#a142f4"></div>Contact</div>
+  <div class="add-tab" aria-label="Add sheet">+</div>
+</div>
+
+<script>
+const S={
+  about:{
+    cols:[{id:'A',w:155},{id:'B',w:420},{id:'C',w:135}],
+    rows:[
+      {n:1,cells:[{w:710,cls:'shdr',text:'Tanishq Joshi — Software Engineer Portfolio',ref:'A1',formula:'Tanishq Joshi — Software Engineer Portfolio'}]},
+      {n:2,empty:1,cells:[{w:155},{w:420},{w:135}]},
+      {n:3,cells:[{w:155,cls:'lbl',text:'Full Name',ref:'A3',formula:'Full Name'},{w:420,cls:'bold',text:'Tanishq Joshi',ref:'B3',formula:'"Tanishq Joshi"'},{w:135}]},
+      {n:4,cells:[{w:155,cls:'lbl',text:'Title',ref:'A4',formula:'Title'},{w:420,text:'Software Engineer',ref:'B4',formula:'"Software Engineer"'},{w:135}]},
+      {n:5,cells:[{w:155,cls:'lbl',text:'Experience',ref:'A5',formula:'Experience'},{w:420,text:'7+ years',ref:'B5',formula:'=7&"+ years"'},{w:135}]},
+      {n:6,cells:[{w:155,cls:'lbl',text:'Location',ref:'A6',formula:'Location'},{w:420,text:'Indore, Madhya Pradesh, IN',ref:'B6',formula:'"Indore, Madhya Pradesh, IN"'},{w:135}]},
+      {n:7,cells:[{w:155,cls:'lbl',text:'Status',ref:'A7',formula:'Status'},{w:420,type:'status',ref:'B7',formula:'=IF(open_to_work,"Open to Work","Unavailable")'},{w:135}]},
+      {n:8,empty:1,cells:[{w:155},{w:420},{w:135}]},
+      {n:9,cells:[{w:155,cls:'lbl',text:'Summary',ref:'A9',formula:'Summary'},{w:420,text:'I build scalable backend systems and intelligent cloud-native applications.',ref:'B9',formula:'"I build scalable backend systems and intelligent cloud-native applications."'},{w:135}]},
+      {n:10,cells:[{w:155},{w:420,cls:'muted',text:'Main stack: Node.js + AWS. Currently deep in Agentic AI —',ref:'B10'},{w:135,text:'Open to remote',ref:'C10',formula:'"Open to remote: true"'}]},
+      {n:11,cells:[{w:155},{w:420,cls:'muted',text:'RAG pipelines, LLM integrations, Copilot Studio.',ref:'B11'},{w:135}]},
+      {n:12,empty:1,cells:[{w:155},{w:420},{w:135}]},
+      {n:13,cells:[{w:155,cls:'lbl',text:'LinkedIn',ref:'A13',formula:'LinkedIn'},{w:420,html:'<a href="https://linkedin.com/in/tanishq-joshi-b396a2170" target="_blank" rel="noopener">linkedin.com/in/tanishq-joshi-b396a2170</a>',ref:'B13',formula:'=HYPERLINK("https://linkedin.com/in/tanishq-joshi-b396a2170")'},{w:135}]},
+      {n:14,cells:[{w:155,cls:'lbl',text:'GitHub',ref:'A14',formula:'GitHub'},{w:420,html:'<a href="https://github.com/tanishq510" target="_blank" rel="noopener">github.com/tanishq510</a>',ref:'B14',formula:'=HYPERLINK("https://github.com/tanishq510")'},{w:135}]},
+      {n:15,cells:[{w:155,cls:'lbl',text:'Email',ref:'A15',formula:'Email'},{w:420,html:'<a href="mailto:tanishjoshi93@gmail.com">tanishjoshi93@gmail.com</a>',ref:'B15',formula:'=HYPERLINK("mailto:tanishjoshi93@gmail.com")'},{w:135}]},
+      {n:16,empty:1,cells:[{w:155},{w:420},{w:135}]},
+      {n:17,cells:[{w:155,cls:'lbl',text:'Resume',ref:'A17',formula:'Resume'},{w:420,type:'dl',ref:'B17',formula:'=HYPERLINK("./resume.pdf","Download Resume.pdf")'},{w:135}]},
+      {n:18,empty:1,cells:[{w:155},{w:420},{w:135}]},
+    ]
+  },
+  exp:{
+    cols:[{id:'A',w:190},{id:'B',w:150},{id:'C',w:138},{id:'D',w:232}],
+    rows:[
+      {n:1,cells:[{w:190,cls:'hdr',text:'Company',ref:'A1',formula:'Company'},{w:150,cls:'hdr',text:'Role',ref:'B1',formula:'Role'},{w:138,cls:'hdr ctr',text:'Period',ref:'C1',formula:'Period'},{w:232,cls:'hdr',text:'Impact',ref:'D1',formula:'Impact'}]},
+      {n:2,cells:[{w:190,cls:'bold',text:'Tata Consultancy Services',ref:'A2',formula:'"Tata Consultancy Services"'},{w:150,text:'Software Engineer',ref:'B2'},{w:138,cls:'muted ctr',text:'May 2022 – present',ref:'C2',formula:'"May 2022 – present"'},{w:232,text:'Agentic AI via Copilot Studio + OpenAI → effort ↓60%',ref:'D2',formula:'"Agentic AI — manual effort ↓60%"'}]},
+      {n:3,cells:[{w:190},{w:150},{w:138},{w:232,cls:'muted',text:'RAG semantic search over internal docs → resolution ↓45%',ref:'D3'}]},
+      {n:4,cells:[{w:190},{w:150},{w:138},{w:232,cls:'muted',text:'SQS + Step Functions event pipelines across microservices',ref:'D4'}]},
+      {n:5,cells:[{w:190},{w:150},{w:138},{w:232,cls:'muted',text:'Lambda cold-start optimisation → p99 latency ↓30%',ref:'D5'}]},
+      {n:6,cells:[{w:190,cls:'bold',text:'Mindbowser',ref:'A6'},{w:150,text:'Software Engineer',ref:'B6'},{w:138,cls:'muted ctr',text:'Jan – May 2022',ref:'C6',formula:'"Jan 2022 – May 2022"'},{w:232,text:'Docker containerisation → deployment time ↓40%',ref:'D6'}]},
+      {n:7,cells:[{w:190},{w:150},{w:138},{w:232,cls:'muted',text:'React/Next.js frontend → traffic ↑25%, load time ↓20%',ref:'D7'}]},
+      {n:8,cells:[{w:190,cls:'bold',text:'Codiant — Yash Technologies',ref:'A8'},{w:150,text:'Software Developer',ref:'B8'},{w:138,cls:'muted ctr',text:'Jan 2021 – Jan 2022',ref:'C8'},{w:232,text:'CRM/HRM full-stack, FSD architecture, RTK Query',ref:'D8'}]},
+      {n:9,cells:[{w:190,cls:'bold',text:'WebKodz',ref:'A9'},{w:150,text:'Fullstack Developer',ref:'B9'},{w:138,cls:'muted ctr',text:'Aug 2020 – Jan 2021',ref:'C9'},{w:232,cls:'muted',text:'Responsive builds, WordPress CMS, SEO +35%',ref:'D9'}]},
+      {n:10,cells:[{w:190,cls:'bold',text:'SMT Group',ref:'A10'},{w:150,text:'Junior Fullstack Dev',ref:'B10'},{w:138,cls:'muted ctr',text:'Jul 2019 – Aug 2020',ref:'C10'},{w:232,cls:'muted',text:'Internal dashboards and reporting tools',ref:'D10'}]},
+      {n:11,empty:1,cells:[{w:190},{w:150},{w:138},{w:232}]},
+    ]
+  },
+  skills:{
+    cols:[{id:'A',w:140},{id:'B',w:140},{id:'C',w:140},{id:'D',w:140},{id:'E',w:140}],
+    rows:[
+      {n:1,cells:[{w:140,cls:'hdr ctr',text:'Backend',ref:'A1'},{w:140,cls:'hdr ctr',text:'Cloud (AWS)',ref:'B1'},{w:140,cls:'hdr ctr',text:'AI / LLM',ref:'C1'},{w:140,cls:'hdr ctr',text:'Frontend',ref:'D1'},{w:140,cls:'hdr ctr',text:'Tooling',ref:'E1'}]},
+      {n:2,cells:[{w:140,cls:'ctr',text:'Node.js',ref:'A2'},{w:140,cls:'ctr',text:'Lambda',ref:'B2'},{w:140,cls:'ctr',text:'RAG',ref:'C2'},{w:140,cls:'ctr',text:'React',ref:'D2'},{w:140,cls:'ctr',text:'Docker',ref:'E2'}]},
+      {n:3,cells:[{w:140,cls:'ctr',text:'TypeScript',ref:'A3'},{w:140,cls:'ctr',text:'SQS / SNS',ref:'B3'},{w:140,cls:'ctr',text:'OpenAI API',ref:'C3'},{w:140,cls:'ctr',text:'Next.js',ref:'D3'},{w:140,cls:'ctr',text:'Git',ref:'E3'}]},
+      {n:4,cells:[{w:140,cls:'ctr',text:'Express',ref:'A4'},{w:140,cls:'ctr',text:'Step Functions',ref:'B4'},{w:140,cls:'ctr',text:'LangChain',ref:'C4'},{w:140,cls:'ctr',text:'Tailwind CSS',ref:'D4'},{w:140,cls:'ctr',text:'Postman',ref:'E4'}]},
+      {n:5,cells:[{w:140,cls:'ctr',text:'GraphQL',ref:'A5'},{w:140,cls:'ctr',text:'S3 / RDS',ref:'B5'},{w:140,cls:'ctr',text:'Copilot Studio',ref:'C5'},{w:140,cls:'ctr',text:'HTML / CSS',ref:'D5'},{w:140,cls:'ctr',text:'Swagger',ref:'E5'}]},
+      {n:6,cells:[{w:140,cls:'ctr',text:'MongoDB',ref:'A6'},{w:140,cls:'ctr',text:'CloudWatch',ref:'B6'},{w:140,cls:'ctr',text:'Embeddings',ref:'C6'},{w:140,cls:'ctr'},{w:140,cls:'ctr',text:'Jira',ref:'E6'}]},
+      {n:7,cells:[{w:140,cls:'ctr',text:'PostgreSQL',ref:'A7'},{w:140,cls:'ctr',text:'DynamoDB',ref:'B7'},{w:140,cls:'ctr',text:'Azure AI',ref:'C7'},{w:140,cls:'ctr'},{w:140,cls:'ctr'}]},
+      {n:8,cells:[{w:140,cls:'ctr',text:'Redis',ref:'A8'},{w:140,cls:'ctr',text:'IAM / EC2',ref:'B8'},{w:140,cls:'ctr',text:'Prompt Eng.',ref:'C8'},{w:140,cls:'ctr'},{w:140,cls:'ctr'}]},
+      {n:9,empty:1,cells:[{w:140},{w:140},{w:140},{w:140},{w:140}]},
+      {n:10,cells:[{w:140,cls:'lbl ctr',text:'Years of Exp.',ref:'A10',formula:'Years of Experience'},{w:140,cls:'bold ctr',text:'7+',ref:'B10',formula:'=7',style:'color:#137333'},{w:140,cls:'lbl ctr',text:'Remote?',ref:'C10'},{w:140,cls:'bold ctr',text:'Yes ✓',ref:'D10',formula:'=TRUE',style:'color:#137333'},{w:140,cls:'lbl ctr',text:'Open to Work?',ref:'E10'}]},
+      {n:11,cells:[{w:140},{w:140},{w:140},{w:140},{w:140,cls:'bold ctr',text:'Yes ✓',ref:'E11',formula:'=TRUE',style:'color:#137333'}]},
+    ]
+  },
+  projects:{
+    cols:[{id:'A',w:150},{id:'B',w:235},{id:'C',w:178},{id:'D',w:147}],
+    rows:[
+      {n:1,cells:[{w:150,cls:'hdr',text:'Project',ref:'A1'},{w:235,cls:'hdr',text:'Description',ref:'B1'},{w:178,cls:'hdr',text:'Stack',ref:'C1'},{w:147,cls:'hdr',text:'Links',ref:'D1'}]},
+      {n:2,cells:[{w:150,cls:'bold',html:'<a href="https://github.com/tanishq510" target="_blank" rel="noopener">rag-pipeline</a>',ref:'A2',formula:'=HYPERLINK("https://github.com/tanishq510","rag-pipeline")'},{w:235,text:'Document ingestion + semantic search over PDFs',ref:'B2'},{w:178,cls:'muted',text:'Node.js, OpenAI, Pinecone, Lambda',ref:'C2'},{w:147,html:'<a href="https://github.com/tanishq510" target="_blank" rel="noopener">↗ github</a>',ref:'D2'}]},
+      {n:3,cells:[{w:150,cls:'bold',html:'<a href="https://github.com/tanishq510" target="_blank" rel="noopener">aws-step-workflow</a>',ref:'A3'},{w:235,text:'Serverless orchestration with DLQs and error branching',ref:'B3'},{w:178,cls:'muted',text:'AWS, Step Functions, SQS',ref:'C3'},{w:147,html:'<a href="https://github.com/tanishq510" target="_blank" rel="noopener">↗ github</a>',ref:'D3'}]},
+      {n:4,cells:[{w:150,cls:'bold',html:'<a href="https://github.com/tanishq510" target="_blank" rel="noopener">copilot-agent</a>',ref:'A4'},{w:235,text:'Enterprise chatbot with memory and tool calling',ref:'B4'},{w:178,cls:'muted',text:'Copilot Studio, Azure AI, TypeScript',ref:'C4'},{w:147,html:'<a href="https://github.com/tanishq510" target="_blank" rel="noopener">↗ github</a>',ref:'D4'}]},
+      {n:5,cells:[{w:150,cls:'bold',html:'<a href="https://tanishq510.github.io" target="_blank" rel="noopener">this-portfolio</a>',ref:'A5'},{w:235,text:'You are looking at it. Built as a Google Sheets mockup.',ref:'B5'},{w:178,cls:'muted',text:'HTML, CSS, Vanilla JS',ref:'C5'},{w:147,html:'<a href="https://github.com/Tanishq510/Tanishq510.github.io" target="_blank" rel="noopener">↗ source</a>',ref:'D5'}]},
+      {n:6,empty:1,cells:[{w:150},{w:235},{w:178},{w:147}]},
+    ]
+  },
+  contact:{
+    cols:[{id:'A',w:155},{id:'B',w:415},{id:'C',w:140}],
+    rows:[
+      {n:1,cells:[{w:710,cls:'shdr',text:'Contact Tanishq Joshi',ref:'A1',formula:'Contact Tanishq Joshi'}]},
+      {n:2,empty:1,cells:[{w:155},{w:415},{w:140}]},
+      {n:3,cells:[{w:155,cls:'lbl',text:'Email',ref:'A3'},{w:415,html:'<a href="mailto:tanishjoshi93@gmail.com">tanishjoshi93@gmail.com</a>',ref:'B3',formula:'=HYPERLINK("mailto:tanishjoshi93@gmail.com")'},{w:140}]},
+      {n:4,cells:[{w:155,cls:'lbl',text:'LinkedIn',ref:'A4'},{w:415,html:'<a href="https://linkedin.com/in/tanishq-joshi-b396a2170" target="_blank" rel="noopener">linkedin.com/in/tanishq-joshi-b396a2170</a>',ref:'B4',formula:'=HYPERLINK("https://linkedin.com/in/tanishq-joshi-b396a2170")'},{w:140}]},
+      {n:5,cells:[{w:155,cls:'lbl',text:'GitHub',ref:'A5'},{w:415,html:'<a href="https://github.com/tanishq510" target="_blank" rel="noopener">github.com/tanishq510</a>',ref:'B5',formula:'=HYPERLINK("https://github.com/tanishq510")'},{w:140}]},
+      {n:6,empty:1,cells:[{w:155},{w:415},{w:140}]},
+      {n:7,cells:[{w:155,cls:'lbl',text:'Available for',ref:'A7'},{w:415,text:'Full-time roles, remote contracts, interesting side projects',ref:'B7'},{w:140}]},
+      {n:8,cells:[{w:155,cls:'lbl',text:'Response time',ref:'A8'},{w:415,text:'Within 24 hours',ref:'B8'},{w:140}]},
+      {n:9,empty:1,cells:[{w:155},{w:415},{w:140}]},
+      {n:10,cells:[{w:155,cls:'lbl',text:'Resume',ref:'A10'},{w:415,type:'dl',ref:'B10',formula:'=HYPERLINK("./resume.pdf","Download Resume.pdf")'},{w:140}]},
+      {n:11,empty:1,cells:[{w:155},{w:415},{w:140}]},
+    ]
+  }
+};
+
+function render(id){
+  const sheet=S[id];
+  const ch=document.getElementById('col-headers');
+  const grid=document.getElementById('grid');
+  ch.innerHTML='';
+  const sp=document.createElement('div');sp.className='rn-sp';ch.appendChild(sp);
+  sheet.cols.forEach(c=>{
+    const el=document.createElement('div');
+    el.className='ch';el.id=`ch-${id}-${c.id}`;
+    el.style.cssText=`width:${c.w}px;min-width:${c.w}px;`;
+    el.textContent=c.id;ch.appendChild(el);
+  });
+  grid.innerHTML='';
+  sheet.rows.forEach(row=>{
+    const rowEl=document.createElement('div');
+    rowEl.className='row'+(row.empty?' empty-row':'');
+    const rn=document.createElement('div');
+    rn.className='rn';rn.id=`rn-${id}-${row.n}`;rn.textContent=row.n;rowEl.appendChild(rn);
+    row.cells.forEach(cell=>{
+      const el=document.createElement('div');
+      el.className=('cell '+(cell.cls||'')).trim();
+      el.style.cssText=`width:${cell.w}px;min-width:${cell.w}px;`+(cell.style||'');
+      if(cell.type==='status'){
+        el.innerHTML='<span class="status-pill"><span class="pulse"></span>Open to Work</span>';
+      }else if(cell.type==='dl'){
+        el.innerHTML='<a class="dl-btn" href="./resume.pdf" download="Tanishq_Joshi_Resume.pdf">&#8595;&nbsp;&nbsp;Download Resume.pdf</a>';
+      }else if(cell.html){
+        el.innerHTML=cell.html;
+      }else{
+        el.textContent=cell.text||'';
+      }
+      el.addEventListener('click',e=>{
+        if(e.target.tagName==='A')return;
+        activate(el,cell,row.n,id);
+      });
+      rowEl.appendChild(el);
+    });
+    grid.appendChild(rowEl);
+  });
+}
+
+function activate(el,cell,rowNum,sheetId){
+  document.querySelectorAll('.cell.active').forEach(c=>c.classList.remove('active'));
+  document.querySelectorAll('.rn.hl').forEach(r=>r.classList.remove('hl'));
+  document.querySelectorAll('.ch.hl').forEach(c=>c.classList.remove('hl'));
+  el.classList.add('active');
+  const rn=document.getElementById(`rn-${sheetId}-${rowNum}`);
+  if(rn)rn.classList.add('hl');
+  const ref=cell.ref||'A1';
+  const col=ref.replace(/[0-9]/g,'');
+  const chEl=document.getElementById(`ch-${sheetId}-${col}`);
+  if(chEl)chEl.classList.add('hl');
+  document.getElementById('name-box').textContent=ref;
+  document.getElementById('formula-content').textContent=cell.formula!==undefined?cell.formula:(cell.text||'');
+}
+function switchSheet(id){
+  document.querySelectorAll('.tab').forEach(t=>{
+    const a=t.dataset.sheet===id;
+    t.classList.toggle('active',a);
+    t.setAttribute('aria-selected',String(a));
+  });
+  render(id);
+  document.getElementById('grid').scrollTop=0;
+  const fr=S[id].rows[0];
+  if(fr){const fe=document.querySelector('#grid .cell');if(fe)activate(fe,fr.cells[0],1,id);}
+}
+
+function closeMenus(){document.querySelectorAll('.menu-item.open').forEach(m=>m.classList.remove('open'));}
+document.querySelectorAll('.menu-item').forEach(item=>{
+  item.addEventListener('click',e=>{
+    const open=item.classList.contains('open');
+    closeMenus();if(!open)item.classList.add('open');e.stopPropagation();
+  });
+  item.addEventListener('keydown',e=>{
+    if(e.key==='Enter'||e.key===' '){e.preventDefault();item.click();}
+    if(e.key==='Escape')closeMenus();
+  });
+});
+document.addEventListener('click',closeMenus);
+
+render('about');
+const fe=document.querySelector('#grid .cell');
+if(fe)activate(fe,S.about.rows[0].cells[0],1,'about');
+</script>
+</body>
+</html> -->
