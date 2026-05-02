@@ -541,7 +541,7 @@ const SHEETS = {
       {n:14,cells:[{w:155,cls:"lbl",text:"GitHub",ref:"A14",formula:"GitHub"},{w:420,html:"<a href=\"https://github.com/tanishq510\" target=\"_blank\" rel=\"noopener\">github.com/tanishq510</a>",ref:"B14",formula:"=HYPERLINK(\"https://github.com/tanishq510\")"},{w:135}]},
       {n:15,cells:[{w:155,cls:"lbl",text:"Email",ref:"A15",formula:"Email"},{w:420,html:"<a href=\"mailto:tanishjoshi93@gmail.com\">tanishjoshi93@gmail.com</a>",ref:"B15",formula:"=HYPERLINK(\"mailto:tanishjoshi93@gmail.com\")"},{w:135}]},
       {n:16,empty:1,cells:[{w:155},{w:420},{w:135}]},
-      {n:17,cells:[{w:155,cls:"lbl",text:"Resume",ref:"A17",formula:"Resume"},{w:420,type:"dl",ref:"B17",formula:"=HYPERLINK(\"./resume.pdf\",\"Download Resume.pdf\")"},{w:135}]},
+      {n:17,cells:[{w:155,cls:"lbl",text:"Resume",ref:"A17",formula:"Resume"},{w:420,type:"dl",ref:"B17",formula:"=HYPERLINK(\"./Tanishq_Joshi_Resume.pdf\",\"Download Resume.pdf\")"},{w:135}]},
       {n:18,empty:1,cells:[{w:155},{w:420},{w:135}]},
     ]
   },
@@ -698,7 +698,7 @@ function renderDesktop(id){
       if(cell.type==="status"){
         el.innerHTML = "<span class=\"status-pill\"><span class=\"pulse\"></span>Open to Work</span>";
       } else if(cell.type==="dl"){
-        el.innerHTML = "<a class=\"dl-btn\" href=\"./resume.pdf\" download=\"Tanishq_Joshi_Resume.pdf\">Download Resume.pdf</a>";
+        el.innerHTML = "<a class=\"dl-btn\" href=\"./resume.pdf\" download=\"./Tanishq_Joshi_Resume.pdf\">Download Resume.pdf</a>";
       } else if(cell.html){
         el.innerHTML = cell.html;
       } else {
@@ -880,7 +880,7 @@ function renderMobile(id){
     // Download button
     const dlWrap = document.createElement("div");
     dlWrap.className="m-dl-wrap";
-    dlWrap.innerHTML="<a class=\"m-dl-btn\" href=\"./resume.pdf\" download=\"Tanishq_Joshi_Resume.pdf\">Download Resume.pdf</a>";
+    dlWrap.innerHTML="<a class=\"m-dl-btn\" href=\"./resume.pdf\" download=\"./Tanishq_Joshi_Resume.pdf\">Download Resume.pdf</a>";
     section.appendChild(dlWrap);
   }
 
