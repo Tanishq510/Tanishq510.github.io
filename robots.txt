@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /v1-dark.html
+Disallow: /v2-editorial-light.html
+
+Sitemap: https://tanishq510.github.io/sitemap.xml
