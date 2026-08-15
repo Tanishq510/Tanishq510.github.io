@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<title>Tanishq Joshi — Software Engineer · Backend & AI Systems</title>
+<meta name="description" content="Tanishq Joshi is a backend-focused Software Engineer with 7.5+ years building production APIs, AWS serverless systems, and AI-powered products. Founder of kaarters.com and createfreeresume.com."/>
+<meta name="keywords" content="Tanishq Joshi, Software Engineer, Backend, Node.js, TypeScript, AWS, Serverless, RAG, LLM, AI, Indore, Remote"/>
+<meta name="author" content="Tanishq Joshi"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://tanishq510.github.io/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://tanishq510.github.io/"/>
+<meta property="og:title" content="Tanishq Joshi — Software Engineer · Backend & AI Systems"/>
+<meta property="og:description" content="7.5+ years building production APIs, AWS serverless systems, and AI-powered products. Shipped two live products solo."/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Tanishq Joshi — Software Engineer"/>
+<meta name="twitter:description" content="Backend & AI Systems · Node.js · TypeScript · AWS · LLM/RAG"/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='78' x='50' text-anchor='middle' font-family='Georgia' font-size='84' font-style='italic'>t</text></svg>"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Tanishq Joshi","jobTitle":"Software Engineer — Backend & AI Systems","url":"https://tanishq510.github.io","email":"tanishqjoshi93@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Indore","addressCountry":"IN"},"sameAs":["https://linkedin.com/in/tanishq-joshi-b396a2170","https://github.com/tanishq510"],"knowsAbout":["Node.js","TypeScript","AWS Lambda","Serverless","RAG Pipelines","LLM Integration","PostgreSQL","React","Next.js"]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --paper:#f7f5f0;
+  --paper-2:#efece4;
+  --ink:#181511;
+  --muted:#6f675c;
+  --faint:#a39a8c;
+  --line:#dcd6ca;
+  --line-dark:#181511;
+  --accent:#a8430d;
+  --serif:"Newsreader",Georgia,serif;
+  --sans:"Inter",system-ui,-apple-system,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+  --maxw:1080px;
+  --pad:24px;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);background:var(--paper);color:var(--ink);
+  font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+::selection{background:#e8d9c8;color:var(--ink)}
+a{color:inherit;text-decoration:none}
+section{scroll-margin-top:90px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad)}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.16,.7,.3,1),transform .9s cubic-bezier(.16,.7,.3,1);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+  *{animation:none!important}
+}
+
+/* ---------- header ---------- */
+header.site{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:color-mix(in srgb,var(--paper) 88%,transparent);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  border-bottom:1px solid transparent;transition:border-color .3s;
+}
+header.site.scrolled{border-bottom-color:var(--line)}
+.site-inner{
+  max-width:var(--maxw);margin:0 auto;padding:0 var(--pad);
+  height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px;
+}
+.brand{font-family:var(--mono);font-size:13.5px;letter-spacing:.02em}
+.brand em{font-family:var(--serif);font-style:italic;font-size:16px;letter-spacing:0}
+.site-nav{display:flex;align-items:center;gap:26px}
+.site-nav a{
+  position:relative;font-size:13.5px;font-weight:500;color:var(--muted);
+  padding:4px 0;transition:color .25s;
+}
+.site-nav a::after{
+  content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;
+  background:var(--ink);transition:right .3s cubic-bezier(.16,.7,.3,1);
+}
+.site-nav a:hover,.site-nav a.active{color:var(--ink)}
+.site-nav a:hover::after,.site-nav a.active::after{right:0}
+.site-nav .resume{
+  color:var(--ink);border:1px solid var(--ink);border-radius:999px;
+  padding:7px 16px;font-size:13px;transition:background .25s,color .25s;
+}
+.site-nav .resume::after{display:none}
+.site-nav .resume:hover{background:var(--ink);color:var(--paper)}
+@media (max-width:640px){
+  .site-nav{gap:16px}
+  .site-nav a:not(.resume){display:none}
+}
+
+/* ---------- hero ---------- */
+.hero{padding:190px 0 90px;position:relative}
+.hero .kicker{
+  font-family:var(--mono);font-size:13px;color:var(--muted);letter-spacing:.06em;
+  display:flex;align-items:center;gap:12px;margin-bottom:34px;
+}
+.hero .kicker .dot{width:7px;height:7px;border-radius:50%;background:#2f7a4d;flex-shrink:0;animation:softpulse 2.6s ease-in-out infinite}
+@keyframes softpulse{0%,100%{opacity:1}50%{opacity:.35}}
+.hero h1{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(44px,7.6vw,92px);line-height:1.04;letter-spacing:-.015em;
+  max-width:19ch;
+}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero .sub{
+  margin-top:38px;max-width:56ch;color:var(--muted);font-size:17.5px;
+}
+.hero .sub strong{color:var(--ink);font-weight:600}
+.hero-meta{
+  margin-top:46px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 34px;
+  font-family:var(--mono);font-size:13px;color:var(--muted);
+}
+.hero-meta a{border-bottom:1px solid var(--line);padding-bottom:2px;transition:border-color .25s,color .25s}
+.hero-meta a:hover{color:var(--ink);border-color:var(--ink)}
+.hero-rule{margin-top:90px;border:0;border-top:1px solid var(--line)}
+
+/* ---------- section headings ---------- */
+.sec{padding:84px 0 8px}
+.sec-row{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:54px}
+.sec-label{font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.sec-label sup{color:var(--accent);margin-right:8px;font-size:11px}
+.sec-note{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--faint)}
+@media (max-width:640px){.sec-note{display:none}}
+
+/* ---------- work list ---------- */
+.work{border-top:1px solid var(--line-dark)}
+.work-item{
+  display:grid;grid-template-columns:64px 1fr 300px;gap:28px;
+  padding:44px 0;border-bottom:1px solid var(--line);
+  position:relative;
+}
+.work-item .idx{font-family:var(--mono);font-size:13px;color:var(--faint);padding-top:14px}
+.work-title{
+  font-family:var(--serif);font-weight:400;font-size:clamp(28px,3.6vw,42px);
+  line-height:1.1;letter-spacing:-.01em;display:inline-flex;align-items:baseline;gap:14px;
+}
+.work-title a{position:relative}
+.work-title a::after{
+  content:"";position:absolute;left:0;right:100%;bottom:2px;height:1px;background:var(--ink);
+  transition:right .35s cubic-bezier(.16,.7,.3,1);
+}
+.work-item:hover .work-title a::after{right:0}
+.work-title .arrow{
+  font-family:var(--sans);font-size:20px;color:var(--faint);
+  transition:transform .35s cubic-bezier(.16,.7,.3,1),color .3s;display:inline-block;
+}
+.work-item:hover .arrow{transform:translate(6px,-6px);color:var(--accent)}
+.work-sub{font-family:var(--mono);font-size:12.5px;color:var(--accent);margin:10px 0 14px;letter-spacing:.02em}
+.work-desc{color:var(--muted);font-size:15.5px;max-width:56ch}
+.work-desc strong{color:var(--ink);font-weight:600}
+.work-facts{padding-top:12px}
+.work-facts li{
+  list-style:none;font-size:14px;color:var(--muted);
+  padding:9px 0;border-bottom:1px dotted var(--line);line-height:1.5;
+}
+.work-facts li:last-child{border-bottom:0}
+.work-tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px 14px}
+.work-tags span{font-family:var(--mono);font-size:11.5px;color:var(--faint)}
+.work-tags span::before{content:"·";margin-right:6px;color:var(--line)}
+.work-tags span:first-child::before{content:""}
+@media (max-width:900px){
+  .work-item{grid-template-columns:1fr;gap:10px;padding:36px 0}
+  .work-item .idx{padding:0}
+  .work-facts{padding-top:4px}
+}
+
+/* ---------- experience ---------- */
+.xp{border-top:1px solid var(--line-dark)}
+.xp-row{
+  display:grid;grid-template-columns:190px 1fr;gap:28px;
+  padding:38px 0;border-bottom:1px solid var(--line);
+}
+.xp-when{font-family:var(--mono);font-size:13px;color:var(--muted);padding-top:6px}
+.xp-role{font-size:19px;font-weight:600;letter-spacing:-.01em}
+.xp-org{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--accent);margin-top:2px}
+.xp-org span{color:var(--faint);font-family:var(--mono);font-style:normal;font-size:12px;margin-left:10px}
+.xp-points{margin-top:14px;max-width:68ch}
+.xp-points li{
+  list-style:none;color:var(--muted);font-size:15px;padding:5px 0 5px 22px;position:relative;
+}
+.xp-points li::before{content:"—";position:absolute;left:0;color:var(--faint)}
+.xp-points strong{color:var(--ink);font-weight:600}
+.xp-early{display:grid;grid-template-columns:repeat(3,1fr);gap:0 40px;padding:34px 0 6px}
+.xp-early div{padding:6px 0}
+.xp-early h4{font-size:15px;font-weight:600}
+.xp-early .o{font-family:var(--serif);font-style:italic;color:var(--muted);font-size:15px}
+.xp-early .y{font-family:var(--mono);font-size:11.5px;color:var(--faint);margin-top:4px}
+.xp-early p{font-size:13.5px;color:var(--muted);margin-top:8px;line-height:1.55}
+@media (max-width:820px){
+  .xp-row{grid-template-columns:1fr;gap:6px;padding:32px 0}
+  .xp-early{grid-template-columns:1fr;gap:22px}
+}
+
+/* ---------- numbers strip ---------- */
+.numbers{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--line-dark);border-bottom:1px solid var(--line);
+  margin-top:84px;
+}
+.num{padding:34px 22px 30px;border-left:1px solid var(--line)}
+.num:first-child{border-left:0;padding-left:0}
+.num b{
+  font-family:var(--serif);font-weight:400;font-size:clamp(30px,4vw,46px);
+  letter-spacing:-.02em;display:block;line-height:1;font-variant-numeric:tabular-nums;
+}
+.num b i{font-style:italic;color:var(--accent);font-size:.72em}
+.num span{display:block;margin-top:10px;font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.03em}
+@media (max-width:820px){
+  .numbers{grid-template-columns:1fr 1fr}
+  .num{padding-left:0;border-left:0}
+  .num:nth-child(even){padding-left:22px;border-left:1px solid var(--line)}
+}
+
+/* ---------- skills / colophon ---------- */
+.skills-list{border-top:1px solid var(--line-dark)}
+.sk-row{
+  display:grid;grid-template-columns:190px 1fr;gap:28px;
+  padding:26px 0;border-bottom:1px solid var(--line);
+}
+.sk-row .lb{font-family:var(--mono);font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-top:4px}
+.sk-row .ls{font-family:var(--serif);font-size:19px;line-height:1.75;color:var(--ink)}
+.sk-row .ls i{color:var(--faint);font-style:normal;margin:0 10px}
+@media (max-width:820px){.sk-row{grid-template-columns:1fr;gap:6px}}
+
+/* ---------- about ---------- */
+.about-cols{display:grid;grid-template-columns:1fr 1fr;gap:60px;border-top:1px solid var(--line-dark);padding-top:54px}
+.about-cols .lede{
+  font-family:var(--serif);font-size:clamp(22px,2.6vw,28px);line-height:1.45;letter-spacing:-.005em;
+}
+.about-cols .lede em{font-style:italic;color:var(--accent)}
+.about-body p{color:var(--muted);font-size:15.5px;margin-bottom:18px}
+.about-body strong{color:var(--ink);font-weight:600}
+@media (max-width:820px){.about-cols{grid-template-columns:1fr;gap:30px}}
+
+/* ---------- contact ---------- */
+.contact{padding:130px 0 40px}
+.contact .small{font-family:var(--mono);font-size:13px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:26px}
+.contact h2{
+  font-family:var(--serif);font-weight:400;font-size:clamp(40px,7vw,84px);
+  line-height:1.05;letter-spacing:-.015em;max-width:16ch;
+}
+.contact h2 em{font-style:italic;color:var(--accent)}
+.mail-line{
+  margin-top:44px;display:inline-flex;align-items:baseline;gap:16px;
+  font-family:var(--serif);font-size:clamp(20px,3vw,30px);
+  border-bottom:1px solid var(--ink);padding-bottom:6px;
+  transition:color .3s,border-color .3s;
+}
+.mail-line:hover{color:var(--accent);border-color:var(--accent)}
+.mail-line .a{font-size:.8em;transition:transform .3s}
+.mail-line:hover .a{transform:translate(4px,-2px)}
+.contact-meta{margin-top:56px;display:flex;flex-wrap:wrap;gap:12px 36px;font-family:var(--mono);font-size:13px;color:var(--muted)}
+.contact-meta a{border-bottom:1px solid var(--line);padding-bottom:2px;transition:color .25s,border-color .25s}
+.contact-meta a:hover{color:var(--ink);border-color:var(--ink)}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line);margin-top:80px}
+.foot{
+  max-width:var(--maxw);margin:0 auto;padding:26px var(--pad);
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;
+  font-family:var(--mono);font-size:12px;color:var(--faint);
+}
+.foot .clock{font-variant-numeric:tabular-nums}
+
+/* ---------- marginalia ---------- */
+.top-line{position:fixed;top:0;left:0;height:2px;background:var(--accent);width:0%;z-index:200}
+</style>
+</head>
+<body>
+
+<div class="top-line" id="topline"></div>
+
+<header class="site" id="siteHead">
+  <div class="site-inner">
+    <a class="brand" href="#top">Tanishq&nbsp;<em>Joshi</em></a>
+    <nav class="site-nav" id="siteNav">
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="resume" href="Tanishq_Joshi_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ================= HERO ================= -->
+<div class="wrap hero">
+  <p class="kicker rv in"><span class="dot"></span>Available for remote product engineering roles · Indore, IN · US-timezone overlap</p>
+  <h1 class="rv in" style="--d:.08s">Backend engineer who ships <em>end-to-end</em> — from schema to production.</h1>
+  <p class="sub rv in" style="--d:.16s">
+    I'm Tanishq Joshi — <strong>7.5+ years</strong> building production APIs, AWS serverless systems,
+    and AI-powered products. I've designed, built, and launched <strong>two live products solo</strong>,
+    and I lead a platform team at TCS by day.
+  </p>
+  <div class="hero-meta rv in" style="--d:.24s">
+    <a href="https://github.com/tanishq510" target="_blank" rel="noopener">GitHub ↗</a>
+    <a href="https://linkedin.com/in/tanishq-joshi-b396a2170" target="_blank" rel="noopener">LinkedIn ↗</a>
+    <a href="mailto:tanishqjoshi93@gmail.com">tanishqjoshi93@gmail.com</a>
+  </div>
+  <hr class="hero-rule rv in" style="--d:.3s"/>
+</div>
+
+<!-- ================= WORK ================= -->
+<section class="wrap sec" id="work">
+  <div class="sec-row rv">
+    <div class="sec-label"><sup>01</sup>Selected work</div>
+    <div class="sec-note">built, deployed &amp; maintained solo</div>
+  </div>
+
+  <div class="work">
+
+    <article class="work-item rv">
+      <div class="idx">/01</div>
+      <div>
+        <h3 class="work-title">
+          <a href="https://kaarters.com" target="_blank" rel="noopener">Kaarters</a>
+          <span class="arrow">↗</span>
+        </h3>
+        <div class="work-sub">Founder &amp; sole engineer · 2025—present · kaarters.com</div>
+        <p class="work-desc">
+          A live <strong>B2B platform for FMCG distributors</strong> — retailers, delivery riders,
+          routes, and order fulfillment in one place. I designed the relational model end-to-end:
+          distributors, riders, retailers, routes and stops, and a full order lifecycle with
+          payment-collection tracking and audit notes.
+        </p>
+        <div class="work-tags">
+          <span>Next.js 16</span><span>React 19</span><span>TypeScript</span><span>Express</span><span>Prisma</span><span>PostgreSQL</span><span>GitHub Actions</span>
+        </div>
+      </div>
+      <ul class="work-facts">
+        <li>Role-based JWT auth for distributor &amp; rider roles</li>
+        <li>Batch order-status updates, paginated APIs, CSV exports</li>
+        <li>WhatsApp order notifications</li>
+        <li>Drag-and-drop route &amp; stop sequencing</li>
+      </ul>
+    </article>
+
+    <article class="work-item rv">
+      <div class="idx">/02</div>
+      <div>
+        <h3 class="work-title">
+          <a href="https://createfreeresume.com" target="_blank" rel="noopener">CreateFreeResume</a>
+          <span class="arrow">↗</span>
+        </h3>
+        <div class="work-sub">Founder &amp; sole engineer · 2025—present · createfreeresume.com</div>
+        <p class="work-desc">
+          A free, <strong>privacy-first ATS resume builder</strong>. Fully client-side — resume data
+          never leaves the browser. Imports existing PDF and DOCX resumes into structured, editable
+          sections, with live preview and in-browser PDF generation.
+        </p>
+        <div class="work-tags">
+          <span>Next.js</span><span>Zustand</span><span>@react-pdf/renderer</span><span>pdf.js</span><span>mammoth</span><span>Vercel</span>
+        </div>
+      </div>
+      <ul class="work-facts">
+        <li>Multiple ATS-safe templates + Markdown export</li>
+        <li>PDF/DOCX parsing in the browser</li>
+        <li>SEO: sitemaps, Open Graph images</li>
+        <li>Zero backend cost</li>
+      </ul>
+    </article>
+
+    <article class="work-item rv">
+      <div class="idx">/03</div>
+      <div>
+        <h3 class="work-title">
+          <a href="https://github.com/tanishq510" target="_blank" rel="noopener">RAG Document Q&amp;A</a>
+          <span class="arrow">↗</span>
+        </h3>
+        <div class="work-sub">FastAPI microservice · 2025</div>
+        <p class="work-desc">
+          Question-answering over private documents, with <strong>source citations on every answer</strong>.
+          Overlap-aware chunking, sentence-transformers embeddings, and ChromaDB vector storage with
+          idempotent upserts — top-k retrieval feeding Claude for grounded answers.
+        </p>
+        <div class="work-tags">
+          <span>Python</span><span>FastAPI</span><span>ChromaDB</span><span>Claude API</span><span>Pydantic</span>
+        </div>
+      </div>
+      <ul class="work-facts">
+        <li>PDF, text &amp; Markdown ingestion</li>
+        <li>Cited source chunks in every response</li>
+        <li>Swappable embedding &amp; chat models</li>
+      </ul>
+    </article>
+
+  </div>
+</section>
+
+<!-- ================= NUMBERS ================= -->
+<div class="wrap">
+  <div class="numbers rv">
+    <div class="num"><b data-count="7.5"><i>+</i></b><span>years of experience</span></div>
+    <div class="num"><b data-count="2"></b><span>live products, built solo</span></div>
+    <div class="num"><b data-count="200"><i>K+</i></b><span>daily API requests secured</span></div>
+    <div class="num"><b data-count="10"><i>+</i></b><span>AWS accounts architected</span></div>
+  </div>
+</div>
+
+<!-- ================= EXPERIENCE ================= -->
+<section class="wrap sec" id="experience">
+  <div class="sec-row rv">
+    <div class="sec-label"><sup>02</sup>Experience</div>
+    <div class="sec-note">seven years, five teams</div>
+  </div>
+
+  <div class="xp">
+
+    <div class="xp-row rv">
+      <div class="xp-when">2024 — present</div>
+      <div>
+        <div class="xp-role">IT Analyst, Serverless &amp; AI Platform</div>
+        <div class="xp-org">Tata Consultancy Services <span>REMOTE</span></div>
+        <ul class="xp-points">
+          <li>Lead a team of <strong>5+ engineers</strong> across 3 parallel workstreams — 100% on-time delivery over 4 consecutive quarters.</li>
+          <li>Architect serverless API contracts across <strong>10+ AWS accounts</strong> (Lambda, S3, SQS, Step Functions, CloudWatch).</li>
+          <li>Built Python &amp; Node.js code-migration pipelines — manual effort down <strong>~60%</strong>, error rates near zero.</li>
+          <li>AI-assisted automation (Copilot + prompt engineering) for vulnerability remediation and test generation — <strong>QA turnaround down 40%</strong>.</li>
+          <li>85%+ test coverage on critical API paths, TDD throughout.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="xp-row rv">
+      <div class="xp-when">2022 — 2024</div>
+      <div>
+        <div class="xp-role">Software Engineer</div>
+        <div class="xp-org">Mindbowser <span>PUNE</span></div>
+        <ul class="xp-points">
+          <li>Secured APIs handling <strong>200K+ daily requests</strong> with JWT auth and rate limiting — zero unauthorized-access incidents.</li>
+          <li>Integrated SQS, SES, Step Functions, Lambda &amp; S3 into production — ~30% cloud efficiency gain.</li>
+          <li>Shipped <strong>15+ REST endpoints</strong> across healthcare and SaaS products serving 10,000+ users.</li>
+          <li>Dockerized deployments — deploy time down 40%; Figma-to-code React/Next.js frontends — traffic up 25%.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="xp-row rv">
+      <div class="xp-when">2021 — 2022</div>
+      <div>
+        <div class="xp-role">Software Engineer</div>
+        <div class="xp-org">Codiant <span>INDORE</span></div>
+        <ul class="xp-points">
+          <li>CMS modules and REST APIs with Node.js/Express for 3+ content-heavy platforms — owned features from schema design through deployment and post-release support.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="xp-early rv">
+    <div>
+      <h4>Full Stack Developer</h4>
+      <div class="o">Webkodz</div>
+      <div class="y">2020 — 2021 · Indore</div>
+      <p>Schemas &amp; Node.js backends for 5+ client apps; API response times down 25% via query optimization.</p>
+    </div>
+    <div>
+      <h4>Jr. Full Stack Developer</h4>
+      <div class="o">SMT Groups</div>
+      <div class="y">2019 — 2020 · Indore</div>
+      <p>UI components and REST API integration for internal web apps; delivered 3 complete projects.</p>
+    </div>
+    <div>
+      <h4>B.E., Engineering</h4>
+      <div class="o">SVITS Indore</div>
+      <div class="y">2015 — 2019 · 8.0 CGPA</div>
+      <p>Where it all started.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section class="wrap sec" id="skills">
+  <div class="sec-row rv">
+    <div class="sec-label"><sup>03</sup>Toolkit</div>
+    <div class="sec-note">what I reach for</div>
+  </div>
+  <div class="skills-list">
+    <div class="sk-row rv">
+      <div class="lb">Backend</div>
+      <div class="ls">Node.js<i>/</i>TypeScript<i>/</i>Python<i>/</i>Express<i>/</i>FastAPI<i>/</i>PostgreSQL<i>/</i>Prisma<i>/</i>REST design<i>/</i>WebSockets</div>
+    </div>
+    <div class="sk-row rv">
+      <div class="lb">Cloud &amp; Ops</div>
+      <div class="ls">AWS Lambda<i>/</i>S3<i>/</i>SQS<i>/</i>Step Functions<i>/</i>CloudWatch<i>/</i>IAM<i>/</i>SES<i>/</i>Docker<i>/</i>GitHub Actions<i>/</i>Vercel<i>/</i>Render</div>
+    </div>
+    <div class="sk-row rv">
+      <div class="lb">AI &amp; LLM</div>
+      <div class="ls">Claude API<i>/</i>OpenAI API<i>/</i>RAG pipelines<i>/</i>ChromaDB<i>/</i>embeddings<i>/</i>prompt engineering<i>/</i>agentic workflows</div>
+    </div>
+    <div class="sk-row rv">
+      <div class="lb">Frontend</div>
+      <div class="ls">React 19<i>/</i>Next.js<i>/</i>Tailwind<i>/</i>Zustand<i>/</i>Figma-to-code</div>
+    </div>
+    <div class="sk-row rv">
+      <div class="lb">Practices</div>
+      <div class="ls">TDD — Jest &amp; Mocha<i>/</i>Agile<i>/</i>code review<i>/</i>query optimization</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="wrap sec" id="about">
+  <div class="sec-row rv">
+    <div class="sec-label"><sup>04</sup>About</div>
+    <div class="sec-note">the short version</div>
+  </div>
+  <div class="about-cols">
+    <p class="lede rv">
+      I like owning the whole surface of a feature — the data model, the API contract,
+      the infrastructure, and the pixels people actually touch. <em>Shipping is the job.</em>
+    </p>
+    <div class="about-body rv" style="--d:.1s">
+      <p>
+        Over seven years I've gone from building CMS modules to architecting serverless platforms
+        across 10+ AWS accounts, leading a team of five along the way. Nights and weekends, I build
+        products: <strong>Kaarters</strong> for FMCG distributors, <strong>CreateFreeResume</strong>
+        for anyone who's ever fought a resume builder paywall.
+      </p>
+      <p>
+        Lately I'm deep in LLM-powered systems — RAG pipelines with vector search, Claude and OpenAI
+        integrations, and AI-assisted automation that cut my team's QA turnaround by 40%. I'm looking
+        for early-stage product engineering roles where owning outcomes is the default.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="wrap contact" id="contact">
+  <div class="small rv">05 · Contact</div>
+  <h2 class="rv" style="--d:.06s">Have something worth building? <em>Let's talk.</em></h2>
+  <a class="mail-line rv" style="--d:.14s" href="mailto:tanishqjoshi93@gmail.com">
+    tanishqjoshi93@gmail.com <span class="a">↗</span>
+  </a>
+  <div class="contact-meta rv" style="--d:.2s">
+    <a href="https://github.com/tanishq510" target="_blank" rel="noopener">GitHub ↗</a>
+    <a href="https://linkedin.com/in/tanishq-joshi-b396a2170" target="_blank" rel="noopener">LinkedIn ↗</a>
+    <a href="Tanishq_Joshi_Resume.pdf" target="_blank" rel="noopener">Resume (PDF) ↗</a>
+    <span>+91 78699 00340</span>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="foot">
+    <span>© 2026 Tanishq Joshi — set in Newsreader &amp; Inter</span>
+    <span class="clock" id="clock">Indore, IN</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* header border + reading line */
+  var head = document.getElementById("siteHead");
+  var line = document.getElementById("topline");
+  function onScroll(){
+    var h = document.documentElement;
+    head.classList.toggle("scrolled", h.scrollTop > 10);
+    var max = h.scrollHeight - h.clientHeight;
+    line.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + "%";
+  }
+  window.addEventListener("scroll", onScroll, {passive:true});
+  onScroll();
+
+  /* reveal on scroll */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); }
+    });
+  }, {threshold: 0.1, rootMargin: "0px 0px -6% 0px"});
+  document.querySelectorAll(".rv:not(.in)").forEach(function(el){ io.observe(el); });
+
+  /* number count-up, understated */
+  var done = false;
+  var nio = new IntersectionObserver(function(entries){
+    if (!entries[0].isIntersecting || done) return;
+    done = true;
+    document.querySelectorAll(".num b").forEach(function(el){
+      var target = parseFloat(el.dataset.count);
+      var isFloat = String(el.dataset.count).indexOf(".") > -1;
+      var sufEl = el.querySelector("i");
+      var suffix = sufEl ? sufEl.outerHTML : "";
+      if (reduced){ el.innerHTML = el.dataset.count + suffix; return; }
+      var start = null, dur = 1300;
+      function step(ts){
+        if (!start) start = ts;
+        var p = Math.min((ts - start) / dur, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        var val = target * eased;
+        el.innerHTML = (isFloat ? val.toFixed(1) : Math.round(val)) + suffix;
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+    nio.disconnect();
+  }, {threshold: .5});
+  var numbers = document.querySelector(".numbers");
+  if (numbers) nio.observe(numbers);
+
+  /* scroll-spy */
+  var links = document.querySelectorAll("#siteNav a[href^='#']");
+  var spy = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){
+        links.forEach(function(a){
+          a.classList.toggle("active", a.getAttribute("href") === "#" + en.target.id);
+        });
+      }
+    });
+  }, {rootMargin: "-35% 0px -60% 0px"});
+  links.forEach(function(a){
+    var s = document.querySelector(a.getAttribute("href"));
+    if (s) spy.observe(s);
+  });
+
+  /* live local time — a small human touch */
+  var clock = document.getElementById("clock");
+  function tickClock(){
+    var t = new Date().toLocaleTimeString("en-IN", {hour:"2-digit", minute:"2-digit", timeZone:"Asia/Kolkata"});
+    clock.textContent = "Indore, IN — " + t + " IST";
+  }
+  tickClock();
+  setInterval(tickClock, 30000);
+})();
+</script>
+</body>
+</html>

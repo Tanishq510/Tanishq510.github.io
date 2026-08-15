@@ -3,965 +3,979 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-<title>Tanishq Joshi — Software Engineer | Node.js · AWS · Agentic AI</title>
-<meta name="description" content="Tanishq Joshi is a Software Engineer with 7+ years of experience in Node.js, AWS serverless, and Agentic AI. Open to remote product engineering roles. Based in Indore, India."/>
-<meta name="keywords" content="Tanishq Joshi, Software Engineer, Node.js, AWS, Agentic AI, RAG, LangChain, Copilot Studio, Indore, backend developer, remote"/>
+<title>Tanishq Joshi — Software Engineer · Backend & AI Systems</title>
+<meta name="description" content="Tanishq Joshi is a backend-focused Software Engineer with 7.5+ years building production APIs, AWS serverless systems, and AI-powered products. Founder of kaarters.com and createfreeresume.com."/>
+<meta name="keywords" content="Tanishq Joshi, Software Engineer, Backend, Node.js, TypeScript, AWS, Serverless, RAG, LLM, AI, Indore, Remote"/>
 <meta name="author" content="Tanishq Joshi"/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://tanishq510.github.io/"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://tanishq510.github.io/"/>
-<meta property="og:title" content="Tanishq Joshi — Software Engineer"/>
-<meta property="og:description" content="7+ years in Node.js, AWS and Agentic AI. Open to remote product engineering roles."/>
-<meta name="twitter:card" content="summary_large_image"/>
+<meta property="og:title" content="Tanishq Joshi — Software Engineer · Backend & AI Systems"/>
+<meta property="og:description" content="7.5+ years building production APIs, AWS serverless systems, and AI-powered products. Shipped two live products solo."/>
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Tanishq Joshi — Software Engineer"/>
-<meta name="twitter:description" content="7+ years in Node.js, AWS and Agentic AI. Open to remote product engineering roles."/>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Tanishq Joshi","jobTitle":"Software Engineer","url":"https://tanishq510.github.io","email":"tanishjoshi93@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Indore","addressCountry":"IN"},"sameAs":["https://linkedin.com/in/tanishq-joshi-b396a2170","https://github.com/tanishq510"],"knowsAbout":["Node.js","AWS Lambda","Agentic AI","RAG","LangChain","Copilot Studio","TypeScript","React"]}</script>
+<meta name="twitter:description" content="Backend & AI Systems · Node.js · TypeScript · AWS · LLM/RAG"/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23161310'/><text y='76' x='50' text-anchor='middle' font-family='Georgia' font-size='72' font-style='italic' fill='%23e8e1d4'>tj</text></svg>"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Tanishq Joshi","jobTitle":"Software Engineer — Backend & AI Systems","url":"https://tanishq510.github.io","email":"tanishqjoshi93@gmail.com","telephone":"+91-7869900340","address":{"@type":"PostalAddress","addressLocality":"Indore","addressCountry":"IN"},"sameAs":["https://linkedin.com/in/tanishq-joshi-b396a2170","https://github.com/tanishq510"],"knowsAbout":["Node.js","TypeScript","AWS Lambda","Serverless","RAG Pipelines","LLM Integration","PostgreSQL","React","Next.js"]}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --green:#0f9d58;--green-dk:#0b8043;--blue:#1a73e8;--blue-dk:#1557b0;
-  --surf:#f8f9fa;--border:#e0e0e0;--hbg:#f3f3f3;
-  --text:#202124;--muted:#5f6368;--dim:#80868b;
-  --abg:rgba(26,115,232,0.07);--hhi:#d3e3fd;--rhov:#f5f5f5;
-  --row-h:28px;
-  --sans:"Google Sans",Arial,sans-serif;--mono:"Roboto Mono",monospace;
+  --bg:#151210;
+  --bg-2:#1b1714;
+  --ink:#ebe4d7;
+  --muted:#a89d8d;
+  --faint:#6e6558;
+  --line:#2c2620;
+  --line-strong:#57503f;
+  --accent:#e0703a;
+  --accent-dim:rgba(224,112,58,.14);
+  --serif:"Newsreader",Georgia,serif;
+  --sans:"Inter",system-ui,-apple-system,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+  --maxw:1080px;
+  --pad:24px;
+  --ease:cubic-bezier(.16,.7,.3,1);
+  --grain-o:.16;
+  --grad:none;
 }
 
-/* ── FULLSCREEN DESKTOP ── */
-html{height:100%;overflow:hidden;}
+/* ---------- themes ---------- */
+html[data-theme="paper"]{
+  --bg:#f7f5f0;
+  --bg-2:#efece4;
+  --ink:#181511;
+  --muted:#6f675c;
+  --faint:#a39a8c;
+  --line:#dcd6ca;
+  --line-strong:#181511;
+  --accent:#a8430d;
+  --accent-dim:rgba(168,67,13,.1);
+  --grain-o:.08;
+}
+html[data-theme="neon"]{
+  --bg:#0a0e17;
+  --bg-2:#101624;
+  --ink:#e7ecf5;
+  --muted:#94a3b8;
+  --faint:#5b6a82;
+  --line:#1c2536;
+  --line-strong:#33415c;
+  --accent:#5eead4;
+  --accent-dim:rgba(94,234,212,.1);
+  --grain-o:.1;
+  --grad:linear-gradient(100deg,#5eead4 0%,#818cf8 55%,#f472b6 110%);
+}
+html[data-theme="neon"] body{--serif:"Inter",system-ui,sans-serif}
+html[data-theme="neon"] h1,
+html[data-theme="neon"] .work-title,
+html[data-theme="neon"] .contact h2,
+html[data-theme="neon"] .num b{font-weight:700;letter-spacing:-.03em}
+html[data-theme="neon"] em{font-style:normal}
+html[data-theme="neon"] .hero h1 em,
+html[data-theme="neon"] .contact h2 em,
+html[data-theme="neon"] .lede em{
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+}
+html[data-theme="neon"] .brand em,
+html[data-theme="neon"] .xp-org,
+html[data-theme="neon"] .xp-early .o,
+html[data-theme="neon"] .sec-note{font-style:normal}
+
+/* theme swap transition (fallback when View Transitions unsupported) */
+body,header.site,.work-item,.xp-row,.sk-row,.num{transition-property:background,background-color,color,border-color;transition-duration:.4s}
+::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}
+::view-transition-new(root){
+  clip-path:circle(0 at var(--vx,50%) var(--vy,50%));
+  animation:theme-reveal .55s var(--ease) forwards;
+}
+@keyframes theme-reveal{to{clip-path:circle(150vmax at var(--vx,50%) var(--vy,50%))}}
+
+html{scroll-behavior:smooth}
 body{
-  height:100%;width:100%;font-family:var(--sans);font-size:13px;
-  color:var(--text);background:#fff;display:flex;flex-direction:column;
-  overflow:hidden;position:fixed;top:0;left:0;right:0;bottom:0;
+  font-family:var(--sans);background:var(--bg);color:var(--ink);
+  font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+::selection{background:var(--ink);color:var(--bg)}
+a{color:inherit;text-decoration:none}
+section{scroll-margin-top:90px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad)}
+
+/* ---------- grain ---------- */
+body::after{
+  content:"";position:fixed;inset:-50%;z-index:99;pointer-events:none;opacity:var(--grain-o);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
+  animation:grain 9s steps(6) infinite;
+}
+@keyframes grain{
+  0%,100%{transform:translate(0,0)}
+  20%{transform:translate(-6%,4%)}
+  40%{transform:translate(4%,-7%)}
+  60%{transform:translate(-3%,-4%)}
+  80%{transform:translate(6%,5%)}
 }
 
-/* ── TITLE BAR ── */
-#title-bar{
-  display:flex;align-items:center;gap:10px;
-  padding:8px 16px 4px;flex-shrink:0;background:#fff;
+/* ---------- custom cursor ---------- */
+.cur-dot,.cur-ring{
+  position:fixed;top:0;left:0;z-index:300;pointer-events:none;border-radius:50%;
+  transform:translate(-50%,-50%);
 }
-.gs-logo{
-  display:grid;grid-template-columns:1fr 1fr;gap:1.5px;
-  width:28px;height:28px;padding:4px;flex-shrink:0;
+.cur-dot{width:6px;height:6px;background:var(--accent)}
+.cur-ring{
+  width:34px;height:34px;border:1px solid color-mix(in srgb,var(--ink) 50%,transparent);
+  transition:width .3s var(--ease),height .3s var(--ease),border-color .3s,background .3s;
 }
-.gs-logo span{border-radius:1.5px;}
-.gs-logo span:nth-child(1){background:#34a853;}
-.gs-logo span:nth-child(2){background:#fbbc04;}
-.gs-logo span:nth-child(3){background:#ea4335;}
-.gs-logo span:nth-child(4){background:#4285f4;}
-#file-name{font-size:16px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.title-actions{margin-left:auto;display:flex;align-items:center;gap:8px;flex-shrink:0;}
-.contact-btn{
-  background:var(--blue);color:#fff;border:none;border-radius:20px;
-  padding:7px 18px;font-size:13px;font-weight:500;cursor:pointer;
-  font-family:var(--sans);transition:background .2s;white-space:nowrap;
-}
-.contact-btn:hover{background:var(--blue-dk);}
-/* Resume btn — shown only on mobile */
-.resume-btn{
-  display:none;
-  align-items:center;gap:6px;
-  background:#fff;color:var(--blue);
-  border:1px solid var(--blue);
-  border-radius:4px;
-  padding:6px 14px;font-size:12.5px;font-weight:500;cursor:pointer;
-  font-family:var(--sans);transition:background .15s,color .15s;white-space:nowrap;
-  text-decoration:none;
-}
-.resume-btn:hover{background:var(--abg);}
-.avatar{
-  width:32px;height:32px;border-radius:50%;
-  background:linear-gradient(135deg,#7c3aed,#1a73e8);
-  color:#fff;font-size:12px;font-weight:600;
-  display:flex;align-items:center;justify-content:center;
-  flex-shrink:0;cursor:default;user-select:none;
+body.cur-hover .cur-ring{width:58px;height:58px;border-color:var(--accent);background:var(--accent-dim)}
+body.cur-down .cur-ring{width:26px;height:26px}
+@media (pointer:coarse){.cur-dot,.cur-ring{display:none}}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(26px);filter:blur(5px);
+  transition:opacity .9s var(--ease),transform .9s var(--ease),filter .9s var(--ease);
+  transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none;filter:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;filter:none;transition:none}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .cur-dot,.cur-ring{display:none}
 }
 
-/* ── MENU BAR ── */
-#menu-bar{
-  display:flex;padding:2px 10px;background:#fff;
-  flex-shrink:0;position:relative;z-index:200;
+/* ---------- header ---------- */
+header.site{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:color-mix(in srgb,var(--bg) 82%,transparent);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid transparent;transition:border-color .3s,transform .45s var(--ease);
 }
-.menu-item{
-  padding:5px 10px;font-size:13px;color:var(--muted);
-  cursor:pointer;border-radius:4px;user-select:none;
-  transition:background .12s,color .12s;position:relative;
+header.site.scrolled{border-bottom-color:var(--line)}
+header.site.hidden{transform:translateY(-100%)}
+.site-inner{
+  max-width:var(--maxw);margin:0 auto;padding:0 var(--pad);
+  height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px;
 }
-.menu-item:hover,.menu-item.open{background:var(--surf);color:var(--text);}
-.dropdown{
-  display:none;position:absolute;top:calc(100% + 2px);left:0;
-  min-width:220px;background:#fff;
-  border:1px solid var(--border);border-radius:6px;
-  box-shadow:0 6px 20px rgba(0,0,0,.14);
-  z-index:300;padding:4px 0;
+.brand{font-family:var(--mono);font-size:13.5px;letter-spacing:.02em}
+.brand em{font-family:var(--serif);font-style:italic;font-size:16px}
+.site-nav{display:flex;align-items:center;gap:26px}
+.site-nav a{
+  position:relative;font-size:13.5px;font-weight:500;color:var(--muted);
+  padding:4px 0;transition:color .25s;
 }
-.menu-item.open .dropdown{display:block;}
-.dd-item{
-  padding:9px 20px;font-size:13px;color:var(--text);cursor:pointer;
-  transition:background .1s;white-space:nowrap;
-  display:flex;align-items:center;gap:12px;
+.site-nav a::after{
+  content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;
+  background:var(--accent);transition:right .3s var(--ease);
 }
-.dd-item:hover{background:var(--surf);}
-.dd-icon{color:var(--muted);font-size:13px;width:18px;text-align:center;}
-.dd-sep{height:1px;background:var(--border);margin:4px 0;}
-.dd-sc{margin-left:auto;color:var(--dim);font-size:11px;font-family:var(--mono);}
-
-/* ── TOOLBAR ── */
-#toolbar{
-  background:var(--surf);border-top:1px solid var(--border);
-  border-bottom:1px solid var(--border);
-  padding:4px 12px;display:flex;align-items:center;
-  gap:1px;flex-shrink:0;overflow:hidden;
+.site-nav a:hover,.site-nav a.active{color:var(--ink)}
+.site-nav a:hover::after,.site-nav a.active::after{right:0}
+.site-nav .resume{
+  color:var(--ink);border:1px solid var(--line-strong);border-radius:999px;
+  padding:7px 16px;font-size:13px;transition:background .3s,color .3s,border-color .3s;
 }
-.t-btn{
-  height:28px;min-width:28px;display:flex;align-items:center;
-  justify-content:center;border-radius:4px;cursor:pointer;
-  font-size:13px;color:var(--muted);padding:0 4px;
-  transition:background .12s;user-select:none;
-}
-.t-btn:hover{background:#e0e0e0;color:var(--text);}
-.t-sep{width:1px;height:20px;background:var(--border);margin:0 5px;flex-shrink:0;}
-.t-sel{
-  padding:3px 8px;border:1px solid var(--border);border-radius:4px;
-  font-size:12.5px;color:var(--text);background:#fff;
-  font-family:var(--sans);cursor:pointer;
-}
-.t-sel:hover{border-color:#aaa;}
-
-/* ── FORMULA BAR ── */
-#formula-bar{
-  display:flex;align-items:center;height:30px;
-  border-bottom:1px solid var(--border);flex-shrink:0;
-}
-#name-box{
-  width:76px;min-width:76px;border-right:1px solid var(--border);
-  padding:0 8px;height:100%;display:flex;align-items:center;
-  font-family:var(--mono);font-size:13px;
-}
-#fx-icon{
-  padding:0 12px;font-size:12px;color:var(--muted);font-style:italic;
-  border-right:1px solid var(--border);height:100%;
-  display:flex;align-items:center;flex-shrink:0;
-}
-#formula-content{
-  flex:1;padding:0 12px;font-size:13px;font-family:var(--mono);
-  color:var(--text);overflow:hidden;white-space:nowrap;
-  text-overflow:ellipsis;height:100%;display:flex;align-items:center;
+.site-nav .resume::after{display:none}
+.site-nav .resume:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+@media (max-width:640px){
+  .site-nav{gap:16px}
+  .site-nav a:not(.resume){display:none}
 }
 
-/* ── GRID AREA ── */
-#grid-area{flex:1;display:flex;flex-direction:column;overflow:hidden;min-height:0;}
-
-/* ── COLUMN HEADERS ── */
-#col-headers{
-  display:flex;flex-shrink:0;
-  border-bottom:1px solid var(--border);
-  background:var(--hbg);overflow:hidden;
+/* ---------- theme switcher ---------- */
+.themes{
+  display:flex;align-items:center;gap:8px;
+  border:1px solid var(--line-strong);border-radius:999px;padding:6px 10px;
 }
-.rn-sp{width:44px;min-width:44px;flex-shrink:0;}
-.ch{
-  border-left:1px solid var(--border);text-align:center;
-  font-size:12px;color:var(--muted);padding:4px 0;
-  cursor:default;user-select:none;flex-shrink:0;transition:background .12s;
+.th{
+  width:18px;height:18px;border-radius:50%;cursor:pointer;border:0;padding:0;
+  position:relative;transition:transform .3s var(--ease),box-shadow .3s;
+  outline-offset:3px;
 }
-.ch.hl{background:var(--hhi);color:var(--blue);font-weight:600;}
-
-/* ── GRID ── */
-#grid{
-  flex:1;overflow-y:auto;overflow-x:hidden;
-  display:flex;flex-direction:column;
-  /* FIX 2: repeating row lines fill all remaining vertical space */
-
+.th:hover{transform:scale(1.2) rotate(15deg)}
+.th::after{
+  content:"";position:absolute;inset:-5px;border-radius:50%;
+  border:1px solid transparent;transition:border-color .3s,transform .3s var(--ease);
+  transform:scale(.7);
 }
-#grid::-webkit-scrollbar{width:10px;}
-#grid::-webkit-scrollbar-track{background:var(--surf);}
-#grid::-webkit-scrollbar-thumb{background:#bdbdbd;border-radius:5px;}
-#grid::-webkit-scrollbar-thumb:hover{background:#9e9e9e;}
-
-#grid-content{display:flex;flex-direction:column;}
-
-.row{display:flex;border-bottom:1px solid var(--border);flex-shrink:0;}
-.rn{
-  width:44px;min-width:44px;background:var(--hbg);
-  border-right:1px solid var(--border);text-align:center;
-  font-size:11.5px;color:var(--muted);display:flex;align-items:center;
-  justify-content:center;flex-shrink:0;cursor:default;user-select:none;
-  min-height:var(--row-h);
+.th[aria-pressed="true"]::after{border-color:var(--accent);transform:scale(1)}
+.th-ink{background:linear-gradient(135deg,#151210 50%,#e0703a 50%)}
+.th-paper{background:linear-gradient(135deg,#f7f5f0 50%,#a8430d 50%);box-shadow:inset 0 0 0 1px rgba(0,0,0,.18)}
+.th-neon{background:linear-gradient(135deg,#0a0e17 50%,#5eead4 50%)}
+.th .tip{
+  position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%) translateY(-4px);
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--bg);background:var(--ink);padding:4px 10px;border-radius:6px;
+  opacity:0;pointer-events:none;transition:opacity .25s,transform .25s var(--ease);white-space:nowrap;
 }
-.rn.hl{background:var(--hhi);color:var(--blue);font-weight:600;}
+.th:hover .tip{opacity:1;transform:translateX(-50%) translateY(0)}
 
-.cell{
-  border-right:1px solid var(--border);padding:5px 9px;font-size:13px;
-  color:var(--text);display:flex;align-items:center;cursor:cell;
-  overflow:hidden;min-height:var(--row-h);transition:background .08s;
-  position:relative;flex-shrink:0;
+/* ---------- hero ---------- */
+.hero{padding:186px 0 0;position:relative}
+.hero .kicker{
+  font-family:var(--mono);font-size:12.5px;color:var(--muted);letter-spacing:.06em;
+  display:flex;align-items:center;gap:12px;margin-bottom:36px;
 }
-.cell:hover{background:var(--rhov);}
-.cell.active{outline:2px solid var(--blue);outline-offset:-2px;background:var(--abg);z-index:2;}
-.cell.hdr{background:#e6f4ea;font-weight:600;font-size:12px;color:#137333;}
-.cell.lbl{background:var(--surf);color:var(--muted);font-size:12.5px;}
-.cell.bold{font-weight:600;}
-.cell.ctr{justify-content:center;text-align:center;}
-.cell.muted{color:var(--muted);}
-.cell.shdr{background:#e6f4ea;font-weight:600;font-size:13.5px;color:#137333;}
-/* FIX 2: filler cell stretches to fill remaining row width */
-.cell.fill{flex:1;min-width:0;border-right:none;}
-.cell a{color:var(--blue);text-decoration:underline;text-underline-offset:2px;}
-.cell a:hover{color:var(--blue-dk);}
+.hero .kicker .dot{width:7px;height:7px;border-radius:50%;background:#4da06b;flex-shrink:0;animation:softpulse 2.6s ease-in-out infinite}
+@keyframes softpulse{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(44px,7.6vw,92px);line-height:1.05;letter-spacing:-.015em;
+  max-width:19ch;
+}
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.08em;margin-bottom:-.08em}
+.hero h1 .w>span{
+  display:inline-block;transform:translateY(120%);
+  transition:transform 1s var(--ease);transition-delay:calc(var(--i)*.055s + .15s);
+}
+body.loaded .hero h1 .w>span{transform:none}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero .sub{margin-top:40px;max-width:56ch;color:var(--muted);font-size:17.5px}
+.hero .sub strong{color:var(--ink);font-weight:600}
+.hero-meta{
+  margin-top:44px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 34px;
+  font-family:var(--mono);font-size:13px;color:var(--muted);
+}
+.hero-meta a{border-bottom:1px solid var(--line-strong);padding-bottom:2px;transition:color .25s,border-color .25s}
+.hero-meta a:hover{color:var(--ink);border-color:var(--accent)}
 
-.status-pill{
-  display:inline-flex;align-items:center;gap:6px;
-  background:#e6f4ea;color:#137333;padding:3px 12px;
-  border-radius:20px;font-size:12px;font-weight:600;
+/* ---------- marquee ---------- */
+.marquee{
+  margin-top:96px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  overflow:hidden;white-space:nowrap;padding:18px 0;position:relative;
 }
-.pulse{
-  width:7px;height:7px;border-radius:50%;background:var(--green);
-  animation:pulse 2s ease-in-out infinite;
+.marquee .track{display:inline-block;animation:scroll 36s linear infinite;will-change:transform}
+.marquee:hover .track{animation-play-state:paused}
+@keyframes scroll{to{transform:translateX(-50%)}}
+.marquee span{
+  font-family:var(--serif);font-size:22px;color:var(--muted);
+  display:inline-block;padding:0 8px;
 }
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-.dl-btn{
-  color:var(--blue);
-  text-decoration:underline;
-  text-underline-offset:2px;
-  font-size:13px;
-  cursor:pointer;
-  background:none;
-  border:none;
-  padding:0;
-  font-family:var(--sans);
-  transition:color .15s;
-}
-.dl-btn:hover{color:var(--blue-dk);text-decoration:underline;}
+.marquee span em{font-style:italic;color:var(--ink)}
+.marquee span i{font-style:normal;color:var(--accent);padding:0 18px;font-size:14px;vertical-align:middle}
 
-/* ── SHEET TABS ── */
-/* FIX 1: proper padding in footer */
-#sheet-tabs{
-  display:flex;align-items:flex-end;
-  background:#f1f3f4;border-top:1px solid var(--border);
-  padding:4px 12px 0;
-  height:40px;
-  flex-shrink:0;gap:3px;overflow-x:auto;
+/* ---------- section headings ---------- */
+.sec{padding:96px 0 8px}
+.sec-row{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:54px}
+.sec-label{
+  font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
+  display:flex;align-items:center;gap:14px;
 }
-#sheet-tabs::-webkit-scrollbar{height:3px;}
-#sheet-tabs::-webkit-scrollbar-thumb{background:#ccc;}
-.tab{
-  display:flex;align-items:center;gap:6px;padding:5px 18px 7px;
-  border-radius:5px 5px 0 0;background:#e2e3e4;
-  font-size:12.5px;color:var(--muted);cursor:pointer;
-  border:1px solid transparent;border-bottom:none;
-  height:34px;user-select:none;
-  transition:background .12s,color .12s;white-space:nowrap;flex-shrink:0;
+.sec-label sup{color:var(--accent);font-size:11px}
+.sec-label::after{
+  content:"";height:1px;width:0;background:var(--line-strong);
+  transition:width 1s var(--ease) .2s;
 }
-.tab:hover{background:#d4d5d6;color:var(--text);}
-.tab.active{
-  background:#fff;color:var(--text);font-weight:500;
-  border-color:var(--border);box-shadow:inset 0 -2px 0 var(--green);
+.rv.in .sec-label::after,.sec-row.in .sec-label::after{width:70px}
+.sec-note{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--faint)}
+@media (max-width:640px){.sec-note{display:none}}
+
+/* ---------- work list ---------- */
+.work{border-top:1px solid var(--line-strong)}
+.work-item{
+  display:grid;grid-template-columns:64px 1fr 300px;gap:28px;
+  padding:46px 20px;margin:0 -20px;border-bottom:1px solid var(--line);
+  position:relative;transition:background .45s var(--ease);
 }
-.tab-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
-.add-tab{
-  width:30px;height:30px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  cursor:pointer;font-size:18px;color:var(--muted);
-  margin-left:4px;transition:background .12s;flex-shrink:0;
+.work-item::before{
+  content:"";position:absolute;left:0;top:-1px;height:1px;width:0;
+  background:var(--accent);transition:width .6s var(--ease);
 }
-.add-tab:hover{background:#d4d5d6;}
-
-/* ═══════════════════════════════════════════════════════
-   MOBILE STYLES
-═══════════════════════════════════════════════════════ */
-@media(max-width:700px){
-  /* Unlock scroll, release fixed layout */
-  html,body{overflow:auto;position:static;height:auto;}
-  body{display:block;}
-
-  /* Hide desktop-only chrome */
-  #toolbar,#formula-bar,#col-headers{display:none;}
-  #grid-area{overflow:visible;display:block;background:none;}
-  #grid{overflow:visible;display:block;background:none;}
-  #grid-content{display:block;}
-
-  /* Title bar — show resume btn, compact */
-  #title-bar{padding:10px 14px 6px;gap:8px;}
-  #file-name{font-size:13px;}
-  .contact-btn{padding:6px 12px;font-size:12px;}
-  .resume-btn{display:inline-flex;}
-  .avatar{display:none;}
-
-  /* FIX 3: Menu bar functional on mobile */
-  #menu-bar{
-    overflow-x:auto;flex-wrap:nowrap;
-    padding:2px 10px;gap:2px;
-  }
-  #menu-bar::-webkit-scrollbar{display:none;}
-  .menu-item{
-    font-size:12.5px;padding:7px 10px;
-    white-space:nowrap;min-height:36px;
-    display:flex;align-items:center;
-  }
-  /* Mobile dropdowns — positioned via JS below the tapped item */
-  .dropdown{
-    position:fixed;
-    width:220px;min-width:unset;
-    border-radius:6px;
-    box-shadow:0 4px 16px rgba(0,0,0,.16);
-    z-index:9999;max-height:50vh;overflow-y:auto;
-  }
-  .dd-item{padding:11px 18px;font-size:13.5px;min-height:42px;}
-
-  /* FIX 3: Safe area padding for footer */
-  /* MOBILE FOOTER: fixed to bottom with proper padding */
-  #sheet-tabs{
-    position:fixed;
-    bottom:0;left:0;right:0;
-    padding:6px 14px 0;
-    padding-bottom:env(safe-area-inset-bottom,10px);
-    height:auto;min-height:48px;
-    z-index:500;
-    border-top:2px solid var(--border);
-    background:#f1f3f4;
-    box-shadow:0 -2px 8px rgba(0,0,0,.06);
-  }
-  /* push content well above fixed footer */
-  #grid-area{padding-bottom:72px;}
-  .tab{padding:5px 14px 7px;font-size:12px;height:34px;}
-  .tab-dot{width:7px;height:7px;}
-
-  /* ── MOBILE CARD LAYOUT ── */
-  .m-section{padding:0;}
-  .m-card{
-    padding:14px 16px;border-bottom:1px solid var(--border);
-  }
-  .m-card:last-child{border-bottom:none;}
-  /* section title */
-  .m-title{
-    background:#e6f4ea;padding:12px 16px;
-    font-weight:600;font-size:15px;color:#137333;
-    border-bottom:1px solid #c8e6c9;
-  }
-  /* label = group heading — matches lbl style */
-  .m-lbl{
-    font-size:11px;font-weight:700;color:#137333;
-    text-transform:uppercase;letter-spacing:.06em;
-    margin-bottom:4px;
-  }
-  /* value text */
-  .m-val{font-size:13.5px;color:var(--text);line-height:1.55;}
-  .m-val-muted{font-size:13px;color:var(--muted);line-height:1.5;}
-  /* status pill — reuse existing */
-  /* company header row */
-  .m-company{font-size:14px;font-weight:600;color:var(--text);margin-bottom:2px;}
-  .m-role{font-size:12.5px;color:var(--muted);margin-bottom:8px;}
-  /* bullet */
-  .m-bullet{
-    font-size:13px;color:var(--text);padding-left:14px;
-    position:relative;line-height:1.55;margin-bottom:3px;
-  }
-  .m-bullet::before{content:"→";position:absolute;left:0;color:var(--green);font-size:11px;}
-  /* tag row for skills */
-  .m-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
-  .m-tag{
-    font-size:12px;color:var(--muted);
-    background:#fff;border:1px solid var(--border);
-    border-radius:4px;padding:3px 10px;
-  }
-  /* project card */
-  .m-proj-name{
-    font-size:14px;font-weight:600;color:var(--blue);
-    text-decoration:underline;text-underline-offset:2px;
-  }
-  .m-proj-desc{font-size:13px;color:var(--text);margin:4px 0;line-height:1.5;}
-  .m-proj-stack{font-size:12px;color:var(--muted);margin-bottom:6px;}
-  .m-proj-link{
-    font-size:12.5px;color:var(--blue);
-    text-decoration:underline;text-underline-offset:2px;margin-right:12px;
-  }
-  /* divider between exp/project entries */
-  .m-div{height:1px;background:var(--border);margin:0;}
-  /* contact link rows */
-  .m-contact-row{
-    display:flex;align-items:center;gap:10px;
-    padding:12px 16px;border-bottom:1px solid var(--border);
-    min-height:48px;
-  }
-  .m-contact-row:last-child{border-bottom:none;}
-  .m-contact-label{font-size:11px;font-weight:700;color:#137333;text-transform:uppercase;letter-spacing:.06em;min-width:80px;}
-  .m-contact-val{font-size:13px;color:var(--blue);text-decoration:underline;overflow:hidden;text-overflow:ellipsis;}
-  .m-contact-val-plain{font-size:13px;color:var(--text);}
-  /* download btn full width on mobile */
-  .m-dl-wrap{padding:14px 16px;}
-  .m-dl-btn{
-    display:inline-flex;align-items:center;gap:6px;
-    color:var(--blue);text-decoration:underline;text-underline-offset:2px;
-    font-size:14px;font-weight:400;cursor:pointer;
-    background:none;border:none;padding:0;font-family:var(--sans);
-    transition:color .15s;
-  }
-  .m-dl-btn:hover{color:var(--blue-dk);}
+.work-item:hover{background:var(--bg-2)}
+.work-item:hover::before{width:100%}
+.work-item .idx{
+  font-family:var(--mono);font-size:13px;color:var(--faint);padding-top:14px;
+  transition:color .3s,transform .45s var(--ease);
 }
+.work-item:hover .idx{color:var(--accent);transform:translateX(6px)}
+.work-title{
+  font-family:var(--serif);font-weight:400;font-size:clamp(28px,3.6vw,42px);
+  line-height:1.1;letter-spacing:-.01em;display:inline-flex;align-items:baseline;gap:14px;
+}
+.work-title a{position:relative}
+.work-title a::after{
+  content:"";position:absolute;left:0;right:100%;bottom:2px;height:1px;background:var(--ink);
+  transition:right .4s var(--ease);
+}
+.work-item:hover .work-title a::after{right:0}
+.work-title .arrow{
+  font-family:var(--sans);font-size:20px;color:var(--faint);
+  transition:transform .4s var(--ease),color .3s;display:inline-block;
+}
+.work-item:hover .arrow{transform:translate(7px,-7px);color:var(--accent)}
+.work-sub{font-family:var(--mono);font-size:12.5px;color:var(--accent);margin:10px 0 14px;letter-spacing:.02em}
+.work-sub a{border-bottom:1px dotted var(--accent);transition:opacity .25s}
+.work-sub a:hover{opacity:.7}
+.work-desc{color:var(--muted);font-size:15.5px;max-width:56ch}
+.work-desc strong{color:var(--ink);font-weight:600}
+.work-facts{padding-top:12px}
+.work-facts li{
+  list-style:none;font-size:14px;color:var(--muted);
+  padding:9px 0 9px 0;border-bottom:1px dotted var(--line);line-height:1.5;
+  transition:transform .35s var(--ease),color .3s;
+}
+.work-item:hover .work-facts li{color:var(--ink)}
+.work-facts li:hover{transform:translateX(6px)}
+.work-facts li:last-child{border-bottom:0}
+.work-tags{margin-top:16px;display:flex;flex-wrap:wrap;gap:6px 14px}
+.work-tags span{
+  font-family:var(--mono);font-size:11.5px;color:var(--faint);
+  transition:color .3s;
+}
+.work-item:hover .work-tags span{color:var(--muted)}
+.work-tags span::before{content:"·";margin-right:6px;color:var(--line-strong)}
+.work-tags span:first-child::before{content:""}
+@media (max-width:900px){
+  .work-item{grid-template-columns:1fr;gap:10px;padding:36px 16px;margin:0 -16px}
+  .work-item .idx{padding:0}
+  .work-facts{padding-top:4px}
+}
+
+/* ---------- numbers strip ---------- */
+.numbers{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line);
+  margin-top:96px;
+}
+.num{
+  padding:36px 22px 32px;border-left:1px solid var(--line);
+  transition:background .4s var(--ease);position:relative;overflow:hidden;
+}
+.num:hover{background:var(--bg-2)}
+.num::after{
+  content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--accent);
+  transition:width .5s var(--ease);
+}
+.num:hover::after{width:100%}
+.num:first-child{border-left:0}
+.num b{
+  font-family:var(--serif);font-weight:400;font-size:clamp(30px,4vw,46px);
+  letter-spacing:-.02em;display:block;line-height:1;font-variant-numeric:tabular-nums;
+}
+.num b i{font-style:italic;color:var(--accent);font-size:.72em}
+.num span{display:block;margin-top:10px;font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.03em}
+@media (max-width:820px){
+  .numbers{grid-template-columns:1fr 1fr}
+  .num:nth-child(odd){border-left:0}
+}
+
+/* ---------- experience ---------- */
+.xp{border-top:1px solid var(--line-strong)}
+.xp-row{
+  display:grid;grid-template-columns:190px 1fr;gap:28px;
+  padding:40px 20px;margin:0 -20px;border-bottom:1px solid var(--line);
+  transition:background .45s var(--ease);
+}
+.xp-row:hover{background:var(--bg-2)}
+.xp-when{
+  font-family:var(--mono);font-size:13px;color:var(--faint);padding-top:6px;
+  transition:color .3s;
+}
+.xp-row:hover .xp-when{color:var(--accent)}
+.xp-role{font-size:19px;font-weight:600;letter-spacing:-.01em}
+.xp-org{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--accent);margin-top:2px}
+.xp-org span{color:var(--faint);font-family:var(--mono);font-style:normal;font-size:12px;margin-left:10px;letter-spacing:.08em}
+.xp-points{margin-top:14px;max-width:68ch}
+.xp-points li{
+  list-style:none;color:var(--muted);font-size:15px;padding:5px 0 5px 22px;position:relative;
+  transition:color .3s;
+}
+.xp-row:hover .xp-points li{color:#c4b9a8}
+.xp-points li::before{content:"—";position:absolute;left:0;color:var(--faint)}
+.xp-points strong{color:var(--ink);font-weight:600}
+.xp-early{display:grid;grid-template-columns:repeat(3,1fr);gap:0 40px;padding:38px 0 6px}
+.xp-early>div{padding:6px 0;transition:transform .4s var(--ease)}
+.xp-early>div:hover{transform:translateY(-4px)}
+.xp-early h4{font-size:15px;font-weight:600}
+.xp-early .o{font-family:var(--serif);font-style:italic;color:var(--muted);font-size:15px}
+.xp-early .y{font-family:var(--mono);font-size:11.5px;color:var(--faint);margin-top:4px}
+.xp-early p{font-size:13.5px;color:var(--muted);margin-top:8px;line-height:1.55}
+@media (max-width:820px){
+  .xp-row{grid-template-columns:1fr;gap:6px;padding:32px 16px;margin:0 -16px}
+  .xp-early{grid-template-columns:1fr;gap:22px}
+}
+
+/* ---------- skills ---------- */
+.skills-list{border-top:1px solid var(--line-strong)}
+.sk-row{
+  display:grid;grid-template-columns:190px 1fr;gap:28px;
+  padding:28px 20px;margin:0 -20px;border-bottom:1px solid var(--line);
+  transition:background .45s var(--ease);
+}
+.sk-row:hover{background:var(--bg-2)}
+.sk-row .lb{
+  font-family:var(--mono);font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);padding-top:5px;transition:color .3s;
+}
+.sk-row:hover .lb{color:var(--accent)}
+.sk-row .ls{font-family:var(--serif);font-size:19px;line-height:1.8;color:var(--muted)}
+.sk-row .ls b{
+  font-weight:400;color:var(--ink);cursor:default;position:relative;
+  transition:color .25s;
+}
+.sk-row .ls b:hover{color:var(--accent)}
+.sk-row .ls i{color:var(--faint);font-style:normal;margin:0 10px}
+@media (max-width:820px){.sk-row{grid-template-columns:1fr;gap:6px;padding:24px 16px;margin:0 -16px}}
+
+/* ---------- about ---------- */
+.about-cols{display:grid;grid-template-columns:1fr 1fr;gap:60px;border-top:1px solid var(--line-strong);padding-top:54px}
+.about-cols .lede{
+  font-family:var(--serif);font-size:clamp(22px,2.6vw,28px);line-height:1.45;
+}
+.about-cols .lede em{font-style:italic;color:var(--accent)}
+.about-body p{color:var(--muted);font-size:15.5px;margin-bottom:18px}
+.about-body strong{color:var(--ink);font-weight:600}
+@media (max-width:820px){.about-cols{grid-template-columns:1fr;gap:30px}}
+
+/* ---------- contact ---------- */
+.contact{padding:140px 0 40px}
+.contact .small{font-family:var(--mono);font-size:13px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:26px}
+.contact h2{
+  font-family:var(--serif);font-weight:400;font-size:clamp(40px,7vw,84px);
+  line-height:1.05;letter-spacing:-.015em;max-width:16ch;
+}
+.contact h2 em{font-style:italic;color:var(--accent)}
+.mail-row{margin-top:46px;display:flex;flex-wrap:wrap;align-items:center;gap:22px}
+.mail-line{
+  display:inline-flex;align-items:baseline;gap:16px;
+  font-family:var(--serif);font-size:clamp(20px,3vw,30px);
+  border-bottom:1px solid var(--ink);padding-bottom:6px;
+  transition:color .3s,border-color .3s;
+}
+.mail-line:hover{color:var(--accent);border-color:var(--accent)}
+.mail-line .a{font-size:.8em;transition:transform .3s var(--ease)}
+.mail-line:hover .a{transform:translate(5px,-3px)}
+.copy-btn{
+  font-family:var(--mono);font-size:12px;color:var(--muted);cursor:pointer;
+  border:1px solid var(--line-strong);border-radius:999px;padding:8px 16px;background:none;
+  transition:color .3s,border-color .3s,background .3s;
+}
+.copy-btn:hover{color:var(--ink);border-color:var(--ink)}
+.copy-btn.ok{color:#4da06b;border-color:#4da06b}
+.contact-meta{margin-top:56px;display:flex;flex-wrap:wrap;gap:12px 36px;font-family:var(--mono);font-size:13px;color:var(--muted)}
+.contact-meta a{border-bottom:1px solid var(--line-strong);padding-bottom:2px;transition:color .25s,border-color .25s}
+.contact-meta a:hover{color:var(--ink);border-color:var(--accent)}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line);margin-top:90px}
+.foot{
+  max-width:var(--maxw);margin:0 auto;padding:26px var(--pad);
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;
+  font-family:var(--mono);font-size:12px;color:var(--faint);
+}
+.foot .clock{font-variant-numeric:tabular-nums}
+
+.top-line{position:fixed;top:0;left:0;height:2px;background:var(--accent);width:0%;z-index:200}
 </style>
+<script>
+/* apply saved theme before first paint */
+(function(){
+  try{
+    var t = localStorage.getItem("tj-theme");
+    if (t === "paper" || t === "neon") document.documentElement.dataset.theme = t;
+  }catch(e){}
+})();
+</script>
 </head>
-<body id="app">
+<body>
 
-<!-- TITLE BAR -->
-<div id="title-bar">
-  <div class="gs-logo" aria-hidden="true">
-    <span></span><span></span><span></span><span></span>
+<div class="top-line" id="topline"></div>
+<div class="cur-ring" id="curRing"></div>
+<div class="cur-dot" id="curDot"></div>
+
+<header class="site" id="siteHead">
+  <div class="site-inner">
+    <a class="brand" href="#top">Tanishq&nbsp;<em>Joshi</em></a>
+    <nav class="site-nav" id="siteNav">
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="resume magnet" href="resume/">Resume</a>
+      <div class="themes" role="group" aria-label="Color theme">
+        <button class="th th-ink" type="button" data-set-theme="ink" aria-pressed="true" aria-label="Ink theme"><span class="tip">Ink</span></button>
+        <button class="th th-paper" type="button" data-set-theme="paper" aria-pressed="false" aria-label="Paper theme"><span class="tip">Paper</span></button>
+        <button class="th th-neon" type="button" data-set-theme="neon" aria-pressed="false" aria-label="Neon theme"><span class="tip">Neon</span></button>
+      </div>
+    </nav>
   </div>
-  <span id="file-name">Tanishq Joshi — Portfolio.sheets</span>
-  <div class="title-actions">
-    <!-- FIX 4: Resume download button (mobile only) -->
-    <a class="resume-btn" href="./Tanishq_Joshi_Resume.pdf" download="Tanishq_Joshi_Resume.pdf" aria-label="Download Resume">
-      Resume.pdf
+</header>
+
+<main id="top">
+
+<!-- ================= HERO ================= -->
+<div class="wrap hero">
+  <p class="kicker rv in"><span class="dot"></span>Available for remote product engineering roles · Indore, IN · US-timezone overlap</p>
+  <h1 id="heroH1" aria-label="Backend engineer who ships end-to-end — from schema to production.">
+    <span class="w" style="--i:0"><span>Backend</span></span>
+    <span class="w" style="--i:1"><span>engineer</span></span>
+    <span class="w" style="--i:2"><span>who</span></span>
+    <span class="w" style="--i:3"><span>ships</span></span>
+    <span class="w" style="--i:4"><span><em>end-to-end</em></span></span>
+    <span class="w" style="--i:5"><span>—</span></span>
+    <span class="w" style="--i:6"><span>from</span></span>
+    <span class="w" style="--i:7"><span>schema</span></span>
+    <span class="w" style="--i:8"><span>to</span></span>
+    <span class="w" style="--i:9"><span>production.</span></span>
+  </h1>
+  <p class="sub rv in" style="--d:.55s">
+    I'm Tanishq Joshi — <strong>7.5+ years</strong> building production APIs, AWS serverless systems,
+    and AI-powered products. I've designed, built, and launched <strong>two live products solo</strong>,
+    and I lead a serverless &amp; AI platform team at TCS by day.
+  </p>
+  <div class="hero-meta rv in" style="--d:.68s">
+    <a href="https://github.com/tanishq510" target="_blank" rel="noopener">GitHub ↗</a>
+    <a href="https://linkedin.com/in/tanishq-joshi-b396a2170" target="_blank" rel="noopener">LinkedIn ↗</a>
+    <a href="mailto:tanishqjoshi93@gmail.com">tanishqjoshi93@gmail.com</a>
+  </div>
+</div>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee rv in" style="--d:.8s" aria-hidden="true">
+  <div class="track" id="marqueeTrack">
+    <span>Node.js<i>✦</i></span><span><em>TypeScript</em><i>✦</i></span><span>AWS Lambda<i>✦</i></span><span>Step Functions<i>✦</i></span><span><em>RAG pipelines</em><i>✦</i></span><span>PostgreSQL<i>✦</i></span><span>Claude API<i>✦</i></span><span><em>Next.js</em><i>✦</i></span><span>FastAPI<i>✦</i></span><span>Prompt engineering<i>✦</i></span><span><em>Docker</em><i>✦</i></span><span>SQS<i>✦</i></span><span>ChromaDB<i>✦</i></span><span><em>TDD</em><i>✦</i></span>
+  </div>
+</div>
+
+<!-- ================= WORK ================= -->
+<section class="wrap sec" id="work">
+  <div class="sec-row rv">
+    <div class="sec-label"><sup>01</sup>Selected work</div>
+    <div class="sec-note">built, deployed &amp; maintained solo</div>
+  </div>
+
+  <div class="work">
+
+    <article class="work-item rv">
+      <div class="idx">/01</div>
+      <div>
+        <h3 class="work-title">
+          <a href="https://kaarters.com" target="_blank" rel="noopener">Kaarters</a>
+          <span class="arrow">↗</span>
+        </h3>
+        <div class="work-sub">Founder &amp; sole engineer · 2025—present · kaarters.com · <a href="https://github.com/Tanishq510/karter" target="_blank" rel="noopener">github</a></div>
+        <p class="work-desc">
+          A live <strong>B2B platform for FMCG distributors</strong> — retailers, delivery riders,
+          routes, and order fulfillment in one place. I designed the relational data model end-to-end:
+          distributors, riders, retailers, routes and stops, and an order lifecycle with status
+          transitions, payment-collection tracking, and audit notes.
+        </p>
+        <div class="work-tags">
+          <span>Next.js 16</span><span>React 19</span><span>TypeScript</span><span>Express</span><span>Prisma</span><span>PostgreSQL</span><span>Vercel + Render</span><span>GitHub Actions CI/CD</span>
+        </div>
+      </div>
+      <ul class="work-facts">
+        <li>Role-based JWT auth — distributor &amp; rider roles</li>
+        <li>Rider assignment &amp; batch order-status updates</li>
+        <li>Paginated APIs + CSV export for orders, retailers &amp; distributors</li>
+        <li>WhatsApp order notifications</li>
+        <li>Drag-and-drop route &amp; stop sequencing</li>
+      </ul>
+    </article>
+
+    <article class="work-item rv">
+      <div class="idx">/02</div>
+      <div>
+        <h3 class="work-title">
+          <a href="https://createfreeresume.com" target="_blank" rel="noopener">CreateFreeResume</a>
+          <span class="arrow">↗</span>
+        </h3>
+        <div class="work-sub">Founder &amp; sole engineer · 2025—present · createfreeresume.com</div>
+        <p class="work-desc">
+          A free, <strong>privacy-first ATS resume builder</strong> — fully client-side, so resume data
+          never leaves the browser. Imports existing PDF and DOCX resumes (pdf.js, mammoth) into
+          structured, editable sections, with live preview and in-browser PDF generation via
+          @react-pdf/renderer.
+        </p>
+        <div class="work-tags">
+          <span>Next.js</span><span>Zustand</span><span>@react-pdf/renderer</span><span>pdf.js</span><span>mammoth</span><span>Vercel</span><span>GitHub Actions</span>
+        </div>
+      </div>
+      <ul class="work-facts">
+        <li>Multiple ATS-safe templates + Markdown export</li>
+        <li>PDF &amp; DOCX parsing entirely in the browser</li>
+        <li>SEO — sitemaps, Open Graph images</li>
+        <li>Zero backend cost</li>
+      </ul>
+    </article>
+
+    <article class="work-item rv">
+      <div class="idx">/03</div>
+      <div>
+        <h3 class="work-title">
+          <a href="https://github.com/tanishq510" target="_blank" rel="noopener">RAG Document Q&amp;A</a>
+          <span class="arrow">↗</span>
+        </h3>
+        <div class="work-sub">FastAPI microservice · 2025</div>
+        <p class="work-desc">
+          Question-answering over private documents, with <strong>source citations on every answer</strong>.
+          PDF/text/Markdown ingestion with overlap-aware chunking, sentence-transformers embeddings,
+          and ChromaDB vector storage with idempotent upserts — top-k semantic retrieval feeding
+          Claude for grounded answers.
+        </p>
+        <div class="work-tags">
+          <span>Python</span><span>FastAPI</span><span>ChromaDB</span><span>Claude (Anthropic API)</span><span>Pydantic</span>
+        </div>
+      </div>
+      <ul class="work-facts">
+        <li>Cited source chunks in every response</li>
+        <li>REST endpoints — ingest / query / health</li>
+        <li>Swappable embedding &amp; chat models</li>
+      </ul>
+    </article>
+
+  </div>
+</section>
+
+<!-- ================= NUMBERS ================= -->
+<div class="wrap">
+  <div class="numbers rv">
+    <div class="num"><b data-count="7.5"><i>+</i></b><span>years of experience</span></div>
+    <div class="num"><b data-count="2"></b><span>live products, built solo</span></div>
+    <div class="num"><b data-count="200"><i>K+</i></b><span>daily API requests secured</span></div>
+    <div class="num"><b data-count="10"><i>+</i></b><span>AWS accounts architected</span></div>
+  </div>
+</div>
+
+<!-- ================= EXPERIENCE ================= -->
+<section class="wrap sec" id="experience">
+  <div class="sec-row rv">
+    <div class="sec-label"><sup>02</sup>Experience</div>
+    <div class="sec-note">seven years, five teams</div>
+  </div>
+
+  <div class="xp">
+
+    <div class="xp-row rv">
+      <div class="xp-when">Sept 2024 — present</div>
+      <div>
+        <div class="xp-role">IT Analyst — Serverless &amp; AI Platform</div>
+        <div class="xp-org">Tata Consultancy Services <span>REMOTE · PUNE TEAM</span></div>
+        <ul class="xp-points">
+          <li>Led a team of <strong>5+ engineers</strong> across 3 parallel workstreams — 100% on-time delivery over 4 consecutive quarters.</li>
+          <li>Architected and maintained serverless API contracts across <strong>10+ AWS accounts</strong> (Lambda, S3, SQS, Step Functions, CloudWatch), supporting multi-cell production deployments.</li>
+          <li>Built Python &amp; Node.js automation for code-migration pipelines — manual effort down <strong>~60%</strong>, error rates near zero.</li>
+          <li>AI-assisted automation with GitHub Copilot and prompt engineering to auto-remediate security vulnerabilities and generate unit tests — <strong>QA turnaround down 40%</strong>.</li>
+          <li>TDD (Jest/Mocha) and Agile across all delivery cycles — <strong>85%+ test coverage</strong> on critical API paths.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="xp-row rv">
+      <div class="xp-when">May 2022 — Sept 2024</div>
+      <div>
+        <div class="xp-role">Software Engineer</div>
+        <div class="xp-org">Mindbowser <span>PUNE</span></div>
+        <ul class="xp-points">
+          <li>Secured APIs handling <strong>200K+ daily requests</strong> with JWT authentication and rate limiting — eliminated unauthorized-access incidents in production.</li>
+          <li>Integrated AWS SQS, SES, Step Functions, Lambda &amp; S3 into production systems — cloud efficiency up ~30%, infrastructure costs down.</li>
+          <li>Containerized deployments with Docker — deployment time down <strong>40%</strong>, dev/prod parity ensured.</li>
+          <li>Designed and shipped <strong>15+ REST endpoints</strong> across healthcare and SaaS products serving 10,000+ end users on web and mobile.</li>
+          <li>Turned Figma designs into responsive React/Next.js frontends — site traffic up 25%, average page load down 20%.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="xp-row rv">
+      <div class="xp-when">Jan 2021 — May 2022</div>
+      <div>
+        <div class="xp-role">Software Engineer</div>
+        <div class="xp-org">Codiant <span>INDORE</span></div>
+        <ul class="xp-points">
+          <li>Built CMS modules and REST APIs with Node.js/Express for 3+ content-heavy web platforms — owned features from schema design through deployment and post-release support.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="xp-early rv">
+    <div>
+      <h4>Full Stack Developer</h4>
+      <div class="o">Webkodz</div>
+      <div class="y">Aug 2020 — Jan 2021 · Indore</div>
+      <p>Designed relational schemas and built Node.js/Express backends for 5+ client applications — average API response time down 25% via query optimization.</p>
+    </div>
+    <div>
+      <h4>Jr. Full Stack Developer</h4>
+      <div class="o">SMT Groups</div>
+      <div class="y">Mar 2019 — Aug 2020 · Indore</div>
+      <p>Developed UI components and integrated REST APIs for internal web applications; delivered 3 complete projects.</p>
+    </div>
+    <div>
+      <h4>B.E., Engineering</h4>
+      <div class="o">SVITS Indore</div>
+      <div class="y">2015 — 2019 · 8.0 CGPA</div>
+      <p>Where it all started.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section class="wrap sec" id="skills">
+  <div class="sec-row rv">
+    <div class="sec-label"><sup>03</sup>Toolkit</div>
+    <div class="sec-note">what I reach for</div>
+  </div>
+  <div class="skills-list">
+    <div class="sk-row rv">
+      <div class="lb">Backend</div>
+      <div class="ls"><b>Node.js</b><i>/</i><b>TypeScript</b><i>/</i><b>Python</b><i>/</i><b>Express.js</b><i>/</i><b>FastAPI</b><i>/</i><b>REST API design</b><i>/</i><b>Prisma</b><i>/</i><b>PostgreSQL</b><i>/</i><b>SQL</b><i>/</i><b>JWT auth</b><i>/</i><b>rate limiting</b><i>/</i><b>WebSockets</b></div>
+    </div>
+    <div class="sk-row rv">
+      <div class="lb">AWS Cloud</div>
+      <div class="ls"><b>Lambda</b><i>/</i><b>S3</b><i>/</i><b>SQS</b><i>/</i><b>Step Functions</b><i>/</i><b>CloudWatch</b><i>/</i><b>IAM</b><i>/</i><b>SES</b><i>/</i><b>multi-account deployments</b></div>
+    </div>
+    <div class="sk-row rv">
+      <div class="lb">DevOps &amp; CI/CD</div>
+      <div class="ls"><b>GitHub Actions</b><i>/</i><b>Vercel</b><i>/</i><b>Render</b><i>/</i><b>Docker</b><i>/</i><b>Git</b></div>
+    </div>
+    <div class="sk-row rv">
+      <div class="lb">AI &amp; LLM</div>
+      <div class="ls"><b>OpenAI API</b><i>/</i><b>Anthropic Claude API</b><i>/</i><b>RAG pipelines</b><i>/</i><b>ChromaDB vector search</b><i>/</i><b>sentence-transformers</b><i>/</i><b>prompt engineering</b><i>/</i><b>agentic workflows</b><i>/</i><b>GitHub Copilot</b><i>/</i><b>Copilot Studio</b></div>
+    </div>
+    <div class="sk-row rv">
+      <div class="lb">Frontend</div>
+      <div class="ls"><b>React 19</b><i>/</i><b>Next.js (App Router)</b><i>/</i><b>Tailwind CSS</b><i>/</i><b>Zustand</b><i>/</i><b>responsive Figma-to-code</b></div>
+    </div>
+    <div class="sk-row rv">
+      <div class="lb">Testing &amp; Practices</div>
+      <div class="ls"><b>Jest</b><i>/</i><b>Mocha</b><i>/</i><b>TDD</b><i>/</i><b>Agile &amp; Scrum</b><i>/</i><b>code review</b><i>/</i><b>query optimization</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="wrap sec" id="about">
+  <div class="sec-row rv">
+    <div class="sec-label"><sup>04</sup>About</div>
+    <div class="sec-note">the short version</div>
+  </div>
+  <div class="about-cols">
+    <p class="lede rv">
+      I like owning the whole surface of a feature — the data model, the API contract,
+      the infrastructure, and the pixels people actually touch. <em>Shipping is the job.</em>
+    </p>
+    <div class="about-body rv" style="--d:.1s">
+      <p>
+        Over seven years I've gone from building CMS modules to architecting serverless platforms
+        across 10+ AWS accounts, leading a team of five along the way. Nights and weekends, I build
+        products: <strong>Kaarters</strong> for FMCG distributors, <strong>CreateFreeResume</strong>
+        for anyone who's ever fought a resume-builder paywall.
+      </p>
+      <p>
+        Lately I'm deep in LLM-powered systems — RAG pipelines with vector search, OpenAI and Claude
+        API integrations, and AI-assisted automation that cut my team's QA turnaround by 40%.
+        I'm looking for product engineering roles at <strong>early-stage startups</strong> where
+        I own features from schema to ship.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="wrap contact" id="contact">
+  <div class="small rv">05 · Contact</div>
+  <h2 class="rv" style="--d:.06s">Have something worth building? <em>Let's talk.</em></h2>
+  <div class="mail-row rv" style="--d:.14s">
+    <a class="mail-line magnet" href="mailto:tanishqjoshi93@gmail.com">
+      tanishqjoshi93@gmail.com <span class="a">↗</span>
     </a>
-    <button class="contact-btn" onclick="window.location.href='mailto:tanishjoshi93@gmail.com'">Contact</button>
-    <div class="avatar" title="Tanishq Joshi">TJ</div>
+    <button class="copy-btn" id="copyBtn" type="button">copy</button>
   </div>
-</div>
-
-<!-- MENU BAR -->
-<nav id="menu-bar" role="navigation" aria-label="Spreadsheet menu">
-
-  <div class="menu-item" tabindex="0">File
-    <div class="dropdown" role="menu">
-      <div class="dd-item" onclick="window.open('./Tanishq_Joshi_Resume.pdf')"><span class="dd-icon">&#128196;</span>Download Resume<span class="dd-sc">PDF</span></div>
-      <div class="dd-sep"></div>
-      <div class="dd-item" onclick="window.print()"><span class="dd-icon">&#128424;</span>Print<span class="dd-sc">Ctrl+P</span></div>
-    </div>
+  <div class="contact-meta rv" style="--d:.2s">
+    <a href="https://github.com/tanishq510" target="_blank" rel="noopener">GitHub ↗</a>
+    <a href="https://linkedin.com/in/tanishq-joshi-b396a2170" target="_blank" rel="noopener">LinkedIn ↗</a>
+    <a href="resume/">Resume — PDF · MD · JSON ↗</a>
+    <span>+91 78699 00340</span>
   </div>
+</section>
 
-  <div class="menu-item" tabindex="0">View
-    <div class="dropdown" role="menu">
-      <div class="dd-item" onclick="switchSheet('about');closeMenus()"><span class="dd-icon" style="color:#0f9d58">&#9632;</span>About</div>
-      <div class="dd-item" onclick="switchSheet('exp');closeMenus()"><span class="dd-icon" style="color:#1a73e8">&#9632;</span>Experience</div>
-      <div class="dd-item" onclick="switchSheet('skills');closeMenus()"><span class="dd-icon" style="color:#fbbc04">&#9632;</span>Skills</div>
-      <div class="dd-item" onclick="switchSheet('projects');closeMenus()"><span class="dd-icon" style="color:#ea4335">&#9632;</span>Projects</div>
-      <div class="dd-item" onclick="switchSheet('contact');closeMenus()"><span class="dd-icon" style="color:#a142f4">&#9632;</span>Contact</div>
-    </div>
-  </div>
-
-  <div class="menu-item" tabindex="0">Connect
-    <div class="dropdown" role="menu">
-      <div class="dd-item" onclick="window.open('https://linkedin.com/in/tanishq-joshi-b396a2170','_blank','noopener')"><span class="dd-icon">&#128188;</span>LinkedIn<span class="dd-sc">&#8599;</span></div>
-      <div class="dd-item" onclick="window.open('https://github.com/tanishq510','_blank','noopener')"><span class="dd-icon">&#128025;</span>GitHub<span class="dd-sc">&#8599;</span></div>
-      <div class="dd-sep"></div>
-      <div class="dd-item" onclick="window.location.href='mailto:tanishjoshi93@gmail.com'"><span class="dd-icon">&#9993;</span>Email</div>
-    </div>
-  </div>
-
-  <div class="menu-item" tabindex="0">Tools
-    <div class="dropdown" role="menu">
-      <div class="dd-item" onclick="window.open('./Tanishq_Joshi_Resume.pdf')"><span class="dd-icon">&#128196;</span>Download Resume</div>
-      <div class="dd-item" onclick="window.location.href='mailto:tanishjoshi93@gmail.com'"><span class="dd-icon">&#9993;</span>Send Email</div>
-    </div>
-  </div>
-
-  <div class="menu-item" tabindex="0">Help
-    <div class="dropdown" role="menu">
-      <div class="dd-item" onclick="window.open('https://github.com/Tanishq510/Tanishq510.github.io','_blank','noopener')"><span class="dd-icon">&#11088;</span>View source on GitHub</div>
-      <div class="dd-sep"></div>
-      <div class="dd-item" onclick="window.open('https://linkedin.com/in/tanishq-joshi-b396a2170','_blank','noopener')"><span class="dd-icon">&#128188;</span>Connect on LinkedIn</div>
-      <div class="dd-item" onclick="window.location.href='mailto:tanishjoshi93@gmail.com'"><span class="dd-icon">&#9993;</span>Get in touch</div>
-    </div>
-  </div>
-
-</nav>
-
-<!-- TOOLBAR -->
-<div id="toolbar" role="toolbar">
-  <div class="t-btn">&#8617;</div><div class="t-btn">&#8618;</div>
-  <div class="t-sep"></div>
-  <div class="t-btn" style="min-width:44px;font-size:12px">100%</div>
-  <div class="t-sep"></div>
-  <select class="t-sel" style="width:110px"><option>Google Sans</option><option>Roboto Mono</option></select>
-  <div style="width:5px"></div>
-  <select class="t-sel" style="width:48px"><option>12</option><option>13</option></select>
-  <div class="t-sep"></div>
-  <div class="t-btn" style="font-weight:700">B</div>
-  <div class="t-btn" style="font-style:italic">I</div>
-  <div class="t-btn" style="text-decoration:underline">U</div>
-  <div class="t-sep"></div>
-  <div class="t-btn">&#8676;</div><div class="t-btn">&#8285;</div><div class="t-btn">&#8677;</div>
-  <div class="t-sep"></div>
-  <div class="t-btn" style="color:var(--green);font-weight:700">A</div>
-  <div class="t-btn">&#9632;</div>
-  <div class="t-sep"></div>
-  <div class="t-btn">&#128279;</div><div class="t-btn">&#128202;</div>
-</div>
-
-<!-- FORMULA BAR -->
-<div id="formula-bar">
-  <div id="name-box">A1</div>
-  <div id="fx-icon">fx</div>
-  <div id="formula-content">Tanishq Joshi &#8212; Portfolio</div>
-</div>
-
-<!-- GRID -->
-<main id="grid-area" role="main">
-  <div id="col-headers" aria-hidden="true"></div>
-  <div id="grid" role="grid">
-    <div id="grid-content"></div>
-  </div>
 </main>
 
-<!-- SHEET TABS -->
-<div id="sheet-tabs" role="tablist">
-  <div class="tab active" role="tab" aria-selected="true"  data-sheet="about"    onclick="switchSheet('about')"><div class="tab-dot" style="background:#0f9d58"></div>About</div>
-  <div class="tab"        role="tab" aria-selected="false" data-sheet="exp"       onclick="switchSheet('exp')"><div class="tab-dot" style="background:#1a73e8"></div>Experience</div>
-  <div class="tab"        role="tab" aria-selected="false" data-sheet="skills"    onclick="switchSheet('skills')"><div class="tab-dot" style="background:#fbbc04"></div>Skills</div>
-  <div class="tab"        role="tab" aria-selected="false" data-sheet="projects"  onclick="switchSheet('projects')"><div class="tab-dot" style="background:#ea4335"></div>Projects</div>
-  <div class="tab"        role="tab" aria-selected="false" data-sheet="contact"   onclick="switchSheet('contact')"><div class="tab-dot" style="background:#a142f4"></div>Contact</div>
-  <div class="add-tab">+</div>
-</div>
+<footer>
+  <div class="foot">
+    <span>© 2026 Tanishq Joshi — set in Newsreader &amp; Inter</span>
+    <span class="clock" id="clock">Indore, IN</span>
+  </div>
+</footer>
 
 <script>
-/* ═══════════════════════════════════
-   DESKTOP SHEET DATA
-═══════════════════════════════════ */
-const SHEETS = {
-  about:{
-    cols:[{id:"A",w:155},{id:"B",w:420},{id:"C",w:135}],
-    rows:[
-      {n:1,cells:[{w:710,cls:"shdr",text:"Tanishq Joshi \u2014 Software Engineer Portfolio",ref:"A1",formula:"Tanishq Joshi \u2014 Software Engineer Portfolio"}]},
-      {n:2,empty:1,cells:[{w:155},{w:420},{w:135}]},
-      {n:3,cells:[{w:155,cls:"lbl",text:"Full Name",ref:"A3",formula:"Full Name"},{w:420,cls:"bold",text:"Tanishq Joshi",ref:"B3",formula:"\"Tanishq Joshi\""},{w:135}]},
-      {n:4,cells:[{w:155,cls:"lbl",text:"Title",ref:"A4",formula:"Title"},{w:420,text:"Software Engineer",ref:"B4",formula:"\"Software Engineer\""},{w:135}]},
-      {n:5,cells:[{w:155,cls:"lbl",text:"Experience",ref:"A5",formula:"Experience"},{w:420,text:"7+ years",ref:"B5",formula:"=7&\"+ years\""},{w:135}]},
-      {n:6,cells:[{w:155,cls:"lbl",text:"Location",ref:"A6",formula:"Location"},{w:420,text:"Indore, Madhya Pradesh, IN",ref:"B6",formula:"\"Indore, Madhya Pradesh, IN\""},{w:135}]},
-      {n:7,cells:[{w:155,cls:"lbl",text:"Status",ref:"A7",formula:"Status"},{w:420,type:"status",ref:"B7",formula:"=IF(open_to_work,\"Open to Work\",\"Unavailable\")"},{w:135}]},
-      {n:8,empty:1,cells:[{w:155},{w:420},{w:135}]},
-      {n:9,cells:[{w:155,cls:"lbl",text:"Summary",ref:"A9",formula:"Summary"},{w:420,text:"I build scalable backend systems and intelligent cloud-native applications.",ref:"B9",formula:"\"Summary\""},{w:135}]},
-      {n:10,cells:[{w:155},{w:420,cls:"muted",text:"Main stack: Node.js + AWS. Currently deep in Agentic AI \u2014",ref:"B10"},{w:135,text:"Open to remote",ref:"C10",formula:"\"Open to remote: true\""}]},
-      {n:11,cells:[{w:155},{w:420,cls:"muted",text:"RAG pipelines, LLM integrations, Copilot Studio.",ref:"B11"},{w:135}]},
-      {n:12,empty:1,cells:[{w:155},{w:420},{w:135}]},
-      {n:13,cells:[{w:155,cls:"lbl",text:"LinkedIn",ref:"A13",formula:"LinkedIn"},{w:420,html:"<a href=\"https://linkedin.com/in/tanishq-joshi-b396a2170\" target=\"_blank\" rel=\"noopener\">linkedin.com/in/tanishq-joshi-b396a2170</a>",ref:"B13",formula:"=HYPERLINK(\"https://linkedin.com/in/tanishq-joshi-b396a2170\")"},{w:135}]},
-      {n:14,cells:[{w:155,cls:"lbl",text:"GitHub",ref:"A14",formula:"GitHub"},{w:420,html:"<a href=\"https://github.com/tanishq510\" target=\"_blank\" rel=\"noopener\">github.com/tanishq510</a>",ref:"B14",formula:"=HYPERLINK(\"https://github.com/tanishq510\")"},{w:135}]},
-      {n:15,cells:[{w:155,cls:"lbl",text:"Email",ref:"A15",formula:"Email"},{w:420,html:"<a href=\"mailto:tanishjoshi93@gmail.com\">tanishjoshi93@gmail.com</a>",ref:"B15",formula:"=HYPERLINK(\"mailto:tanishjoshi93@gmail.com\")"},{w:135}]},
-      {n:16,empty:1,cells:[{w:155},{w:420},{w:135}]},
-      {n:17,cells:[{w:155,cls:"lbl",text:"Resume",ref:"A17",formula:"Resume"},{w:420,type:"dl",ref:"B17",formula:"=HYPERLINK(\"Tanishq_Joshi_Resume.pdf\",\"Download Resume.pdf\")"},{w:135}]},
-      {n:18,empty:1,cells:[{w:155},{w:420},{w:135}]},
-    ]
-  },
-  exp:{
-    cols:[{id:"A",w:190},{id:"B",w:150},{id:"C",w:138},{id:"D",w:232}],
-    rows:[
-      {n:1,cells:[{w:190,cls:"hdr",text:"Company",ref:"A1"},{w:150,cls:"hdr",text:"Role",ref:"B1"},{w:138,cls:"hdr ctr",text:"Period",ref:"C1"},{w:232,cls:"hdr",text:"Impact",ref:"D1"}]},
-      {n:2,cells:[{w:190,cls:"bold",text:"Tata Consultancy Services",ref:"A2",formula:"\"Tata Consultancy Services\""},{w:150,text:"Software Engineer",ref:"B2"},{w:138,cls:"muted ctr",text:"May 2022 \u2013 present",ref:"C2",formula:"\"May 2022 \u2013 present\""},{w:232,text:"Agentic AI via Copilot Studio + OpenAI \u2192 effort \u2193 60%",ref:"D2",formula:"\"Agentic AI \u2014 manual effort \u2193 60%\""}]},
-      {n:3,cells:[{w:190},{w:150},{w:138},{w:232,cls:"muted",text:"RAG semantic search \u2192 resolution \u2193 45%",ref:"D3"}]},
-      {n:4,cells:[{w:190},{w:150},{w:138},{w:232,cls:"muted",text:"SQS + Step Functions event pipelines",ref:"D4"}]},
-      {n:5,cells:[{w:190},{w:150},{w:138},{w:232,cls:"muted",text:"Lambda cold-start optimisation \u2192 p99 \u2193 30%",ref:"D5"}]},
-      {n:6,cells:[{w:190,cls:"bold",text:"Mindbowser",ref:"A6"},{w:150,text:"Software Engineer",ref:"B6"},{w:138,cls:"muted ctr",text:"Jan \u2013 May 2022",ref:"C6"},{w:232,text:"Docker containerisation \u2192 deploy time \u2193 40%",ref:"D6"}]},
-      {n:7,cells:[{w:190},{w:150},{w:138},{w:232,cls:"muted",text:"React / Next.js \u2192 traffic \u2191 25%, load \u2193 20%",ref:"D7"}]},
-      {n:8,cells:[{w:190,cls:"bold",text:"Codiant \u2014 Yash Technologies",ref:"A8"},{w:150,text:"Software Developer",ref:"B8"},{w:138,cls:"muted ctr",text:"Jan 2021 \u2013 Jan 2022",ref:"C8"},{w:232,text:"CRM / HRM full-stack, FSD architecture, RTK Query",ref:"D8"}]},
-      {n:9,cells:[{w:190,cls:"bold",text:"WebKodz",ref:"A9"},{w:150,text:"Fullstack Developer",ref:"B9"},{w:138,cls:"muted ctr",text:"Aug 2020 \u2013 Jan 2021",ref:"C9"},{w:232,cls:"muted",text:"Responsive builds, WordPress CMS, SEO +35%",ref:"D9"}]},
-      {n:10,cells:[{w:190,cls:"bold",text:"SMT Group",ref:"A10"},{w:150,text:"Junior Fullstack Dev",ref:"B10"},{w:138,cls:"muted ctr",text:"Jul 2019 \u2013 Aug 2020",ref:"C10"},{w:232,cls:"muted",text:"Internal dashboards and reporting tools",ref:"D10"}]},
-      {n:11,empty:1,cells:[{w:190},{w:150},{w:138},{w:232}]},
-    ]
-  },
-  skills:{
-    cols:[{id:"A",w:140},{id:"B",w:140},{id:"C",w:140},{id:"D",w:140},{id:"E",w:140}],
-    rows:[
-      {n:1,cells:[{w:140,cls:"hdr ctr",text:"Backend",ref:"A1"},{w:140,cls:"hdr ctr",text:"Cloud (AWS)",ref:"B1"},{w:140,cls:"hdr ctr",text:"AI / LLM",ref:"C1"},{w:140,cls:"hdr ctr",text:"Frontend",ref:"D1"},{w:140,cls:"hdr ctr",text:"Tooling",ref:"E1"}]},
-      {n:2,cells:[{w:140,cls:"ctr",text:"Node.js",ref:"A2"},{w:140,cls:"ctr",text:"Lambda",ref:"B2"},{w:140,cls:"ctr",text:"RAG",ref:"C2"},{w:140,cls:"ctr",text:"React",ref:"D2"},{w:140,cls:"ctr",text:"Docker",ref:"E2"}]},
-      {n:3,cells:[{w:140,cls:"ctr",text:"TypeScript",ref:"A3"},{w:140,cls:"ctr",text:"SQS / SNS",ref:"B3"},{w:140,cls:"ctr",text:"OpenAI API",ref:"C3"},{w:140,cls:"ctr",text:"Next.js",ref:"D3"},{w:140,cls:"ctr",text:"Git",ref:"E3"}]},
-      {n:4,cells:[{w:140,cls:"ctr",text:"Express",ref:"A4"},{w:140,cls:"ctr",text:"Step Functions",ref:"B4"},{w:140,cls:"ctr",text:"LangChain",ref:"C4"},{w:140,cls:"ctr",text:"Tailwind CSS",ref:"D4"},{w:140,cls:"ctr",text:"Postman",ref:"E4"}]},
-      {n:5,cells:[{w:140,cls:"ctr",text:"GraphQL",ref:"A5"},{w:140,cls:"ctr",text:"S3 / RDS",ref:"B5"},{w:140,cls:"ctr",text:"Copilot Studio",ref:"C5"},{w:140,cls:"ctr",text:"HTML / CSS",ref:"D5"},{w:140,cls:"ctr",text:"Swagger",ref:"E5"}]},
-      {n:6,cells:[{w:140,cls:"ctr",text:"MongoDB",ref:"A6"},{w:140,cls:"ctr",text:"CloudWatch",ref:"B6"},{w:140,cls:"ctr",text:"Embeddings",ref:"C6"},{w:140,cls:"ctr"},{w:140,cls:"ctr",text:"Jira",ref:"E6"}]},
-      {n:7,cells:[{w:140,cls:"ctr",text:"PostgreSQL",ref:"A7"},{w:140,cls:"ctr",text:"DynamoDB",ref:"B7"},{w:140,cls:"ctr",text:"Azure AI",ref:"C7"},{w:140,cls:"ctr"},{w:140,cls:"ctr"}]},
-      {n:8,cells:[{w:140,cls:"ctr",text:"Redis",ref:"A8"},{w:140,cls:"ctr",text:"IAM / EC2",ref:"B8"},{w:140,cls:"ctr",text:"Prompt Eng.",ref:"C8"},{w:140,cls:"ctr"},{w:140,cls:"ctr"}]},
-      {n:9,empty:1,cells:[{w:140},{w:140},{w:140},{w:140},{w:140}]},
-      {n:10,cells:[{w:140,cls:"lbl ctr",text:"Years of Exp.",ref:"A10",formula:"Years of Experience"},{w:140,cls:"bold ctr",text:"7+",ref:"B10",formula:"=7",style:"color:#137333"},{w:140,cls:"lbl ctr",text:"Remote?",ref:"C10"},{w:140,cls:"bold ctr",text:"Yes \u2713",ref:"D10",formula:"=TRUE",style:"color:#137333"},{w:140,cls:"lbl ctr",text:"Open to Work?",ref:"E10"}]},
-      {n:11,cells:[{w:140},{w:140},{w:140},{w:140},{w:140,cls:"bold ctr",text:"Yes \u2713",ref:"E11",formula:"=TRUE",style:"color:#137333"}]},
-    ]
-  },
-  projects:{
-    cols:[{id:"A",w:150},{id:"B",w:235},{id:"C",w:178},{id:"D",w:147}],
-    rows:[
-      {n:1,cells:[{w:150,cls:"hdr",text:"Project",ref:"A1"},{w:235,cls:"hdr",text:"Description",ref:"B1"},{w:178,cls:"hdr",text:"Stack",ref:"C1"},{w:147,cls:"hdr",text:"Links",ref:"D1"}]},
-      {n:2,cells:[{w:150,cls:"bold",html:"<a href=\"https://github.com/tanishq510\" target=\"_blank\" rel=\"noopener\">rag-pipeline</a>",ref:"A2"},{w:235,text:"Document ingestion + semantic search over PDFs",ref:"B2"},{w:178,cls:"muted",text:"Node.js, OpenAI, Pinecone, Lambda",ref:"C2"},{w:147,html:"<a href=\"https://github.com/tanishq510\" target=\"_blank\" rel=\"noopener\">\u2197 github</a>",ref:"D2"}]},
-      {n:3,cells:[{w:150,cls:"bold",html:"<a href=\"https://github.com/tanishq510\" target=\"_blank\" rel=\"noopener\">aws-step-workflow</a>",ref:"A3"},{w:235,text:"Serverless orchestration with DLQs and error branching",ref:"B3"},{w:178,cls:"muted",text:"AWS, Step Functions, SQS",ref:"C3"},{w:147,html:"<a href=\"https://github.com/tanishq510\" target=\"_blank\" rel=\"noopener\">\u2197 github</a>",ref:"D3"}]},
-      {n:4,cells:[{w:150,cls:"bold",html:"<a href=\"https://github.com/tanishq510\" target=\"_blank\" rel=\"noopener\">copilot-agent</a>",ref:"A4"},{w:235,text:"Enterprise chatbot with memory and tool calling",ref:"B4"},{w:178,cls:"muted",text:"Copilot Studio, Azure AI, TypeScript",ref:"C4"},{w:147,html:"<a href=\"https://github.com/tanishq510\" target=\"_blank\" rel=\"noopener\">\u2197 github</a>",ref:"D4"}]},
-      {n:5,cells:[{w:150,cls:"bold",html:"<a href=\"https://tanishq510.github.io\" target=\"_blank\" rel=\"noopener\">this-portfolio</a>",ref:"A5"},{w:235,text:"You are looking at it. Built as a Google Sheets mockup.",ref:"B5"},{w:178,cls:"muted",text:"HTML, CSS, Vanilla JS",ref:"C5"},{w:147,html:"<a href=\"https://github.com/Tanishq510/Tanishq510.github.io\" target=\"_blank\" rel=\"noopener\">\u2197 source</a>",ref:"D5"}]},
-      {n:6,empty:1,cells:[{w:150},{w:235},{w:178},{w:147}]},
-    ]
-  },
-  contact:{
-    cols:[{id:"A",w:155},{id:"B",w:415},{id:"C",w:140}],
-    rows:[
-      {n:1,cells:[{w:710,cls:"shdr",text:"Contact Tanishq Joshi",ref:"A1",formula:"Contact Tanishq Joshi"}]},
-      {n:2,empty:1,cells:[{w:155},{w:415},{w:140}]},
-      {n:3,cells:[{w:155,cls:"lbl",text:"Email",ref:"A3"},{w:415,html:"<a href=\"mailto:tanishjoshi93@gmail.com\">tanishjoshi93@gmail.com</a>",ref:"B3",formula:"=HYPERLINK(\"mailto:tanishjoshi93@gmail.com\")"},{w:140}]},
-      {n:4,cells:[{w:155,cls:"lbl",text:"LinkedIn",ref:"A4"},{w:415,html:"<a href=\"https://linkedin.com/in/tanishq-joshi-b396a2170\" target=\"_blank\" rel=\"noopener\">linkedin.com/in/tanishq-joshi-b396a2170</a>",ref:"B4",formula:"=HYPERLINK(\"https://linkedin.com/in/tanishq-joshi-b396a2170\")"},{w:140}]},
-      {n:5,cells:[{w:155,cls:"lbl",text:"GitHub",ref:"A5"},{w:415,html:"<a href=\"https://github.com/tanishq510\" target=\"_blank\" rel=\"noopener\">github.com/tanishq510</a>",ref:"B5",formula:"=HYPERLINK(\"https://github.com/tanishq510\")"},{w:140}]},
-      {n:6,empty:1,cells:[{w:155},{w:415},{w:140}]},
-      {n:7,cells:[{w:155,cls:"lbl",text:"Available for",ref:"A7"},{w:415,text:"Full-time roles, remote contracts, interesting side projects",ref:"B7"},{w:140}]},
-      {n:8,cells:[{w:155,cls:"lbl",text:"Response time",ref:"A8"},{w:415,text:"Within 24 hours",ref:"B8"},{w:140}]},
-      {n:9,empty:1,cells:[{w:155},{w:415},{w:140}]},
-      {n:10,cells:[{w:155,cls:"lbl",text:"Resume",ref:"A10"},{w:415,type:"dl",ref:"B10",formula:"=HYPERLINK(\"./Tanishq_Joshi_Resume.pdf\",\"Download Resume.pdf\")"},{w:140}]},
-      {n:11,empty:1,cells:[{w:155},{w:415},{w:140}]},
-    ]
+(function(){
+  "use strict";
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var finePointer = window.matchMedia("(pointer: fine)").matches;
+
+  /* hero word reveal */
+  requestAnimationFrame(function(){ document.body.classList.add("loaded"); });
+
+  /* reading line + header hide-on-scroll-down */
+  var head = document.getElementById("siteHead");
+  var line = document.getElementById("topline");
+  var lastY = 0;
+  function onScroll(){
+    var h = document.documentElement;
+    var y = h.scrollTop;
+    head.classList.toggle("scrolled", y > 10);
+    head.classList.toggle("hidden", y > 300 && y > lastY);
+    lastY = y;
+    var max = h.scrollHeight - h.clientHeight;
+    line.style.width = (max > 0 ? (y / max) * 100 : 0) + "%";
   }
-};
+  window.addEventListener("scroll", onScroll, {passive:true});
+  onScroll();
 
-/* ═══════════════════════════════════
-   FIX 5: MOBILE CARD DATA
-═══════════════════════════════════ */
-const MOBILE = {
-  about: null, // uses desktop grid (already works well on mobile)
-  contact: null, // uses desktop grid
-
-  skills: [
-    { cat:"Backend",       items:["Node.js","TypeScript","Express","GraphQL","MongoDB","PostgreSQL","Redis","MySQL"] },
-    { cat:"Cloud (AWS)",   items:["Lambda","SQS / SNS","Step Functions","S3 / RDS","CloudWatch","DynamoDB","IAM / EC2","ECS"] },
-    { cat:"AI / LLM",      items:["RAG","OpenAI API","LangChain","LlamaIndex","Copilot Studio","Azure AI","Embeddings","Prompt Eng."] },
-    { cat:"Frontend",      items:["React","Next.js","Tailwind CSS","HTML / CSS"] },
-    { cat:"Tooling",       items:["Docker","Git","Postman","Swagger","Jira","VS Code"] },
-  ],
-
-  exp: [
-    { company:"Tata Consultancy Services", role:"Software Engineer", period:"May 2022 \u2013 present",
-      bullets:["Built Agentic AI workflows via Copilot Studio + OpenAI \u2014 reduced manual effort by 60%","RAG semantic search over internal knowledge bases \u2014 query resolution 45% faster","Event-driven pipelines using SQS, SNS and Step Functions across microservices","Lambda cold-start optimisation \u2014 p99 latency reduced by 30%"] },
-    { company:"Mindbowser", role:"Software Engineer", period:"Jan 2022 \u2013 May 2022",
-      bullets:["Docker containerisation \u2014 deployment time reduced by 40%","React / Next.js frontend rewrites \u2014 traffic up 25%, load time down 20%"] },
-    { company:"Codiant \u2014 Yash Technologies", role:"Software Developer", period:"Jan 2021 \u2013 Jan 2022",
-      bullets:["CRM and HRM platforms built full-stack with FSD architecture and RTK Query"] },
-    { company:"WebKodz", role:"Fullstack Developer", period:"Aug 2020 \u2013 Jan 2021",
-      bullets:["Responsive web builds and WordPress CMS \u2014 improved SEO scores by 35%"] },
-    { company:"SMT Group", role:"Junior Fullstack Developer", period:"Jul 2019 \u2013 Aug 2020",
-      bullets:["Internal dashboards and reporting tools for operations teams"] },
-  ],
-
-  projects: [
-    { name:"rag-pipeline", href:"https://github.com/tanishq510",
-      desc:"Document ingestion and semantic search \u2014 upload any PDF and ask questions in natural language.",
-      stack:"Node.js \u00b7 OpenAI \u00b7 Pinecone \u00b7 AWS Lambda",
-      links:[{label:"\u2197 github", href:"https://github.com/tanishq510"}] },
-    { name:"aws-step-workflow", href:"https://github.com/tanishq510",
-      desc:"Serverless job orchestration with Step Functions, Lambda and SQS \u2014 includes dead-letter queues and error branching.",
-      stack:"AWS \u00b7 Step Functions \u00b7 SQS \u00b7 Lambda",
-      links:[{label:"\u2197 github", href:"https://github.com/tanishq510"}] },
-    { name:"copilot-agent", href:"https://github.com/tanishq510",
-      desc:"Enterprise chatbot with memory, tool calling and REST integrations on Microsoft Copilot Studio.",
-      stack:"Copilot Studio \u00b7 Azure AI \u00b7 TypeScript",
-      links:[{label:"\u2197 github", href:"https://github.com/tanishq510"}] },
-    { name:"this-portfolio", href:"https://tanishq510.github.io",
-      desc:"You are looking at it. A Google Sheets\u2013themed portfolio built in vanilla HTML, CSS and JS.",
-      stack:"HTML \u00b7 CSS \u00b7 Vanilla JS",
-      links:[{label:"\u2197 source", href:"https://github.com/Tanishq510/Tanishq510.github.io"}] },
-  ]
-};
-
-/* ═══════════════════════════════════
-   HELPERS
-═══════════════════════════════════ */
-function isMobile(){ return window.innerWidth <= 700; }
-
-/* ═══════════════════════════════════
-   DESKTOP RENDER
-═══════════════════════════════════ */
-function renderDesktop(id){
-  const sheet = SHEETS[id];
-  const ch = document.getElementById("col-headers");
-  const gc = document.getElementById("grid-content");
-
-  // column headers
-  ch.innerHTML = "";
-  const sp = document.createElement("div"); sp.className="rn-sp"; ch.appendChild(sp);
-  sheet.cols.forEach(c => {
-    const el = document.createElement("div");
-    el.className="ch"; el.id="ch-"+id+"-"+c.id;
-    el.style.cssText="width:"+c.w+"px;min-width:"+c.w+"px;";
-    el.textContent = c.id; ch.appendChild(el);
-  });
-  // filler header cell
-  const fhc = document.createElement("div");
-  fhc.className="ch"; fhc.style.flex="1"; ch.appendChild(fhc);
-
-  // rows
-  gc.innerHTML = "";
-  sheet.rows.forEach(row => {
-    const rowEl = document.createElement("div");
-    rowEl.className = "row" + (row.empty ? " empty-row" : "");
-
-    const rn = document.createElement("div");
-    rn.className="rn"; rn.id="rn-"+id+"-"+row.n; rn.textContent=row.n;
-    rowEl.appendChild(rn);
-
-    row.cells.forEach(cell => {
-      const el = document.createElement("div");
-      el.className = ("cell "+(cell.cls||"")).trim();
-      el.style.cssText = "width:"+cell.w+"px;min-width:"+cell.w+"px;"+(cell.style||"");
-
-      if(cell.type==="status"){
-        el.innerHTML = "<span class=\"status-pill\"><span class=\"pulse\"></span>Open to Work</span>";
-      } else if(cell.type==="dl"){
-        el.innerHTML = "<a class=\"dl-btn\" href=\"./Tanishq_Joshi_Resume.pdf\" download=\"Tanishq_Joshi_Resume.pdf\">Download Resume.pdf</a>";
-      } else if(cell.html){
-        el.innerHTML = cell.html;
-      } else {
-        el.textContent = cell.text||"";
-      }
-
-      el.addEventListener("click", e => {
-        if(e.target.tagName==="A") return;
-        activateCell(el, cell, row.n, id);
-      });
-      rowEl.appendChild(el);
+  /* custom cursor */
+  var dot = document.getElementById("curDot");
+  var ring = document.getElementById("curRing");
+  if (finePointer && !reduced){
+    var mx = -100, my = -100, rx = -100, ry = -100;
+    window.addEventListener("mousemove", function(e){
+      mx = e.clientX; my = e.clientY;
+      dot.style.transform = "translate(" + (mx - 3) + "px," + (my - 3) + "px)";
+    }, {passive:true});
+    (function loop(){
+      rx += (mx - rx) * 0.16;
+      ry += (my - ry) * 0.16;
+      ring.style.transform = "translate(-50%,-50%) translate(" + rx + "px," + ry + "px)";
+      requestAnimationFrame(loop);
+    })();
+    document.addEventListener("mouseover", function(e){
+      document.body.classList.toggle("cur-hover",
+        !!e.target.closest("a, button, .work-item, .num, .sk-row .ls b"));
     });
-
-    // filler cell extends row to full width
-    const filler = document.createElement("div");
-    filler.className = "cell fill";
-    rowEl.appendChild(filler);
-
-    gc.appendChild(rowEl);
-  });
-
-  // Phantom rows — fill visible grid with row lines + column lines + row numbers
-  const dataRowCount = sheet.rows.length;
-  const PHANTOM = 60;
-  for(let p = 0; p < PHANTOM; p++){
-    const pr = document.createElement("div");
-    pr.className = "row phantom-row";
-    // row number
-    const prn = document.createElement("div");
-    prn.className = "rn";
-    prn.style.color = "var(--dim)";
-    prn.textContent = dataRowCount + 1 + p;
-    pr.appendChild(prn);
-    // one empty cell per column — gives vertical column lines
-    sheet.cols.forEach(col => {
-      const pc = document.createElement("div");
-      pc.className = "cell";
-      pc.style.cssText = "width:"+col.w+"px;min-width:"+col.w+"px;";
-      pr.appendChild(pc);
-    });
-    // final fill cell to stretch to edge
-    const pf = document.createElement("div");
-    pf.className = "cell fill";
-    pr.appendChild(pf);
-    gc.appendChild(pr);
-  }
-}
-
-function activateCell(el, cell, rowNum, sheetId){
-  document.querySelectorAll(".cell.active").forEach(c=>c.classList.remove("active"));
-  document.querySelectorAll(".rn.hl").forEach(r=>r.classList.remove("hl"));
-  document.querySelectorAll(".ch.hl").forEach(c=>c.classList.remove("hl"));
-  el.classList.add("active");
-  const rn = document.getElementById("rn-"+sheetId+"-"+rowNum);
-  if(rn) rn.classList.add("hl");
-  const ref = cell.ref||"A1";
-  const col = ref.replace(/[0-9]/g,"");
-  const chEl = document.getElementById("ch-"+sheetId+"-"+col);
-  if(chEl) chEl.classList.add("hl");
-  document.getElementById("name-box").textContent = ref;
-  document.getElementById("formula-content").textContent = cell.formula!==undefined?cell.formula:(cell.text||"");
-}
-
-/* ═══════════════════════════════════
-   FIX 5: MOBILE RENDER
-═══════════════════════════════════ */
-function renderMobile(id){
-  document.getElementById("col-headers").innerHTML = "";
-  const gc = document.getElementById("grid-content");
-  gc.innerHTML = "";
-
-  // About and Contact: use same structure but render as mobile cards via CSS
-  if(id==="about" || id==="contact"){
-    renderDesktop(id); return;
-  }
-
-  const section = document.createElement("div");
-  section.className = "m-section";
-
-  if(id==="skills"){
-    const titleEl = document.createElement("div");
-    titleEl.className="m-title"; titleEl.textContent="Skills & Technologies";
-    section.appendChild(titleEl);
-
-    MOBILE.skills.forEach(group => {
-      const card = document.createElement("div");
-      card.className = "m-card";
-      const lbl = document.createElement("div");
-      lbl.className="m-lbl"; lbl.textContent=group.cat;
-      card.appendChild(lbl);
-      const tags = document.createElement("div");
-      tags.className="m-tags";
-      group.items.forEach(skill => {
-        const t = document.createElement("span");
-        t.className="m-tag"; t.textContent=skill;
-        tags.appendChild(t);
-      });
-      card.appendChild(tags);
-      section.appendChild(card);
-    });
-
-    // summary row
-    const sumCard = document.createElement("div");
-    sumCard.className="m-card";
-    sumCard.innerHTML = "<div class=\"m-lbl\">Summary</div><div class=\"m-tags\"><span class=\"m-tag\" style=\"color:#137333;border-color:#c8e6c9;background:#f0faf4\">7+ years experience</span><span class=\"m-tag\" style=\"color:#137333;border-color:#c8e6c9;background:#f0faf4\">Open to remote</span><span class=\"m-tag\" style=\"color:#137333;border-color:#c8e6c9;background:#f0faf4\">Open to work</span></div>";
-    section.appendChild(sumCard);
-  }
-
-  else if(id==="exp"){
-    const titleEl = document.createElement("div");
-    titleEl.className="m-title"; titleEl.textContent="Work Experience";
-    section.appendChild(titleEl);
-
-    MOBILE.exp.forEach((entry, i) => {
-      const card = document.createElement("div");
-      card.className="m-card";
-
-      const co = document.createElement("div");
-      co.className="m-company"; co.textContent=entry.company;
-      card.appendChild(co);
-
-      const role = document.createElement("div");
-      role.className="m-role"; role.textContent=entry.role+" \u00b7 "+entry.period;
-      card.appendChild(role);
-
-      entry.bullets.forEach(b => {
-        const bul = document.createElement("div");
-        bul.className="m-bullet"; bul.textContent=b;
-        card.appendChild(bul);
-      });
-
-      section.appendChild(card);
-      if(i < MOBILE.exp.length-1){
-        const div = document.createElement("div");
-        div.className="m-div"; section.appendChild(div);
-      }
-    });
-  }
-
-  else if(id==="projects"){
-    const titleEl = document.createElement("div");
-    titleEl.className="m-title"; titleEl.textContent="Projects";
-    section.appendChild(titleEl);
-
-    MOBILE.projects.forEach((proj, i) => {
-      const card = document.createElement("div");
-      card.className="m-card";
-
-      const nameEl = document.createElement("a");
-      nameEl.className="m-proj-name"; nameEl.href=proj.href;
-      nameEl.target="_blank"; nameEl.rel="noopener";
-      nameEl.textContent=proj.name;
-      card.appendChild(nameEl);
-
-      const desc = document.createElement("div");
-      desc.className="m-proj-desc"; desc.textContent=proj.desc;
-      card.appendChild(desc);
-
-      const stack = document.createElement("div");
-      stack.className="m-proj-stack"; stack.textContent=proj.stack;
-      card.appendChild(stack);
-
-      const linksRow = document.createElement("div");
-      proj.links.forEach(lk => {
-        const a = document.createElement("a");
-        a.className="m-proj-link"; a.href=lk.href;
-        a.target="_blank"; a.rel="noopener"; a.textContent=lk.label;
-        linksRow.appendChild(a);
-      });
-      card.appendChild(linksRow);
-      section.appendChild(card);
-
-      if(i < MOBILE.projects.length-1){
-        const div = document.createElement("div");
-        div.className="m-div"; section.appendChild(div);
-      }
-    });
-
-    // Download button
-    const dlWrap = document.createElement("div");
-    dlWrap.className="m-dl-wrap";
-    dlWrap.innerHTML="<a class=\"m-dl-btn\" href=\"./Tanishq_Joshi_Resume.pdf\" download=\"./Tanishq_Joshi_Resume.pdf\">Download Resume.pdf</a>";
-    section.appendChild(dlWrap);
-  }
-
-  gc.appendChild(section);
-}
-
-/* ═══════════════════════════════════
-   SWITCH SHEET
-═══════════════════════════════════ */
-function switchSheet(id){
-  document.querySelectorAll(".tab").forEach(t=>{
-    const a = t.dataset.sheet===id;
-    t.classList.toggle("active",a);
-    t.setAttribute("aria-selected",String(a));
-  });
-  if(isMobile()){
-    renderMobile(id);
+    document.addEventListener("mousedown", function(){ document.body.classList.add("cur-down"); });
+    document.addEventListener("mouseup", function(){ document.body.classList.remove("cur-down"); });
   } else {
-    renderDesktop(id);
-    // activate first data cell
-    const fr = SHEETS[id].rows[0];
-    if(fr){ const fe=document.querySelector("#grid-content .cell"); if(fe) activateCell(fe,fr.cells[0],1,id); }
+    dot.style.display = "none"; ring.style.display = "none";
   }
-  document.getElementById("grid").scrollTop=0;
-}
 
-/* ═══════════════════════════════════
-   MENU INTERACTIONS
-═══════════════════════════════════ */
-function closeMenus(){
-  document.querySelectorAll(".menu-item.open").forEach(m=>{
-    m.classList.remove("open");
-    // Reset any JS-applied position
-    const dd = m.querySelector(".dropdown");
-    if(dd){ dd.style.top=""; dd.style.left=""; }
+  /* magnetic elements */
+  if (finePointer && !reduced){
+    document.querySelectorAll(".magnet").forEach(function(el){
+      el.addEventListener("mousemove", function(e){
+        var r = el.getBoundingClientRect();
+        var dx = e.clientX - (r.left + r.width / 2);
+        var dy = e.clientY - (r.top + r.height / 2);
+        el.style.transform = "translate(" + dx * 0.18 + "px," + dy * 0.3 + "px)";
+      });
+      el.addEventListener("mouseleave", function(){
+        el.style.transition = "transform .5s cubic-bezier(.16,.7,.3,1)";
+        el.style.transform = "";
+        setTimeout(function(){ el.style.transition = ""; }, 500);
+      });
+    });
+  }
+
+  /* duplicate marquee content for seamless loop */
+  var track = document.getElementById("marqueeTrack");
+  track.innerHTML += track.innerHTML;
+
+  /* reveal on scroll */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); }
+    });
+  }, {threshold: 0.1, rootMargin: "0px 0px -6% 0px"});
+  document.querySelectorAll(".rv:not(.in)").forEach(function(el){ io.observe(el); });
+
+  /* number count-up */
+  var done = false;
+  var nio = new IntersectionObserver(function(entries){
+    if (!entries[0].isIntersecting || done) return;
+    done = true;
+    document.querySelectorAll(".num b").forEach(function(el){
+      var target = parseFloat(el.dataset.count);
+      var isFloat = String(el.dataset.count).indexOf(".") > -1;
+      var sufEl = el.querySelector("i");
+      var suffix = sufEl ? sufEl.outerHTML : "";
+      if (reduced){ el.innerHTML = el.dataset.count + suffix; return; }
+      var start = null, dur = 1300;
+      function step(ts){
+        if (!start) start = ts;
+        var p = Math.min((ts - start) / dur, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        var val = target * eased;
+        el.innerHTML = (isFloat ? val.toFixed(1) : Math.round(val)) + suffix;
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+    nio.disconnect();
+  }, {threshold: .5});
+  var numbers = document.querySelector(".numbers");
+  if (numbers) nio.observe(numbers);
+
+  /* scroll-spy */
+  var links = document.querySelectorAll("#siteNav a[href^='#']");
+  var spy = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){
+        links.forEach(function(a){
+          a.classList.toggle("active", a.getAttribute("href") === "#" + en.target.id);
+        });
+      }
+    });
+  }, {rootMargin: "-35% 0px -60% 0px"});
+  links.forEach(function(a){
+    var s = document.querySelector(a.getAttribute("href"));
+    if (s) spy.observe(s);
   });
-}
 
-function positionDropdown(item){
-  const dd = item.querySelector(".dropdown");
-  if(!dd) return;
-  const rect = item.getBoundingClientRect();
-  dd.style.top  = rect.bottom + "px";
-  // Keep dropdown on screen — if it would overflow right, align to right edge
-  const ddW = 220;
-  const left = Math.min(rect.left, window.innerWidth - ddW - 8);
-  dd.style.left = Math.max(8, left) + "px";
-}
-
-document.querySelectorAll(".menu-item").forEach(item=>{
-  item.addEventListener("click", e=>{
-    const isOpen = item.classList.contains("open");
-    closeMenus();
-    if(!isOpen){
-      item.classList.add("open");
-      // On mobile, position dropdown using screen coordinates
-      if(window.innerWidth <= 700) positionDropdown(item);
-    }
-    e.stopPropagation();
+  /* copy email */
+  var copyBtn = document.getElementById("copyBtn");
+  copyBtn.addEventListener("click", function(){
+    navigator.clipboard.writeText("tanishqjoshi93@gmail.com").then(function(){
+      copyBtn.textContent = "copied ✓";
+      copyBtn.classList.add("ok");
+      setTimeout(function(){
+        copyBtn.textContent = "copy";
+        copyBtn.classList.remove("ok");
+      }, 1800);
+    });
   });
-  item.addEventListener("keydown", e=>{
-    if(e.key==="Enter"||e.key===" "){ e.preventDefault(); item.click(); }
-    if(e.key==="Escape") closeMenus();
+
+  /* theme switcher — circular reveal from the click point */
+  var themeBtns = document.querySelectorAll("[data-set-theme]");
+  function markActive(name){
+    themeBtns.forEach(function(b){
+      b.setAttribute("aria-pressed", String(b.dataset.setTheme === name));
+    });
+  }
+  markActive(document.documentElement.dataset.theme || "ink");
+  themeBtns.forEach(function(btn){
+    btn.addEventListener("click", function(e){
+      var name = btn.dataset.setTheme;
+      var current = document.documentElement.dataset.theme || "ink";
+      if (name === current) return;
+      function apply(){
+        if (name === "ink") delete document.documentElement.dataset.theme;
+        else document.documentElement.dataset.theme = name;
+        markActive(name);
+        try{ localStorage.setItem("tj-theme", name); }catch(err){}
+      }
+      if (document.startViewTransition && !reduced){
+        var r = btn.getBoundingClientRect();
+        document.documentElement.style.setProperty("--vx", (r.left + r.width / 2) + "px");
+        document.documentElement.style.setProperty("--vy", (r.top + r.height / 2) + "px");
+        document.startViewTransition(apply);
+      } else {
+        apply();
+      }
+    });
   });
-});
-document.addEventListener("click", closeMenus);
 
-/* Re-render on resize so desktop/mobile switch works */
-let resizeTimer;
-window.addEventListener("resize", ()=>{
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(()=>{
-    const active = document.querySelector(".tab.active");
-    if(active) switchSheet(active.dataset.sheet);
-  }, 200);
-});
-
-/* ═══════════════════════════════════
-   INIT
-═══════════════════════════════════ */
-switchSheet("about");
+  /* live local time */
+  var clock = document.getElementById("clock");
+  function tickClock(){
+    var t = new Date().toLocaleTimeString("en-IN", {hour:"2-digit", minute:"2-digit", timeZone:"Asia/Kolkata"});
+    clock.textContent = "Indore, IN — " + t + " IST";
+  }
+  tickClock();
+  setInterval(tickClock, 30000);
+})();
 </script>
 </body>
 </html>
